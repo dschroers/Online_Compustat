@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,10 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,19 +46,48 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging-indent div.csl-entry {
+.hanging div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -73,7 +101,8 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}</style>
+}
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -110,12 +139,10 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -124,16 +151,11 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ch1_MaximumLikelihood.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -141,7 +163,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./images/Uni_Bonn_Logo.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -150,65 +172,60 @@ div.csl-indent {
       <a href="./">Computational Statistics (M.Sc.)</a> 
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organization of the Course</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Organization of the Course</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch1_MaximumLikelihood.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></span></a>
+  <a href="./Ch1_MaximumLikelihood.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch3_Bootstrap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></span></a>
+  <a href="./Ch3_Bootstrap.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch5_NPRegression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nonparametric Regression</span></span></a>
+  <a href="./Ch5_NPRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nonparametric Regression</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-the-likelihood-principle" id="toc-introduction-the-likelihood-principle" class="nav-link active" data-scroll-target="#introduction-the-likelihood-principle"><span class="header-section-number">1.1</span> Introduction: The Likelihood Principle</a>
+  <li><a href="#introduction-the-likelihood-principle" id="toc-introduction-the-likelihood-principle" class="nav-link active" data-scroll-target="#introduction-the-likelihood-principle"><span class="toc-section-number">1.1</span>  Introduction: The Likelihood Principle</a>
   <ul class="collapse">
-  <li><a href="#properties-of-maximum-likelihood-estimators" id="toc-properties-of-maximum-likelihood-estimators" class="nav-link" data-scroll-target="#properties-of-maximum-likelihood-estimators"><span class="header-section-number">1.1.1</span> Properties of Maximum Likelihood Estimators</a></li>
-  <li><a href="#example-coin-flipping-bernoulli-trial" id="toc-example-coin-flipping-bernoulli-trial" class="nav-link" data-scroll-target="#example-coin-flipping-bernoulli-trial"><span class="header-section-number">1.1.2</span> Example: Coin Flipping (Bernoulli Trial)</a></li>
-  <li><a href="#estimation-idea" id="toc-estimation-idea" class="nav-link" data-scroll-target="#estimation-idea"><span class="header-section-number">1.1.3</span> Estimation Idea</a></li>
+  <li><a href="#properties-of-maximum-likelihood-estimators" id="toc-properties-of-maximum-likelihood-estimators" class="nav-link" data-scroll-target="#properties-of-maximum-likelihood-estimators"><span class="toc-section-number">1.1.1</span>  Properties of Maximum Likelihood Estimators</a></li>
+  <li><a href="#example-coin-flipping-bernoulli-trial" id="toc-example-coin-flipping-bernoulli-trial" class="nav-link" data-scroll-target="#example-coin-flipping-bernoulli-trial"><span class="toc-section-number">1.1.2</span>  Example: Coin Flipping (Bernoulli Trial)</a></li>
+  <li><a href="#estimation-idea" id="toc-estimation-idea" class="nav-link" data-scroll-target="#estimation-idea"><span class="toc-section-number">1.1.3</span>  Estimation Idea</a></li>
   </ul></li>
-  <li><a href="#numeric-optimization" id="toc-numeric-optimization" class="nav-link" data-scroll-target="#numeric-optimization"><span class="header-section-number">1.2</span> Numeric Optimization</a></li>
-  <li><a href="#sec-LinRegNorm" id="toc-sec-LinRegNorm" class="nav-link" data-scroll-target="#sec-LinRegNorm"><span class="header-section-number">1.3</span> A classical Example: Linear Regression under Normality</a>
+  <li><a href="#numeric-optimization" id="toc-numeric-optimization" class="nav-link" data-scroll-target="#numeric-optimization"><span class="toc-section-number">1.2</span>  Numeric Optimization</a></li>
+  <li><a href="#sec-LinRegNorm" id="toc-sec-LinRegNorm" class="nav-link" data-scroll-target="#sec-LinRegNorm"><span class="toc-section-number">1.3</span>  A classical Example: Linear Regression under Normality</a>
   <ul class="collapse">
-  <li><a href="#sec-varMLE" id="toc-sec-varMLE" class="nav-link" data-scroll-target="#sec-varMLE"><span class="header-section-number">1.3.1</span> Variance of ML-Estimators <span class="math inline">\(\hat\beta_{ML}\)</span> and <span class="math inline">\(s^2_{ML}\)</span></a></li>
-  <li><a href="#asymptotic-distribution-and-single-parameter-testing" id="toc-asymptotic-distribution-and-single-parameter-testing" class="nav-link" data-scroll-target="#asymptotic-distribution-and-single-parameter-testing"><span class="header-section-number">1.3.2</span> Asymptotic Distribution and Single Parameter Testing</a></li>
+  <li><a href="#sec-varMLE" id="toc-sec-varMLE" class="nav-link" data-scroll-target="#sec-varMLE"><span class="toc-section-number">1.3.1</span>  Variance of ML-Estimators <span class="math inline">\(\hat\beta_{ML}\)</span> and <span class="math inline">\(s^2_{ML}\)</span></a></li>
+  <li><a href="#asymptotic-distribution-and-single-parameter-testing" id="toc-asymptotic-distribution-and-single-parameter-testing" class="nav-link" data-scroll-target="#asymptotic-distribution-and-single-parameter-testing"><span class="toc-section-number">1.3.2</span>  Asymptotic Distribution and Single Parameter Testing</a></li>
   </ul></li>
-  <li><a href="#sec-MLAsymp" id="toc-sec-MLAsymp" class="nav-link" data-scroll-target="#sec-MLAsymp"><span class="header-section-number">1.4</span> Asymptotic Theory of Maximum-Likelihood Estimators</a></li>
-  <li><a href="#cramérrao-lower-bound" id="toc-cramérrao-lower-bound" class="nav-link" data-scroll-target="#cramérrao-lower-bound"><span class="header-section-number">1.5</span> Cramér–Rao Lower Bound</a>
+  <li><a href="#sec-MLAsymp" id="toc-sec-MLAsymp" class="nav-link" data-scroll-target="#sec-MLAsymp"><span class="toc-section-number">1.4</span>  Asymptotic Theory of Maximum-Likelihood Estimators</a></li>
+  <li><a href="#cramérrao-lower-bound" id="toc-cramérrao-lower-bound" class="nav-link" data-scroll-target="#cramérrao-lower-bound"><span class="toc-section-number">1.5</span>  Cramér–Rao Lower Bound</a>
   <ul class="collapse">
-  <li><a href="#sketch-of-proof-for-the-cramer-rao-lower-bound" id="toc-sketch-of-proof-for-the-cramer-rao-lower-bound" class="nav-link" data-scroll-target="#sketch-of-proof-for-the-cramer-rao-lower-bound"><span class="header-section-number">1.5.1</span> Sketch of proof for the Cramer-Rao lower bound</a></li>
+  <li><a href="#sketch-of-proof-for-the-cramer-rao-lower-bound" id="toc-sketch-of-proof-for-the-cramer-rao-lower-bound" class="nav-link" data-scroll-target="#sketch-of-proof-for-the-cramer-rao-lower-bound"><span class="toc-section-number">1.5.1</span>  Sketch of proof for the Cramer-Rao lower bound</a></li>
   </ul></li>
-  <li><a href="#invariance-property-of-the-ml-estimator" id="toc-invariance-property-of-the-ml-estimator" class="nav-link" data-scroll-target="#invariance-property-of-the-ml-estimator"><span class="header-section-number">1.6</span> Invariance Property of the ML-Estimator</a>
+  <li><a href="#invariance-property-of-the-ml-estimator" id="toc-invariance-property-of-the-ml-estimator" class="nav-link" data-scroll-target="#invariance-property-of-the-ml-estimator"><span class="toc-section-number">1.6</span>  Invariance Property of the ML-Estimator</a>
   <ul class="collapse">
   <li><a href="#one-to-one-functions" id="toc-one-to-one-functions" class="nav-link" data-scroll-target="#one-to-one-functions">One-to-One Functions</a></li>
   </ul></li>
@@ -223,7 +240,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></h1>
 </div>
 
 
@@ -265,12 +282,12 @@ div.csl-indent {
 </ul>
 <p>Likewise for multivariate parameter <span class="math inline">\(\theta_0\in\mathbb{R}^p.\)</span></p>
 <p>Thus, maximum likelihood estimators can be very appealing, provided that the assumption on the general distribution family is correct.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 ML-estimation requires fixing the family of distributions <span class="math inline">\(f(\cdot;\theta)\)</span>
 </div>
 </div>
@@ -365,12 +382,12 @@ N_{H,obs}=\sum_{i=1}^n X_{i,obs}
 \end{align*}
 \]</span> where <span class="math inline">\(f(\,\cdot\,;\theta)\)</span> denotes here the probability mass function of the Bernoulli distribution with parameter candidate <span class="math inline">\(p=\theta.\)</span></p>
 <p>The function <span class="math inline">\(\mathcal{L}_n(\theta)\)</span> is called the <strong>likelihood function</strong>. The likelihood function depends on the random sample <span class="math inline">\(\{X_{1},\dots,X_{n}\}\)</span> and is thus itself random. If we want to emphasize that we look at a given realization of the random sample <span class="math inline">\(\{X_{1,obs},\dots,X_{n,obs}\}\)</span>, we write <span class="math inline">\(\mathcal{L}_{,obs}(\theta)\)</span>.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -398,13 +415,13 @@ N_{H,obs}=\sum_{i=1}^n X_{i,obs}
 <li>The value <span class="math inline">\(\hat\theta_{ML}\)</span> at which the likelihood function <span class="math inline">\(\mathcal{L}_n(\cdot)\)</span> is maximized is called the <strong>maximum likelihood (ML) estimator</strong></li>
 <li>The value <span class="math inline">\(\hat\theta_{ML,obs}\)</span> at which the observed likelihood function <span class="math inline">\(\mathcal{L}_{n,obs}(\cdot)\)</span> is maximized is called the <strong>maximum likelihood (ML) estimate</strong>; i.e., <span class="math inline">\(\hat\theta_{ML,obs}\)</span> is a specific realization of the ML-estimator computed from the observed data <span class="math inline">\(\{X_{1,obs},\dots,X_{n,obs}\}.\)</span></li>
 </ul>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Caution
+<div class="callout-caption-container flex-fill">
+Danger
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -417,12 +434,12 @@ Caution
 \]</span> Of course, we can only compute a specific value <span class="math inline">\((\hat\theta_{ML,obs})\)</span> given an observed realization of the random sample. Using the random variable type of notation <span class="math inline">\(\hat\theta_{ML}\)</span> to denote both the random variables point of view and the realization point of view reminds ourselves that any specific value <span class="math inline">\((\hat\theta_{ML,obs})\)</span> is just <strong>a possible realization</strong> of the estimator.</p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -449,7 +466,7 @@ Caution
 &amp;=\arg\max_{\theta\in[0,1]} \prod_{i=1}^n \theta^{X_{i}}(1-\theta)^{1-X_{i}}.
 \end{align*}
 \]</span></p>
-<p>Usually it’s easier to work with sums rather than products—also for doing the asymptotics in <a href="#sec-MLAsymp"><span class="quarto-unresolved-ref">sec-MLAsymp</span></a>. So we apply a monotonic transformation by taking the logarithm of the likelihood which leads to the <strong>log-likelihood function</strong>: <span class="math display">\[
+<p>Usually it’s easier to work with sums rather than products—also for doing the asymptotics in <a href="#sec-MLAsymp"><span>Section&nbsp;1.4</span></a>. So we apply a monotonic transformation by taking the logarithm of the likelihood which leads to the <strong>log-likelihood function</strong>: <span class="math display">\[
 \begin{align*}
 \ell_n(\theta)
 &amp;=\ln\mathcal{L}_n(\theta)\\[2ex]
@@ -463,16 +480,16 @@ Caution
 &amp;=\arg\max_{\theta\in\Theta} \ell_n(\theta).
 \end{align*}
 \]</span> <!-- but $\ell_n(\theta)$ gives a more simple structure simplifying the maximization problem.  --></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Log-likelihoods instead of the likelihoods">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Log-likelihoods instead of the likelihoods
+<div class="callout-caption-container flex-fill">
+Note
 </div>
 </div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container callout-body" title="Log-likelihoods instead of the likelihoods">
 <ul>
 <li><p>From a standpoint of computational complexity, you can imagine that summing is less expensive than multiplication (although nowadays, these are almost equal).</p></li>
 <li><p>More important: likelihoods would become very small and you will run out of your <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">floating point</a> precision very quickly, yielding an underflow. That’s why it is way more convenient to use the logarithm of the likelihood. Simply try to calculate the likelihood by hand, using pocket calculator—it’s almost impossible.</p></li>
@@ -487,14 +504,14 @@ Log-likelihoods instead of the likelihoods
 &amp;=\sum_{i=1}^n\left( X_{i} \ln(\theta) + (1-X_{i})\ln(1-\theta)\right).
 \end{align*}
 \]</span></p>
-<p><a href="#fig-RandomEx1">Figure&nbsp;<span class="quarto-unresolved-ref">fig-RandomEx1</span></a> shows some random realizations of the log-likelihood function based on different random realizations of the <span class="math inline">\(n=5\)</span> coin tosses, i.e.&nbsp;realizations of the random sample <span class="math inline">\(\{X_1,\dots,X_n\}\in\{0,1\}^n.\)</span></p>
+<p><a href="#fig-RandomEx1">Figure&nbsp;<span>1.1</span></a> shows some random realizations of the log-likelihood function based on different random realizations of the <span class="math inline">\(n=5\)</span> coin tosses, i.e.&nbsp;realizations of the random sample <span class="math inline">\(\{X_1,\dots,X_n\}\in\{0,1\}^n.\)</span></p>
 <p>with this block:</p>
-<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch1_MaximumLikelihood_cache/html/fig-RandomEx1_5afb0f5293945af3302ad0a5977ad3bd">
+<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch1_MaximumLikelihood_cache/html/fig-RandomEx1_58beca46c9321465d9df28e65ade81d7">
 <div class="cell-output-display">
 <div id="fig-RandomEx1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-RandomEx1-.gif" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.1: Random realizations of the log-likelihood function <span class="math inline">\(\ell_{n}\)</span> of our coin flipping example based on different realizations of the random sample <span class="math inline">\(X_1,\dots,X_n\)</span> with <span class="math inline">\(n=5\)</span> and (usually unknown) <span class="math inline">\(\theta_0=0.2.\)</span></figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.1: Random realizations of the log-likelihood function <span class="math inline">\(\ell_{n}\)</span> of our coin flipping example based on different realizations of the random sample <span class="math inline">\(X_1,\dots,X_n\)</span> with <span class="math inline">\(n=5\)</span> and (usually unknown) <span class="math inline">\(\theta_0=0.2.\)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -524,16 +541,16 @@ Log-likelihoods instead of the likelihoods
 </section>
 <section id="numeric-optimization" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="numeric-optimization"><span class="header-section-number">1.2</span> Numeric Optimization</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Need of Numerical optimization is standard">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Need of Numerical optimization is standard
+<div class="callout-caption-container flex-fill">
+Note
 </div>
 </div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container callout-body" title="Need of Numerical optimization is standard">
 <p>Usually, we are not so fortunate as to have an analytical solution for the MLE, and must rely on the computer to find the maximizing arguments of the log-likelihood function. Various methods exist for finding the maximum (or minimum) of a function (e.g.&nbsp;the Newton-Raphson algorithm). In this aspect, MLE belongs to the field of computational statistics.</p>
 </div>
 </div>
@@ -549,13 +566,13 @@ X_i:=(\underbrace{X_{i1}}_{=1},X_{i2},\ldots,X_{iK})^T\in\mathbb{R}^K
 \]</span> denotes the vector of predictor variables, where the (i.i.d.) random sample<br>
 <span class="math display">\[
 (Y_1,X_1), (Y_2,X_2), \dots, (Y_n,X_n)
-\]</span> follows a <strong>random design with homoskedastic errors</strong> (see <a href="#def-RandomDesign">Definition&nbsp;<span class="quarto-unresolved-ref">def-RandomDesign</span></a>).</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+\]</span> follows a <strong>random design with homoskedastic errors</strong> (see <a href="#def-RandomDesign">Definition&nbsp;<span>1.3</span></a>).</p>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -578,7 +595,7 @@ X_i:=(\underbrace{X_{i1}}_{=1},X_{i2},\ldots,X_{iK})^T\in\mathbb{R}^K
 </div>
 </div>
 </div>
-<p>For the following, it is convenient to write <a href="#eq-LinMod">Equation&nbsp;<span class="quarto-unresolved-ref">eq-LinMod</span></a> using matrix notation <span class="math display">\[
+<p>For the following, it is convenient to write <a href="#eq-LinMod">Equation&nbsp;<span>1.2</span></a> using matrix notation <span class="math display">\[
 \begin{eqnarray*}
   \underset{(n\times 1)}{Y}&amp;=&amp;\underset{(n\times K)}{X}\underset{(K\times 1)}{\beta_0} + \underset{(n\times 1)}{\varepsilon},
 \end{eqnarray*}
@@ -609,7 +626,7 @@ The requirement to make a (correct) distributional assumption is much more restr
 <!-- \item The $\varepsilon$'s are independent of one another. -->
 <!-- \item The $\varepsilon$'s are identically distributed, i.e. homoskedastic. -->
 <!-- \end{itemize} -->
-<p>Under <a href="#eq-OLSnormAss">Equation&nbsp;<span class="quarto-unresolved-ref">eq-OLSnormAss</span></a>, we have <span class="math display">\[
+<p>Under <a href="#eq-OLSnormAss">Equation&nbsp;<span>1.3</span></a>, we have <span class="math display">\[
 f(Y_i|X_i;\beta_0^T,\sigma_0^2)=
 \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(Y_i-X_i^T\beta_0)^2}{2\sigma_0^2}\right),
 \]</span> where <span class="math display">\[
@@ -653,12 +670,12 @@ $$ --> <!-- Noting that $\varepsilon=Y-X\beta$, we get the  --> and the log-like
 \dfrac{\partial \ell_n}{\partial \sigma^2}(\beta^T,\sigma^2)
 \end{matrix}\right)
 \tag{1.4}\]</span></span></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -675,12 +692,12 @@ $$ --> <!-- Noting that $\varepsilon=Y-X\beta$, we get the  --> and the log-like
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Note
 </div>
 </div>
@@ -694,10 +711,10 @@ Note
   \mathbb{E}\left(\dfrac{\partial \ell_n}{\partial \theta_p}(\theta^T_0)\right)
   \end{matrix}
   \right) = \underset{(p\times 1)}{0}
-\]</span> We prove this below in <a href="#sec-MLAsymp"><span class="quarto-unresolved-ref">sec-MLAsymp</span></a>.</p>
+\]</span> We prove this below in <a href="#sec-MLAsymp"><span>Section&nbsp;1.4</span></a>.</p>
 </div>
 </div>
-<p>Setting the score function in <a href="#eq-LinRegScoreFun">Equation&nbsp;<span class="quarto-unresolved-ref">eq-LinRegScoreFun</span></a> equal to zero yields a system of <span class="math inline">\(K+1\)</span> equations with <span class="math inline">\(K+1\)</span> unknowns, which identifies the ML-estimators <span class="math inline">\((\hat\beta_{ML}\)</span> and <span class="math inline">\(s_{ML}^2),\)</span> <span class="math display">\[
+<p>Setting the score function in <a href="#eq-LinRegScoreFun">Equation&nbsp;<span>1.4</span></a> equal to zero yields a system of <span class="math inline">\(K+1\)</span> equations with <span class="math inline">\(K+1\)</span> unknowns, which identifies the ML-estimators <span class="math inline">\((\hat\beta_{ML}\)</span> and <span class="math inline">\(s_{ML}^2),\)</span> <span class="math display">\[
 \begin{align*}
 &amp;\nabla\ell_n(\hat\theta^T_{ML})
 =
@@ -735,12 +752,12 @@ s_{ML}^2 =\dfrac{1}{n}(Y-X\hat\beta_{ML})^T(Y-X\hat\beta_{ML})\\[2ex]
 </ul>
 <section id="sec-varMLE" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="sec-varMLE"><span class="header-section-number">1.3.1</span> Variance of ML-Estimators <span class="math inline">\(\hat\beta_{ML}\)</span> and <span class="math inline">\(s^2_{ML}\)</span></h3>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Computing the Asymptotic Variance
 </div>
 </div>
@@ -843,12 +860,12 @@ Computing the Asymptotic Variance
 \end{array}\right]
 \end{align*}
 \]</span></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -929,7 +946,7 @@ AVar\left(\begin{array}{c}\hat\beta_{ML,n} \\ s_{ML,n}^2\end{array}\right)
 \end{array}\right].
 \end{align*}
 \tag{1.5}\]</span></span></p>
-<p><a href="#eq-FIMVar">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FIMVar</span></a> means that <span id="eq-FIMVar2"><span class="math display">\[
+<p><a href="#eq-FIMVar">Equation&nbsp;<span>1.5</span></a> means that <span id="eq-FIMVar2"><span class="math display">\[
 \begin{align*}
 \underset{(K\times K)}{Var\left(\begin{array}{c}\hat\beta_{ML,n} \\ s_{ML,n}^2\end{array}\right)}
 &amp;\approx
@@ -971,7 +988,7 @@ $$
 Var(\hat\beta_{ML}) \to 0\quad\text{and}\quad Var(s_{ML}^2) \to 0
 $$ 
 as $n\to\infty$. -->
-<p>Of course, the variance expressions in <a href="#eq-FIMVar">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FIMVar</span></a> and <a href="#eq-FIMVar2">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FIMVar2</span></a>, respectively, contain unknown quantities and are, therefore, not directly usable in practice. However, we can plug in estimates for the unknown quantities; namely <span class="math display">\[
+<p>Of course, the variance expressions in <a href="#eq-FIMVar">Equation&nbsp;<span>1.5</span></a> and <a href="#eq-FIMVar2">Equation&nbsp;<span>1.6</span></a>, respectively, contain unknown quantities and are, therefore, not directly usable in practice. However, we can plug in estimates for the unknown quantities; namely <span class="math display">\[
 s_{ML}^2                         \quad\text{for}\quad \sigma^2_0
 \]</span> and <span class="math display">\[
 S_{X^TX}^{-1}=\left(\frac{1}{n}\sum_{i=1}^nX_i X_i^T\right)^{-1} \quad \text{for}\quad \Sigma_{X^TX}^{-1}.
@@ -1043,7 +1060,7 @@ $$ -->
 </section>
 <section id="asymptotic-distribution-and-single-parameter-testing" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="asymptotic-distribution-and-single-parameter-testing"><span class="header-section-number">1.3.2</span> Asymptotic Distribution and Single Parameter Testing</h3>
-<p>It follows from asymptotic maximum likelihood theory (see <a href="#sec-MLAsymp"><span class="quarto-unresolved-ref">sec-MLAsymp</span></a>) that the probability distribution of the vector of parameter estimates <span class="math display">\[
+<p>It follows from asymptotic maximum likelihood theory (see <a href="#sec-MLAsymp"><span>Section&nbsp;1.4</span></a>) that the probability distribution of the vector of parameter estimates <span class="math display">\[
 \begin{pmatrix}
 \hat\beta_{ML,n}\\
 \hat s_{ML,n}^2
@@ -1167,7 +1184,7 @@ X_1,\dots,X_n\overset{\text{i.i.d.}}{\sim}X,
 \end{align*}
 \]</span> for all <span class="math inline">\(\theta\in\Theta.\)</span></li>
 </ul>
-<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-note callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -1189,13 +1206,13 @@ f(x;\theta)=h(x)\exp(\eta(\theta) T(x) - B(\theta))
 </div>
 <p>The derivation of the asymptotic distribution of the ML estimator, <span class="math inline">\(\hat\theta_n,\)</span> relies on an expansion of the derivative of the log-likelihood function, <span class="math display">\[
 \ell_n'(\cdot),
-\]</span> around <span class="math inline">\(\theta_0\)</span> (see <a href="#eq-MVT">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MVT</span></a> below) using the <strong>Mean Value Theorem</strong> (<a href="#thm-MVT">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-MVT</span></a>).</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+\]</span> around <span class="math inline">\(\theta_0\)</span> (see <a href="#eq-MVT">Equation&nbsp;<span>1.7</span></a> below) using the <strong>Mean Value Theorem</strong> (<a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>).</p>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -1209,7 +1226,7 @@ f(b)=f(a) + f'(c)(b-a).
 </div>
 </div>
 </div>
-<p>By the Mean Value Theorem (<a href="#thm-MVT">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-MVT</span></a>), we know that <span id="eq-MVT"><span class="math display">\[
+<p>By the Mean Value Theorem (<a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>), we know that <span id="eq-MVT"><span class="math display">\[
 \ell_n'(\hat{\theta}_n)=\ell_n'(\theta_0)+\ell_n''(\psi_n)(\hat{\theta}_n-\theta_0)
 \tag{1.7}\]</span></span> for some <span class="math inline">\(\psi_n\)</span> between <span class="math inline">\(\hat{\theta}_n\)</span> and <span class="math inline">\(\theta_0;\)</span> i.e.</p>
 <ul>
@@ -1218,15 +1235,15 @@ f(b)=f(a) + f'(c)(b-a).
 </ul>
 <p>Since <span class="math inline">\(\hat{\theta}_n\)</span> maximizes the log-Likelihood function it follows that <span class="math display">\[
 \ell_n'(\hat{\theta}_n)=0.
-\]</span> Together with <a href="#eq-MVT">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MVT</span></a>, this implies that <span class="math display">\[
+\]</span> Together with <a href="#eq-MVT">Equation&nbsp;<span>1.7</span></a>, this implies that <span class="math display">\[
 \overbrace{\ell_n'(\hat{\theta}_n)}^{=0}=\ell_n'(\theta_0)+\ell_n''(\psi_n)(\hat{\theta}_n-\theta_0)
 \]</span> <span id="eq-ml2"><span class="math display">\[
 \Rightarrow\quad \ell_n'(\theta_0)=-\ell_n''(\psi_n)(\hat{\theta}_n-\theta_0).
 \tag{1.8}\]</span></span></p>
 <blockquote class="blockquote">
-<p><a href="#eq-ml2">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ml2</span></a> provides a useful expression that allows us to derive the asymptotic distribution of <span class="math inline">\(\hat{\theta}_n.\)</span></p>
+<p><a href="#eq-ml2">Equation&nbsp;<span>1.8</span></a> provides a useful expression that allows us to derive the asymptotic distribution of <span class="math inline">\(\hat{\theta}_n.\)</span></p>
 </blockquote>
-<p>Let us derive two (<a href="#eq-zero1">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zero1</span></a> and <a href="#eq-zero2">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zero2</span></a>) auxiliary results. Note that necessarily, <span class="math display">\[
+<p>Let us derive two (<a href="#eq-zero1">Equation&nbsp;<span>1.9</span></a> and <a href="#eq-zero2">Equation&nbsp;<span>1.10</span></a>) auxiliary results. Note that necessarily, <span class="math display">\[
 \int f(x;\theta)dx=1
 \]</span> for <em>all possible values</em> of <span class="math inline">\(\theta\in\Theta,\)</span> since <span class="math inline">\(f\)</span> is a density function.</p>
 <p>Therefore, <span class="math display">\[
@@ -1247,7 +1264,7 @@ f(b)=f(a) + f'(c)(b-a).
 =\frac{\partial^2}{\partial \theta^2}\int f(x;\theta)dx
 =0
 \tag{1.10}\]</span></span> for all <span class="math inline">\(\theta\in\Theta.\)</span></p>
-<p>Using <a href="#eq-zero1">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zero1</span></a>, we can now show that the average <span class="math display">\[
+<p>Using <a href="#eq-zero1">Equation&nbsp;<span>1.9</span></a>, we can now show that the average <span class="math display">\[
 \frac{1}{n}\ell_n'(\theta_0)=\frac{1}{n}\underbrace{\sum_{i=1}^n\frac{\partial}{\partial \theta} \ln f(X_i;\theta_0)}_{\ell_n'(\theta_0)}
 \]</span> is <strong>asymptotically normal</strong>. This is done in the following by checking the three conditions for applying the Lindeberg-Lévy central limit theorem.</p>
 <p>Firstly, the average <span class="math display">\[
@@ -1266,7 +1283,7 @@ f(b)=f(a) + f'(c)(b-a).
 &amp;=\int \frac{\partial}{\partial \theta}  f(x;\theta_0)dx\\[2ex]
 &amp;=0,
 \end{align*}
-\tag{1.11}\]</span></span> where the last step follows from <a href="#eq-zero1">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zero1</span></a>.</p>
+\tag{1.11}\]</span></span> where the last step follows from <a href="#eq-zero1">Equation&nbsp;<span>1.9</span></a>.</p>
 <p>Thirdly, for the variance one gets: <span id="eq-Var"><span class="math display">\[
 \begin{align*}
 Var\left(\frac{1}{n}\ell_n'(\theta_0)\right)
@@ -1276,9 +1293,9 @@ Var\left(\frac{1}{n}\ell_n'(\theta_0)\right)
 &amp;=\frac{1}{n}\mathbb{E}\left(\left(\frac{\frac{\partial}{\partial \theta}  f(X;\theta_0)}{f(X;\theta_0)}\right)^2\right)\\
 &amp;=\frac{1}{n}\mathcal{I}(\theta_0),
 \end{align*}
-\tag{1.12}\]</span></span> where the simplification of the variance expression to a second moment expression follows from <a href="#eq-Mean">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Mean</span></a>. <br></p>
+\tag{1.12}\]</span></span> where the simplification of the variance expression to a second moment expression follows from <a href="#eq-Mean">Equation&nbsp;<span>1.11</span></a>. <br></p>
 <blockquote class="blockquote">
-<p>We can write the last expression in <a href="#eq-Var">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Var</span></a> using the Fisher Information <span class="math inline">\(\mathcal{I}(\theta_0)=-\frac{1}{n}\mathbb{E}(\ell_n''(\theta_0))\)</span> since below in <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FisherInfoDeriv</span></a> we’ll see that <span class="math display">\[
+<p>We can write the last expression in <a href="#eq-Var">Equation&nbsp;<span>1.12</span></a> using the Fisher Information <span class="math inline">\(\mathcal{I}(\theta_0)=-\frac{1}{n}\mathbb{E}(\ell_n''(\theta_0))\)</span> since below in <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span>1.14</span></a> we’ll see that <span class="math display">\[
 \begin{align*}
 \mathbb{E}\left(\left(\frac{\frac{\partial}{\partial \theta}  f(X;\theta_0)}{f(X;\theta_0)}\right)^2\right)
 &amp; =-\frac{1}{n}\mathbb{E}(\ell_n''(\theta_0)) = \mathcal{I}(\theta_0).
@@ -1293,23 +1310,23 @@ $$
 <p>Thus, we can apply the <strong>Lindeberg-Lévy central limit theorem</strong> from which it follows that <span class="math display">\[
 \frac{\frac{1}{n}\ell_n'(\theta_0)-\overbrace{\mathbb{E}\left(\frac{1}{n}\ell_n'(\theta_0)\right)}^{=0}}{\sqrt{\frac{1}{n}\mathcal{I}(\theta_0)} } = \frac{\ell_n'(\theta_0)}{\sqrt{n\mathcal{I}(\theta_0)} } \to_d \mathcal{N}(0,1)
 \]</span> as <span class="math inline">\(n\to\infty.\)</span></p>
-<p>By our mean value expression in <a href="#eq-ml2">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ml2</span></a> <span class="math display">\[
+<p>By our mean value expression in <a href="#eq-ml2">Equation&nbsp;<span>1.8</span></a> <span class="math display">\[
 \ell_n'(\theta_0)=-\ell_n''(\psi_n)(\hat{\theta}_n-\theta_0)
 \]</span> we thus have <span class="math display">\[
 \frac{-\ell_n''(\psi_n)}{\sqrt{n \mathcal{I}(\theta_0)}}\left(\hat{\theta}_n-\theta_0\right) \to_d \mathcal{N}(0,1),
 \]</span> which is equivalent to <span id="eq-MLNorm"><span class="math display">\[
 \left(\frac{-\frac{1}{n}\ell_n''(\psi_n)}{\sqrt{\mathcal{I}(\theta_0)}}\right)\;\sqrt{n}\left(\hat{\theta}_n-\theta_0\right) \to_d \mathcal{N}(0,1).
-\tag{1.13}\]</span></span> The <span class="math inline">\(\sqrt{n}\left(\hat{\theta}_n-\theta_0\right)\)</span>-part in <a href="#eq-MLNorm">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MLNorm</span></a> is our object of interest.</p>
+\tag{1.13}\]</span></span> The <span class="math inline">\(\sqrt{n}\left(\hat{\theta}_n-\theta_0\right)\)</span>-part in <a href="#eq-MLNorm">Equation&nbsp;<span>1.13</span></a> is our object of interest.</p>
 <p>The further analysis requires us to study the asymptotic behavior of<br>
 <span class="math display">\[
 -\frac{1}{n}\ell_n''(\psi_n)
-\]</span> which will help us to understand the behavior of <span class="math inline">\(\left(\frac{-\frac{1}{n}\ell_n''(\psi_n)}{\sqrt{\mathcal{I}(\theta_0)}}\right)\)</span> in <a href="#eq-MLNorm">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MLNorm</span></a>.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+\]</span> which will help us to understand the behavior of <span class="math inline">\(\left(\frac{-\frac{1}{n}\ell_n''(\psi_n)}{\sqrt{\mathcal{I}(\theta_0)}}\right)\)</span> in <a href="#eq-MLNorm">Equation&nbsp;<span>1.13</span></a>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Important
 </div>
 </div>
@@ -1348,7 +1365,7 @@ Important
 &amp;=\mathbb{E}\left(-\frac{\frac{\partial^2}{\partial \theta^2}  f(X;\theta_0)}{f(X;\theta_0)}\right)+\mathbb{E}\left(\left( \frac{\frac{\partial}{\partial \theta}  f(X;\theta_0)}
 {f(X;\theta_0)}\right)^2\right)
 \end{align*}
-\]</span> <a href="#eq-zero2">Equation&nbsp;<span class="quarto-unresolved-ref">eq-zero2</span></a> implies that <span class="math inline">\(\mathbb{E}\left(-\frac{\frac{\partial^2}{\partial \theta^2} f(X;\theta_0)}{f(X;\theta_0)}\right)=0\)</span> thus <span class="math display">\[
+\]</span> <a href="#eq-zero2">Equation&nbsp;<span>1.10</span></a> implies that <span class="math inline">\(\mathbb{E}\left(-\frac{\frac{\partial^2}{\partial \theta^2} f(X;\theta_0)}{f(X;\theta_0)}\right)=0\)</span> thus <span class="math display">\[
 \begin{align*}
 \underbrace{\mathbb{E}\left(-\frac{1}{n}\ell_n''(\theta_0)\right)}_{=\mathcal{I}(\theta_0)}
 &amp;=0 + \mathbb{E}\left(\left( \frac{\frac{\partial}{\partial \theta}  f(X;\theta_0)}{f(X;\theta_0)}\right)^2\right)
@@ -1361,18 +1378,18 @@ Important
 <p>This means that <span class="math display">\[
 -\frac{1}{n}\ell_n''(\theta_0)
 \]</span> is an <strong>unbiased estimator</strong> of the Fisher information <span class="math inline">\(\mathcal{I}(\theta_0).\)</span></p>
-<p>Moreover, <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FisherInfoDeriv</span></a> provides an alternative expression for the Fisher information <span class="math inline">\(\mathcal{I}(\theta_0).\)</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>Moreover, <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span>1.14</span></a> provides an alternative expression for the Fisher information <span class="math inline">\(\mathcal{I}(\theta_0).\)</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Multivariate Settings
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For multivariate (<span class="math inline">\(p\)</span>-dimensional) parameters <span class="math inline">\(\theta_0,\)</span> the Fisher information <span class="math inline">\(\mathcal{I}(\theta_0)=(-1)\cdot \mathbb{E}\left(\ell_n''(\theta_0)\right)\)</span> becomes the (<span class="math inline">\(p\times p\)</span>) Fisher information matrix (see <a href="#sec-varMLE"><span class="quarto-unresolved-ref">sec-varMLE</span></a>).</p>
+<p>For multivariate (<span class="math inline">\(p\)</span>-dimensional) parameters <span class="math inline">\(\theta_0,\)</span> the Fisher information <span class="math inline">\(\mathcal{I}(\theta_0)=(-1)\cdot \mathbb{E}\left(\ell_n''(\theta_0)\right)\)</span> becomes the (<span class="math inline">\(p\times p\)</span>) Fisher information matrix (see <a href="#sec-varMLE"><span>Section&nbsp;1.3.1</span></a>).</p>
 </div>
 </div>
 <p>Second, the variance of variance of <span class="math inline">\(-\frac{1}{n}\ell_n''(\theta_0):\)</span> <span class="math display">\[
@@ -1400,17 +1417,17 @@ Var\left(-\frac{1}{n}\ell_n''(\theta_0)\right)\to 0\quad\text{as}\quad n\to\inft
 \]</span> which implies that <span class="math inline">\(\frac{1}{n}\ell_n''(\theta_0)\)</span> is also a <strong>(weakly) consistent</strong> estimator, i.e.&nbsp; <span class="math display">\[
 -\frac{1}{n}\ell_n''(\theta_0)\to_p \mathcal{I}(\theta_0)\quad \hbox{as}\quad n\to\infty,
 \]</span> since mean square convergence implies convergence in probability.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>🤔 Remember, we wanted to study <span class="math inline">\(-\frac{1}{n}\ell_n''(\psi_n)\)</span> in <a href="#eq-MLNorm">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MLNorm</span></a> <strong>not</strong> <span class="math inline">\(-\frac{1}{n}\ell_n''(\theta_0).\)</span> Studying <span class="math inline">\(-\frac{1}{n}\ell_n''(\theta_0)\)</span> was only the simpler thing to do.</p>
+<p>🤔 Remember, we wanted to study <span class="math inline">\(-\frac{1}{n}\ell_n''(\psi_n)\)</span> in <a href="#eq-MLNorm">Equation&nbsp;<span>1.13</span></a> <strong>not</strong> <span class="math inline">\(-\frac{1}{n}\ell_n''(\theta_0).\)</span> Studying <span class="math inline">\(-\frac{1}{n}\ell_n''(\theta_0)\)</span> was only the simpler thing to do.</p>
 <p>Luckily, we are actually close now.</p>
 </div>
 </div>
@@ -1418,9 +1435,9 @@ Important
 \hat\theta_n\to_p\theta_0\quad\text{as}\quad n\to\infty.
 \]</span></p>
 <blockquote class="blockquote">
-<p><strong>Example:</strong> Our results in <a href="#sec-LinRegNorm"><span class="quarto-unresolved-ref">sec-LinRegNorm</span></a> imply, for instance, that the ML estimator <span class="math inline">\(\hat{\beta}_n\)</span> is consistent for <span class="math inline">\(\beta.\)</span></p>
+<p><strong>Example:</strong> Our results in <a href="#sec-LinRegNorm"><span>Section&nbsp;1.3</span></a> imply, for instance, that the ML estimator <span class="math inline">\(\hat{\beta}_n\)</span> is consistent for <span class="math inline">\(\beta.\)</span></p>
 </blockquote>
-<p>Since <span class="math inline">\(\psi_n\)</span> is a <strong>mean value</strong> between <span class="math inline">\(\theta_0\)</span> and <span class="math inline">\(\hat{\theta}_n\)</span> (<a href="#eq-MVT">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MVT</span></a>), consistency of <span class="math inline">\(\hat{\theta}_n\)</span> implies that <span class="math display">\[
+<p>Since <span class="math inline">\(\psi_n\)</span> is a <strong>mean value</strong> between <span class="math inline">\(\theta_0\)</span> and <span class="math inline">\(\hat{\theta}_n\)</span> (<a href="#eq-MVT">Equation&nbsp;<span>1.7</span></a>), consistency of <span class="math inline">\(\hat{\theta}_n\)</span> implies that <span class="math display">\[
 \psi_n\to_p\theta_0\quad\text{as}\quad n\to\infty.
 \]</span></p>
 <p>Therefore, we have by the <strong>continuous mapping theorem</strong> and suitable regularity conditions guaranteeing that <span class="math inline">\(\ell_n''\)</span> converges uniformly on a neighbourhood of <span class="math inline">\(\theta_0\)</span> (e.g.&nbsp;<span class="math inline">\(\ell_n'''\)</span> exists and is continuous on a neighbourhood of <span class="math inline">\(\theta_0\)</span>) that <span class="math display">\[
@@ -1430,7 +1447,7 @@ Important
 \left(\frac{-\frac{1}{n}\ell_n''(\psi_n)}{\sqrt{\mathcal{I}(\theta_0)}}\right)&amp;\to_p \sqrt{\mathcal{I}(\theta_0)} \quad \hbox{ as }\quad n\to\infty.
 \end{align}
 \]</span></p>
-<p>Now, using <strong>Slutsky’s theorem</strong>, we can connect the above consistency result with the asymptotic normality result in <a href="#eq-MLNorm">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MLNorm</span></a> such that <span class="math display">\[
+<p>Now, using <strong>Slutsky’s theorem</strong>, we can connect the above consistency result with the asymptotic normality result in <a href="#eq-MLNorm">Equation&nbsp;<span>1.13</span></a> such that <span class="math display">\[
 \begin{align*}
 \underbrace{\left(\frac{-\frac{1}{n}\ell_n''(\psi_n)}{\sqrt{\mathcal{I}(\theta_0)}}\right)}_{\to_p \sqrt{\mathcal{I}(\theta_0)} }\sqrt{n}\left(\hat{\theta}_n-\theta_0\right)\to_d\mathcal{N}(0,1)
 \end{align*}
@@ -1441,13 +1458,13 @@ Important
 \tag{1.15}\]</span></span> where <span class="math inline">\(1/\mathcal{I}(\theta_0)\)</span> is the <strong>asymptotic variance</strong> of the ML estimator <span class="math inline">\(\hat{\theta}_n\)</span> and equals the inverse of the (here scalar valued) Fisher information <span class="math display">\[
 \mathcal{I}(\theta_0)=-\frac{1}{n}\mathbb{E}(\ell_n''(\theta_0)).
 \]</span></p>
-<p><a href="#eq-AsymNormMLE">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AsymNormMLE</span></a> is the asymptotic normality result we aimed for.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p><a href="#eq-AsymNormMLE">Equation&nbsp;<span>1.15</span></a> is the asymptotic normality result we aimed for.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Multivariate Settings
 </div>
 </div>
@@ -1457,12 +1474,12 @@ Multivariate Settings
 \]</span> where <span class="math inline">\(\mathcal{I}(\theta_0)=-\frac{1}{n}\mathbb{E}\left(H_{\ell_n}(\theta_0)\right)\)</span> is the <span class="math inline">\((p\times p)\)</span> Fisher information matrix with <span class="math inline">\(H_{\ell_n}(\theta_0)\)</span> denoting the Hesse matrix of <span class="math inline">\(\ell_n(\cdot)\)</span> evaluated at <span class="math inline">\(\theta_0.\)</span></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 ML-Theory and Machine learning
 </div>
 </div>
@@ -1480,12 +1497,12 @@ ML-Theory and Machine learning
 \mathcal{I}(\theta_0) = -\frac{1}{n}\mathbb{E}\left(H_{\ell_n}(\theta_0)\right)
 \]</span> evaluated at the true parameter value <span class="math inline">\(\theta_0.\)</span></p>
 <p>Thus, maximum likelihood estimators attain the Cramer-Rao lower bound and will therefore be asymptotically efficient.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Calyampudi Radhakrishna Rao
 </div>
 </div>
@@ -1495,11 +1512,11 @@ Calyampudi Radhakrishna Rao
 </div>
 <section id="sketch-of-proof-for-the-cramer-rao-lower-bound" class="level3" data-number="1.5.1">
 <h3 data-number="1.5.1" class="anchored" data-anchor-id="sketch-of-proof-for-the-cramer-rao-lower-bound"><span class="header-section-number">1.5.1</span> Sketch of proof for the Cramer-Rao lower bound</h3>
-<p>Assume we are in the one-parameter scalar-data scenario with the Assumptions of the previous section. Let <span class="math inline">\(\hat\theta_n= \hat\theta_n(X_1,...,X_n)\)</span> be an unbiased estimator of <span class="math inline">\(\theta\)</span>, i.e.&nbsp;<span class="math inline">\(\mathbb E[\hat \theta_n] =\theta\)</span>, such that <span class="math inline">\(Var[\hat \theta_n]&lt;\infty\)</span>. With the notation <span class="math inline">\(U_i=\partial_{\theta}\log(f(X_i:\theta))\)</span>, we find by the i.i.d. assumption on the data, <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FisherInfoDeriv</span></a> and <a href="#eq-Mean">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Mean</span></a> that <span class="math display">\[
+<p>Assume we are in the one-parameter scalar-data scenario with the Assumptions of the previous section. Let <span class="math inline">\(\hat\theta_n= \hat\theta_n(X_1,...,X_n)\)</span> be an unbiased estimator of <span class="math inline">\(\theta\)</span>, i.e.&nbsp;<span class="math inline">\(\mathbb E[\hat \theta_n] =\theta\)</span>, such that <span class="math inline">\(Var[\hat \theta_n]&lt;\infty\)</span>. With the notation <span class="math inline">\(U_i=\partial_{\theta}\log(f(X_i:\theta))\)</span>, we find by the i.i.d. assumption on the data, <a href="#eq-FisherInfoDeriv">Equation&nbsp;<span>1.14</span></a> and <a href="#eq-Mean">Equation&nbsp;<span>1.11</span></a> that <span class="math display">\[
 \begin{aligned}
 \mathbb E\left[\left(\sum_{i=1}^n U_i\right)^2\right]=Var\left[\sum_{i=1}^n U_i\right]=\sum_{i=1}^n Var\left[ U_i\right] = &amp; \sum_{i=1}^n \mathbb E\left[\left(\frac{\partial_{\theta}f(X_i:\theta)}{f(X_i:\theta)}\right)^2\right]\\
 = &amp; n \mathcal I(\theta).
-\end{aligned}\]</span> Then, <a href="#eq-Mean">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Mean</span></a> and the Cauchy-Schwartz inequality yield <span class="math display">\[
+\end{aligned}\]</span> Then, <a href="#eq-Mean">Equation&nbsp;<span>1.11</span></a> and the Cauchy-Schwartz inequality yield <span class="math display">\[
 \begin{aligned}
 \sum_{i=1}^n\mathbb E[U_i\hat \theta_n]= &amp; \sum_{i=1}^n\left(\mathbb E[U_i\hat \theta_n]-\underset{= 0}{\mathbb E[U_i]\theta}  \right)\\
 =&amp; \mathbb E\left[\left(\sum_{i=1}^n U_i\right)\left(\hat \theta_n-\theta \right)\right]\\
@@ -1519,12 +1536,12 @@ Calyampudi Radhakrishna Rao
 = &amp; \partial_{\theta}\mathbb E[\hat\theta_n]=\partial_{\theta}\theta=1
 \end{aligned}
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Important
 </div>
 </div>
@@ -1542,12 +1559,12 @@ V(\theta)\geq \frac{1}{\mathcal I(\theta)}.
 \]</span></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Important
 </div>
 </div>
@@ -1580,12 +1597,12 @@ Important
 <p>Important property of one-to-one functions: A one-to-one function <span class="math inline">\(\eta = \tau(\theta)\)</span> possesses a well-defined <strong>inverse</strong> <span class="math display">\[
 \theta=\tau^{-1}(\eta).
 \]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Example:
 </div>
 </div>
@@ -1627,12 +1644,12 @@ $$
 \sqrt{n}\left(\tau(\hat\theta_n) - \tau(\theta_0)\right)\sim\mathcal{N}\left(0,\left(\mathcal{I}(\theta_0)\right)^{-1}\right) \nabla\ell_n(\theta^T)
 $$ 
 -->
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 More general (not one-to-one) functions
 </div>
 </div>
@@ -1647,7 +1664,7 @@ More general (not one-to-one) functions
 <h2 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h2>
 <section id="exercise-1." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="exercise-1.">Exercise 1.</h4>
-<p>Program the Newton-Raphson algorithm for a numerical computation of the ML estimate <span class="math inline">\(\hat\theta\)</span> of the parameter <span class="math inline">\(\theta=P(\text{Coin}=\texttt{HEAD})\)</span> in our coin toss example of this chapter. Replicate the results shown in <a href="#tbl-NR">Table&nbsp;<span class="quarto-unresolved-ref">tbl-NR</span></a>.</p>
+<p>Program the Newton-Raphson algorithm for a numerical computation of the ML estimate <span class="math inline">\(\hat\theta\)</span> of the parameter <span class="math inline">\(\theta=P(\text{Coin}=\texttt{HEAD})\)</span> in our coin toss example of this chapter.</p>
 </section>
 <section id="exercise-2." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="exercise-2.">Exercise 2.</h4>
@@ -1690,13 +1707,13 @@ f(x;\lambda_0) = \frac{\lambda_0^x \exp(-\lambda_0)}{x!}.
 <h4 class="unnumbered anchored" data-anchor-id="exercise-5.">Exercise 5.</h4>
 <p>Show that the Newton-Raphson algorithm converges; i.e.&nbsp;that <span class="math display">\[
 |e_{(m)}|\to 0 \quad\text{as}\quad m \to\infty.
-\]</span> under the setup outlined in <a href="#sec-ConvNR"><span class="quarto-unresolved-ref">sec-ConvNR</span></a>.</p>
+\]</span></p>
 <p><strong>Tip:</strong> Use the first-order Taylor expansion of <span class="math inline">\(\ell'(\theta_{root})\)</span> around <span class="math inline">\(\theta_{(m)}\)</span> with <strong>explicit remainder</strong> term <span class="math inline">\(R\)</span> given by <span class="math display">\[\begin{align*}
 \overset{\theta_{(m)}+(\theta_{root}-\theta_{(m)})}{\ell'\big(\;\overbrace{\theta_{root}}\;\big)}
 &amp; = \ell'(\theta_{(m)}) + \ell''(\theta_{(m)})(\theta_{root}-\theta_{(m)}) + R,
 \end{align*}\]</span> where <span class="math display">\[
 R=\frac{1}{2}\ell'''(\xi_{(m)})(\theta_{root}-\theta_{(m)})^2
-\]</span> for a mean-value <span class="math inline">\(\xi_{(m)}\)</span> between <span class="math inline">\(\theta_{(m)}\)</span> and <span class="math inline">\(\theta_{root}\)</span>. This is called the Lagrange form of the Taylor-Series remainder term and follows from the Mean-Value <a href="#thm-MVT">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-MVT</span></a>.</p>
+\]</span> for a mean-value <span class="math inline">\(\xi_{(m)}\)</span> between <span class="math inline">\(\theta_{(m)}\)</span> and <span class="math inline">\(\theta_{root}\)</span>. This is called the Lagrange form of the Taylor-Series remainder term and follows from the Mean-Value <a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>.</p>
 </section>
 <section id="exercise-6." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="exercise-6.">Exercise 6.</h4>
@@ -1725,8 +1742,8 @@ R=\frac{1}{2}\ell'''(\xi_{(m)})(\theta_{root}-\theta_{(m)})^2
 <h2 class="unnumbered anchored" data-anchor-id="solutions">Solutions</h2>
 <section id="solutions-of-exercise-1." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="solutions-of-exercise-1.">Solutions of Exercise 1.</h4>
-<p>Below I use the same data (one H, four T) that was used to produce the results in <a href="#tbl-NR">Table&nbsp;<span class="quarto-unresolved-ref">tbl-NR</span></a> of our script. However, you can produce new data by setting another seed-value different to <code>set.seed(1)</code>.</p>
-<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/unnamed-chunk-1_59aaf331b74e3ff93893a65d91dd13fa">
+<p>You can produce new data by setting another seed-value different to <code>set.seed(1)</code>.</p>
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/unnamed-chunk-1_01b25e1ec601f2d3f7f1b2b484582d2f">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>theta_true <span class="ot">&lt;-</span> <span class="fl">0.2</span>    <span class="co"># unknown true theta value</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>n          <span class="ot">&lt;-</span>  <span class="dv">5</span>     <span class="co"># sample size</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1893,8 +1910,8 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 </section>
 <section id="b-maximum-likelihood-estimator-of-theta_0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="b-maximum-likelihood-estimator-of-theta_0">(b) Maximum Likelihood Estimator of <span class="math inline">\(\theta_0\)</span></h4>
-<p><span class="math inline">\(\mathcal{L}_n(\theta)\)</span> is strictly decreasing over the interval <span class="math inline">\([X_{(n)},\infty);\)</span> see <a href="#fig-MLMaxestim">Figure&nbsp;<span class="quarto-unresolved-ref">fig-MLMaxestim</span></a>.</p>
-<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-MLMaxestim_c7a8b2618fa9124cc45e4f7bb91b9068">
+<p><span class="math inline">\(\mathcal{L}_n(\theta)\)</span> is strictly decreasing over the interval <span class="math inline">\([X_{(n)},\infty);\)</span> see <a href="#fig-MLMaxestim">Figure&nbsp;<span>1.2</span></a>.</p>
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-MLMaxestim_869bdd1be55e92853d476068e50bbeec">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n          <span class="ot">&lt;-</span> <span class="dv">20</span>   <span class="co"># sample size</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>X_max      <span class="ot">&lt;-</span> <span class="fl">0.25</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1922,7 +1939,7 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 <div id="fig-MLMaxestim" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-MLMaxestim-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.2: Graph of the likelihood function <span class="math inline">\(\mathcal{L}_n(\theta)\)</span> given in <a href="#eq-MLMaxestim">Equation&nbsp;<span class="quarto-unresolved-ref">eq-MLMaxestim</span></a>.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: Graph of the likelihood function <span class="math inline">\(\mathcal{L}_n(\theta)\)</span> given in <a href="#eq-MLMaxestim">Equation&nbsp;<span>1.16</span></a>.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1974,12 +1991,12 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 \begin{align}
 P(X=4) = \frac{\lambda_0^4 \exp(-\lambda_0)}{4!}.
 \end{align}
-\]</span> Thus <span class="math inline">\(P(X=4)\)</span> is a function of <span class="math inline">\(\lambda\)</span> (see <a href="#fig-ExPoisson">Figure&nbsp;<span class="quarto-unresolved-ref">fig-ExPoisson</span></a>) <span class="math display">\[
+\]</span> Thus <span class="math inline">\(P(X=4)\)</span> is a function of <span class="math inline">\(\lambda\)</span> (see <a href="#fig-ExPoisson">Figure&nbsp;<span>1.3</span></a>) <span class="math display">\[
 \begin{align}
 P(X=4)\equiv P_\lambda(X=4) = \frac{\lambda^4 \exp(-\lambda)}{4!} = \tau(\lambda)
 \end{align}
 \]</span></p>
-<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-ExPoisson_e3dc5b8047a1ea99fbecb6038554b167">
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-ExPoisson_8af3ce091db3f26b403739447f3768b7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lambda_vec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> .<span class="dv">0001</span>, <span class="at">to =</span> <span class="dv">15</span>, <span class="at">len =</span> <span class="dv">100</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>g_vec      <span class="ot">&lt;-</span> (lambda_vec<span class="sc">^</span><span class="dv">4</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">*</span>lambda_vec))<span class="sc">/</span>( <span class="fu">factorial</span>(<span class="dv">4</span>) )</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1991,7 +2008,7 @@ P(X=4)\equiv P_\lambda(X=4) = \frac{\lambda^4 \exp(-\lambda)}{4!} = \tau(\lambda
 <div id="fig-ExPoisson" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-ExPoisson-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.3: For <span class="math inline">\(0\leq \lambda \leq 4\)</span> the function <span class="math inline">\(\tau(\lambda)\)</span> is a one-to-one function.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: For <span class="math inline">\(0\leq \lambda \leq 4\)</span> the function <span class="math inline">\(\tau(\lambda)\)</span> is a one-to-one function.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -2006,7 +2023,6 @@ P(X=4)\equiv P_\lambda(X=4) = \frac{\lambda^4 \exp(-\lambda)}{4!} = \tau(\lambda
 </section>
 <section id="solutions-of-exercise-5." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="solutions-of-exercise-5.">Solutions of Exercise 5.</h4>
-<p>Setup of <a href="#sec-ConvNR"><span class="quarto-unresolved-ref">sec-ConvNR</span></a>:</p>
 <p>Let <span class="math inline">\(\theta_{root}\)</span> denote the root of <span class="math inline">\(\ell_n';\)</span> i.e.&nbsp; <span class="math display">\[
   \ell_n'(\theta_{root})=0.
 \]</span> Let <span class="math display">\[\begin{align*}
@@ -2089,7 +2105,7 @@ e_{(m+1)}
   &amp;\phantom{|e_{(2)}|\leq \overbrace{M\;|e_{(1)}|}^{&lt;1}\,|e_{(1)}|}\vdots\\[2ex]
   \Rightarrow\quad
   &amp; |e_{(m+1)}|&lt; \,|e_{(m)}| \quad\text{for all }m=0,1,2\dots
-  \end{align*}\]</span> which shows the convergence of the Newton Raphson algorithm. (The inequality in <a href="#eq-NRIneq">Equation&nbsp;<span class="quarto-unresolved-ref">eq-NRIneq</span></a> implies that the convergence is even quadratic; i.e.&nbsp;very fast.)</p>
+  \end{align*}\]</span> which shows the convergence of the Newton Raphson algorithm. (The inequality in <a href="#eq-NRIneq">Equation&nbsp;<span>1.17</span></a> implies that the convergence is even quadratic; i.e.&nbsp;very fast.)</p>
 <p><strong>Special Case</strong> <span class="math inline">\(M=0\)</span>: <br> For <span class="math display">\[
     \sup_{\theta\in I}|\ell'''(\theta)|=0
 \]</span> we have that <span class="math inline">\(M=0\)</span> which implies that we find the root, <span class="math inline">\(\theta_{root},\)</span> already in the first <span class="math inline">\((m=1)\)</span> update step, since<br>
@@ -2258,7 +2274,7 @@ f_{X_{(n)}}(x)
 <section id="solutions-of-exercise-7." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="solutions-of-exercise-7.">Solutions of Exercise 7.</h4>
 <p>The code below contains the Monte-Carlo study outlined in Exercise 7.</p>
-<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/estimator-simulation_b7de7b963c8bf01d1b0d33297613370f">
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/estimator-simulation_5d2dc128a7629c10ca494f8e8bb71213">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"scales"</span>)   <span class="co"># for transparent colors</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">129</span>)</span>
@@ -2312,7 +2328,7 @@ f_{X_{(n)}}(x)
 10        10   0.0726     0.1107    0.1770</code></pre>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch1_MaximumLikelihood_cache/html/fig-estimator-convergence_ff273bfa305e010b0f0e3cbf937e19a1">
+<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch1_MaximumLikelihood_cache/html/fig-estimator-convergence_6a9cf04d7dba3ef2625b817a09457754">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Animated convergence plot</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
@@ -2365,12 +2381,12 @@ f_{X_{(n)}}(x)
 <div id="fig-estimator-convergence" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-estimator-convergence-.gif" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.4: Animated convergence of the density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.4: Animated convergence of the density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="Ch1_MaximumLikelihood_cache/html/fig-estimator-density_29415005752e43fb0d90cb205f51eeef">
+<div class="cell" data-layout-align="center" data-hash="Ch1_MaximumLikelihood_cache/html/fig-estimator-density_ef70e0cc9866a043ada766ab98be2c7c">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Final density plot</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
@@ -2431,7 +2447,7 @@ f_{X_{(n)}}(x)
 <div id="fig-estimator-density" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-estimator-density-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.5: Density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.5: Density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -2713,17 +2729,17 @@ f_{X_{(n)}}(x)
 <!-- %\end{frame} -->
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-CasellaBerger_StatInf_2001" class="csl-entry" role="listitem">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-CasellaBerger_StatInf_2001" class="csl-entry" role="doc-biblioentry">
 Casella, George, and Roger Berger. 2001. <em>Statistical Inference</em>. 2nd ed. Duxbury.
 </div>
-<div id="ref-Kirkpatrick_2017" class="csl-entry" role="listitem">
+<div id="ref-Kirkpatrick_2017" class="csl-entry" role="doc-biblioentry">
 Kirkpatrick, James, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei A Rusu, Kieran Milan, et al. 2017. <span>“Overcoming Catastrophic Forgetting in Neural Networks.”</span> <em>Proceedings of the National Academy of Sciences</em> 114 (13): 3521–26.
 </div>
-<div id="ref-Martens_2020" class="csl-entry" role="listitem">
+<div id="ref-Martens_2020" class="csl-entry" role="doc-biblioentry">
 Martens, James. 2020. <span>“New Insights and Perspectives on the Natural Gradient Method.”</span> <em>The Journal of Machine Learning Research</em> 21 (1): 5776–5851.
 </div>
-<div id="ref-White1982" class="csl-entry" role="listitem">
+<div id="ref-White1982" class="csl-entry" role="doc-biblioentry">
 White, Halbert. 1982. <span>“Maximum Likelihood Estimation of Misspecified Models.”</span> <em>Econometrica</em>, 1–25.
 </div>
 </div>
@@ -2757,23 +2773,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -2838,92 +2840,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

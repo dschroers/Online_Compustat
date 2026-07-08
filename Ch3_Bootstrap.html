@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,10 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,19 +46,48 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging-indent div.csl-entry {
+.hanging div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -73,7 +101,8 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}</style>
+}
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -110,12 +139,10 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -124,16 +151,11 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ch3_Bootstrap.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -141,7 +163,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./images/Uni_Bonn_Logo.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -150,70 +172,65 @@ div.csl-indent {
       <a href="./">Computational Statistics (M.Sc.)</a> 
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organization of the Course</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Organization of the Course</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch1_MaximumLikelihood.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></span></a>
+  <a href="./Ch1_MaximumLikelihood.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maximum Likelihood</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch3_Bootstrap.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></span></a>
+  <a href="./Ch3_Bootstrap.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ch5_NPRegression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nonparametric Regression</span></span></a>
+  <a href="./Ch5_NPRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nonparametric Regression</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-Illustration" id="toc-sec-Illustration" class="nav-link active" data-scroll-target="#sec-Illustration"><span class="header-section-number">2.1</span> Illustration: When are you happy about the Bootstrap?</a></li>
-  <li><a href="#recap-the-empirical-distribution-function" id="toc-recap-the-empirical-distribution-function" class="nav-link" data-scroll-target="#recap-the-empirical-distribution-function"><span class="header-section-number">2.2</span> Recap: The Empirical Distribution Function</a>
+  <li><a href="#sec-Illustration" id="toc-sec-Illustration" class="nav-link active" data-scroll-target="#sec-Illustration"><span class="toc-section-number">2.1</span>  Illustration: When are you happy about the Bootstrap?</a></li>
+  <li><a href="#recap-the-empirical-distribution-function" id="toc-recap-the-empirical-distribution-function" class="nav-link" data-scroll-target="#recap-the-empirical-distribution-function"><span class="toc-section-number">2.2</span>  Recap: The Empirical Distribution Function</a>
   <ul class="collapse">
-  <li><a href="#idea-of-the-bootstrap" id="toc-idea-of-the-bootstrap" class="nav-link" data-scroll-target="#idea-of-the-bootstrap"><span class="header-section-number">2.2.1</span> Idea of the Bootstrap</a></li>
+  <li><a href="#idea-of-the-bootstrap" id="toc-idea-of-the-bootstrap" class="nav-link" data-scroll-target="#idea-of-the-bootstrap"><span class="toc-section-number">2.2.1</span>  Idea of the Bootstrap</a></li>
   </ul></li>
-  <li><a href="#sec-BasicBootstrap" id="toc-sec-BasicBootstrap" class="nav-link" data-scroll-target="#sec-BasicBootstrap"><span class="header-section-number">2.3</span> The Basic Bootstrap Method</a>
+  <li><a href="#sec-BasicBootstrap" id="toc-sec-BasicBootstrap" class="nav-link" data-scroll-target="#sec-BasicBootstrap"><span class="toc-section-number">2.3</span>  The Basic Bootstrap Method</a>
   <ul class="collapse">
   <li><a href="#bootstrap-consistency" id="toc-bootstrap-consistency" class="nav-link" data-scroll-target="#bootstrap-consistency">Bootstrap Consistency</a></li>
-  <li><a href="#example-inference-about-the-population-mean" id="toc-example-inference-about-the-population-mean" class="nav-link" data-scroll-target="#example-inference-about-the-population-mean"><span class="header-section-number">2.3.1</span> Example: Inference About the Population Mean</a></li>
-  <li><a href="#the-basic-bootstrap-confidence-interval" id="toc-the-basic-bootstrap-confidence-interval" class="nav-link" data-scroll-target="#the-basic-bootstrap-confidence-interval"><span class="header-section-number">2.3.2</span> The Basic Bootstrap Confidence Interval</a></li>
+  <li><a href="#example-inference-about-the-population-mean" id="toc-example-inference-about-the-population-mean" class="nav-link" data-scroll-target="#example-inference-about-the-population-mean"><span class="toc-section-number">2.3.1</span>  Example: Inference About the Population Mean</a></li>
+  <li><a href="#the-basic-bootstrap-confidence-interval" id="toc-the-basic-bootstrap-confidence-interval" class="nav-link" data-scroll-target="#the-basic-bootstrap-confidence-interval"><span class="toc-section-number">2.3.2</span>  The Basic Bootstrap Confidence Interval</a></li>
   </ul></li>
-  <li><a href="#sec-BootT" id="toc-sec-BootT" class="nav-link" data-scroll-target="#sec-BootT"><span class="header-section-number">2.4</span> The Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> Method</a>
+  <li><a href="#sec-BootT" id="toc-sec-BootT" class="nav-link" data-scroll-target="#sec-BootT"><span class="toc-section-number">2.4</span>  The Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> Method</a>
   <ul class="collapse">
-  <li><a href="#the-bootstrap-boldsymbolt-confidence-interval" id="toc-the-bootstrap-boldsymbolt-confidence-interval" class="nav-link" data-scroll-target="#the-bootstrap-boldsymbolt-confidence-interval"><span class="header-section-number">2.4.1</span> The Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> Confidence Interval</a></li>
-  <li><a href="#accuracy-of-the-bootstrap-boldsymbolt-method" id="toc-accuracy-of-the-bootstrap-boldsymbolt-method" class="nav-link" data-scroll-target="#accuracy-of-the-bootstrap-boldsymbolt-method"><span class="header-section-number">2.4.2</span> Accuracy of the Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> method</a></li>
+  <li><a href="#the-bootstrap-boldsymbolt-confidence-interval" id="toc-the-bootstrap-boldsymbolt-confidence-interval" class="nav-link" data-scroll-target="#the-bootstrap-boldsymbolt-confidence-interval"><span class="toc-section-number">2.4.1</span>  The Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> Confidence Interval</a></li>
+  <li><a href="#accuracy-of-the-bootstrap-boldsymbolt-method" id="toc-accuracy-of-the-bootstrap-boldsymbolt-method" class="nav-link" data-scroll-target="#accuracy-of-the-bootstrap-boldsymbolt-method"><span class="toc-section-number">2.4.2</span>  Accuracy of the Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> method</a></li>
   </ul></li>
-  <li><a href="#bootstrap-and-linear-regression-analysis" id="toc-bootstrap-and-linear-regression-analysis" class="nav-link" data-scroll-target="#bootstrap-and-linear-regression-analysis"><span class="header-section-number">2.5</span> Bootstrap and Linear Regression Analysis</a>
+  <li><a href="#bootstrap-and-linear-regression-analysis" id="toc-bootstrap-and-linear-regression-analysis" class="nav-link" data-scroll-target="#bootstrap-and-linear-regression-analysis"><span class="toc-section-number">2.5</span>  Bootstrap and Linear Regression Analysis</a>
   <ul class="collapse">
-  <li><a href="#sec-bootPairs" id="toc-sec-bootPairs" class="nav-link" data-scroll-target="#sec-bootPairs"><span class="header-section-number">2.5.1</span> Bootstrap under Random Design: Bootstrapping Pairs</a></li>
-  <li><a href="#sec-bootResid" id="toc-sec-bootResid" class="nav-link" data-scroll-target="#sec-bootResid"><span class="header-section-number">2.5.2</span> Bootstrap under Fixed Design: The Residual Bootstrap</a></li>
-  <li><a href="#sec-bootWild" id="toc-sec-bootWild" class="nav-link" data-scroll-target="#sec-bootWild"><span class="header-section-number">2.5.3</span> Bootstrap under Fixed Design: The Wild Bootstrap</a></li>
-  <li><a href="#bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0" id="toc-bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0" class="nav-link" data-scroll-target="#bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0"><span class="header-section-number">2.5.4</span> Bootstrap Confidence Intervals for the <span class="math inline">\(\boldsymbol{j}\)</span>th Component of the Regression Coefficient <span class="math inline">\(\boldsymbol{\beta_{0}}\)</span></a></li>
-  <li><a href="#statistical-hypothesis-testing" id="toc-statistical-hypothesis-testing" class="nav-link" data-scroll-target="#statistical-hypothesis-testing"><span class="header-section-number">2.5.5</span> Statistical Hypothesis Testing</a></li>
+  <li><a href="#sec-bootPairs" id="toc-sec-bootPairs" class="nav-link" data-scroll-target="#sec-bootPairs"><span class="toc-section-number">2.5.1</span>  Bootstrap under Random Design: Bootstrapping Pairs</a></li>
+  <li><a href="#sec-bootResid" id="toc-sec-bootResid" class="nav-link" data-scroll-target="#sec-bootResid"><span class="toc-section-number">2.5.2</span>  Bootstrap under Fixed Design: The Residual Bootstrap</a></li>
+  <li><a href="#sec-bootWild" id="toc-sec-bootWild" class="nav-link" data-scroll-target="#sec-bootWild"><span class="toc-section-number">2.5.3</span>  Bootstrap under Fixed Design: The Wild Bootstrap</a></li>
+  <li><a href="#bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0" id="toc-bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0" class="nav-link" data-scroll-target="#bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0"><span class="toc-section-number">2.5.4</span>  Bootstrap Confidence Intervals for the <span class="math inline">\(\boldsymbol{j}\)</span>th Component of the Regression Coefficient <span class="math inline">\(\boldsymbol{\beta_{0}}\)</span></a></li>
+  <li><a href="#statistical-hypothesis-testing" id="toc-statistical-hypothesis-testing" class="nav-link" data-scroll-target="#statistical-hypothesis-testing"><span class="toc-section-number">2.5.5</span>  Statistical Hypothesis Testing</a></li>
   </ul></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a></li>
@@ -226,7 +243,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Bootstrap</span></h1>
 </div>
 
 
@@ -257,12 +274,12 @@ BOOTSTRAP METHODS IN ECONOMETRICS
 <li><span class="citation" data-cites="Horowitz_2001">Horowitz (<a href="#ref-Horowitz_2001" role="doc-biblioref">2001</a>)</span>: The Bootstrap. In: Handbook of Econometrics</li>
 <li><span class="citation" data-cites="Mammen_1992_Book">Mammen (<a href="#ref-Mammen_1992_Book" role="doc-biblioref">1992</a>)</span>: When Does Bootstrap Work: Asymptotic Results and Simulations</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Bradley Efron
 </div>
 </div>
@@ -299,31 +316,31 @@ Var\left(\alpha X + (1-\alpha)Y\right).
 \]</span></p>
 <p>For instance, to construct a confidence interval we need to know the standard error of the estimator <span class="math inline">\(\hat\alpha\)</span>, <span class="math display">\[
 \sqrt{Var(\hat\alpha_n)} = \operatorname{SE}(\hat\alpha_n)=?
-\]</span> However, deriving an explicit expression for <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> is difficult here due to the definition of <span class="math inline">\(\hat\alpha_n\)</span> in <a href="#eq-alphahat">Equation&nbsp;<span class="quarto-unresolved-ref">eq-alphahat</span></a> which contains variance estimators also in the denominator.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+\]</span> However, deriving an explicit expression for <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> is difficult here due to the definition of <span class="math inline">\(\hat\alpha_n\)</span> in <a href="#eq-alphahat">Equation&nbsp;<span>2.2</span></a> which contains variance estimators also in the denominator.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Conclusion: Why Bootstrap?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In cases as described above, we are happy to use the <strong>Basic Bootstrap Method</strong> (<a href="#sec-BasicBootstrap"><span class="quarto-unresolved-ref">sec-BasicBootstrap</span></a>) which allows estimating <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> by resampling from the data observed; i.e.&nbsp;without the need of an explicit formula of a consistent estimator of <span class="math inline">\(\operatorname{SE}(\hat\alpha).\)</span> The <strong>Basic Bootstrap Method</strong> is found to be as accurate as the standard asymptotic normality results which, however, require an explicit formula of an estimator of <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> to become useful.</p>
-<p>If we have a consistent estimator for the <span class="math inline">\(\operatorname{SE}(\hat\alpha),\)</span> then we can make use of this estimator by applying the <strong>Bootstrap-<span class="math inline">\(\mathbf{t}\)</span> Method</strong> (<a href="#sec-BootT"><span class="quarto-unresolved-ref">sec-BootT</span></a>). The Bootstrap-<span class="math inline">\(t\)</span> Method is found to be <strong>more accurate</strong> than the standard asymptotic normality results.</p>
+<p>In cases as described above, we are happy to use the <strong>Basic Bootstrap Method</strong> (<a href="#sec-BasicBootstrap"><span>Section&nbsp;2.3</span></a>) which allows estimating <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> by resampling from the data observed; i.e.&nbsp;without the need of an explicit formula of a consistent estimator of <span class="math inline">\(\operatorname{SE}(\hat\alpha).\)</span> The <strong>Basic Bootstrap Method</strong> is found to be as accurate as the standard asymptotic normality results which, however, require an explicit formula of an estimator of <span class="math inline">\(\operatorname{SE}(\hat\alpha)\)</span> to become useful.</p>
+<p>If we have a consistent estimator for the <span class="math inline">\(\operatorname{SE}(\hat\alpha),\)</span> then we can make use of this estimator by applying the <strong>Bootstrap-<span class="math inline">\(\mathbf{t}\)</span> Method</strong> (<a href="#sec-BootT"><span>Section&nbsp;2.4</span></a>). The Bootstrap-<span class="math inline">\(t\)</span> Method is found to be <strong>more accurate</strong> than the standard asymptotic normality results.</p>
 </div>
 </div>
 </section>
 <section id="recap-the-empirical-distribution-function" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="recap-the-empirical-distribution-function"><span class="header-section-number">2.2</span> Recap: The Empirical Distribution Function</h2>
 <p>The distribution of a real-valued random variable <span class="math inline">\(X\)</span> can be completely described by its (cumulative) distribution function</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -344,12 +361,12 @@ X_1,\dots,X_n\overset{\text{i.i.d.}}\sim X
 1_{(\text{TRUE})} &amp;=1\quad\text{and}\quad 1_{(\text{FALSE})}=0.
 \end{align*}
 \]</span></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -374,7 +391,7 @@ F_n(x)=\left\{
 \]</span> where <span class="math display">\[
 X_{(1)}\leq X_{(2)}\leq \dots \leq X_{(n)}
 \]</span> denotes the <strong>order-statistic</strong>.</p>
-<p><span class="math inline">\(F_n\)</span> is itself a <strong>distribution function according to <a href="#def-cdf">Definition&nbsp;<span class="quarto-unresolved-ref">def-cdf</span></a></strong>; namely, the distribution function of the <strong>discrete random variable</strong> <span class="math inline">\(X^*,\)</span> where</p>
+<p><span class="math inline">\(F_n\)</span> is itself a <strong>distribution function according to <a href="#def-cdf">Definition&nbsp;<span>2.6</span></a></strong>; namely, the distribution function of the <strong>discrete random variable</strong> <span class="math inline">\(X^*,\)</span> where</p>
 <p><span class="math display">\[
 X^*\in\{X_1,\dots,X_n\}
 \]</span> and <span class="math display">\[
@@ -386,12 +403,12 @@ F_n(x)
 &amp;= P\left(X^*\leq x\right).
 \end{align*}
 \]</span></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -442,7 +459,7 @@ F_n(x)
 </tbody>
 </table>
 <p>Corresponding empirical distribution function using <code>R</code>:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/ecdfPlot_93f9239fda49e47f1862b4eb6bd0cc52">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/ecdfPlot_d6ff705e1cbbf5c40693d404dac51819">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>observedSample <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">5.20</span>, <span class="fl">4.80</span>, <span class="fl">5.30</span>, <span class="fl">4.60</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">6.10</span>, <span class="fl">5.40</span>, <span class="fl">5.80</span>, <span class="fl">5.50</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -454,7 +471,7 @@ F_n(x)
 </div>
 </div>
 <p>The <code>R</code> function <code>ecdf()</code> returns a function that gives the values of <span class="math inline">\(F_n(x):\)</span></p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/ecdfEval_89ebf5a48d2cc35bb6e9d5cad5f1efc7">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/ecdfEval_8e55e74c83d183e723b8d6b98febd757">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Note: ecdf() returns a function that can be evaluated! </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">myecdf_fun</span>(<span class="fl">5.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -462,7 +479,7 @@ F_n(x)
 </div>
 </div>
 <p>Sampling (iid) from the empirical distribution function <span class="math inline">\(F_n\)</span> is equivalent to resampling (with replacement and with equal probabilities) data points from the observed data <code>observedSample</code>. The following code generates three “bootstrap” samples from <span class="math inline">\(F_n\colon\)</span></p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-1_fca6def83dbb60d89dc283c1393b7f17">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-1_db0134b03860ec506bc0b943977ab7aa">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>n         <span class="ot">&lt;-</span> <span class="fu">length</span>(observedSample)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>resample1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(observedSample, </span>
@@ -470,21 +487,21 @@ F_n(x)
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>resample1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5.8 5.2 4.8 5.2 4.8 4.6 5.2 5.5</code></pre>
+<pre><code>[1] 5.5 4.6 4.6 5.3 4.6 4.8 6.1 6.1</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>resample2 <span class="ot">&lt;-</span> <span class="fu">sample</span>(observedSample, </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size    =</span> n, </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>resample2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6.1 4.6 4.8 5.3 5.4 5.8 5.3 5.2</code></pre>
+<pre><code>[1] 5.5 5.8 4.6 5.2 5.3 5.8 5.3 5.5</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>resample3 <span class="ot">&lt;-</span> <span class="fu">sample</span>(observedSample, </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">size    =</span> n, </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>resample3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5.8 5.8 4.6 5.4 4.8 4.6 4.6 4.6</code></pre>
+<pre><code>[1] 5.3 4.8 5.8 5.8 5.5 5.2 5.2 5.2</code></pre>
 </div>
 </div>
 </div>
@@ -502,9 +519,9 @@ nF_n(x)\sim B(n, p=F(x))\quad\text{for each}\quad x\in\mathbb{R}
 <li><span class="math inline">\(p=F(x)\)</span> (“probability of success on a single trial”).</li>
 </ul>
 <blockquote class="blockquote">
-<p><strong>Note:</strong> The result in <a href="#eq-ecdfDistr">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ecdfDistr</span></a> holds for any <span class="math inline">\(F.\)</span> Therefore, <span class="math inline">\(nF_n,\)</span> and thus also <span class="math inline">\(F_n,\)</span> is called <strong>distribution free</strong></p>
+<p><strong>Note:</strong> The result in <a href="#eq-ecdfDistr">Equation&nbsp;<span>2.3</span></a> holds for any <span class="math inline">\(F.\)</span> Therefore, <span class="math inline">\(nF_n,\)</span> and thus also <span class="math inline">\(F_n,\)</span> is called <strong>distribution free</strong></p>
 </blockquote>
-<p><a href="#eq-ecdfDistr">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ecdfDistr</span></a> implies that <span class="math display">\[
+<p><a href="#eq-ecdfDistr">Equation&nbsp;<span>2.3</span></a> implies that <span class="math display">\[
 \begin{align*}
 \mathbb{E}(nF_n(x))&amp; = np = nF(x)\\[2ex]
 \Rightarrow \quad \mathbb{E}(F_n(x))&amp; = p = F(x)\\[2ex]
@@ -530,13 +547,13 @@ F_n(x) &amp; \to_{m.s.} F(x)\quad\text{as}\quad n\to\infty\\[2ex]
 \end{align*}
 \]</span> pointwise for each <span class="math inline">\(x\in\mathbb{R}.\)</span></p>
 <p>That is, <span class="math inline">\(F_n(x)\)</span> is a <strong>pointwise consistent</strong> estimator of <span class="math inline">\(F(x)\)</span> for each <span class="math inline">\(x\in\mathbb{R}.\)</span></p>
-<p>The Clivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a> states that <span class="math inline">\(F_n\)</span> is even an <strong>uniformly consistent</strong> estimator of <span class="math inline">\(F.\)</span></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<p>The Clivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a> states that <span class="math inline">\(F_n\)</span> is even an <strong>uniformly consistent</strong> estimator of <span class="math inline">\(F.\)</span></p>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -553,7 +570,7 @@ F_n(x) &amp; \to_{m.s.} F(x)\quad\text{as}\quad n\to\infty\\[2ex]
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch3_Bootstrap_cache/html/fig-glivenko-cantelli_9c65ba3ab2e3e9f12374684566838603">
+<div class="cell" data-layout-align="center" data-animation.hook="gifski" data-hash="Ch3_Bootstrap_cache/html/fig-glivenko-cantelli_d21f3ada50613d50a07a1ef882b1b245">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Animated Glivenko-Cantelli plot</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################################</span></span>
@@ -606,7 +623,7 @@ F_n(x) &amp; \to_{m.s.} F(x)\quad\text{as}\quad n\to\infty\\[2ex]
 <div id="fig-glivenko-cantelli" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch3_Bootstrap_files/figure-html/fig-glivenko-cantelli-.gif" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.1: Animated illustration of the Glivenko-Cantelli theorem: the empirical CDF converges uniformly to the true CDF.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.1: Animated illustration of the Glivenko-Cantelli theorem: the empirical CDF converges uniformly to the true CDF.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -629,7 +646,7 @@ $$
 <p>Unfortunately, we don’t know <span class="math inline">\(F,\)</span> thus Monte Carlo inference is infeasible.</p>
 <p><strong>The idea of the bootstrap is to make the infeasible Monte Carlo inference feasible:</strong> <br> Instead of random sampling from <span class="math inline">\(F,\)</span> which is infeasible (as we don’t know <span class="math inline">\(F\)</span>), the bootstrap uses random sampling from the known empirical distribution function <span class="math inline">\(F_n\)</span> to generate arbitrarily many <strong>bootstrap realizations</strong> of the estimator <span class="math inline">\(\hat{\theta}_n\)</span> <span class="math display">\[
 \hat{\theta}^*_{n,1}, \hat{\theta}^*_{n,2}, \dots, \hat{\theta}^*_{n,m}
-\]</span> with <span class="math inline">\(m\to\infty\)</span> and do inference about <span class="math inline">\(\theta_0\)</span> using these bootstrap realizations.<br> This is justified asymptotically since for large <span class="math inline">\(n,\)</span> the empirical distribution <span class="math inline">\(F_n\)</span> is “close” to the unknown distribution <span class="math inline">\(F\)</span> (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a>). That is, for <span class="math inline">\(n\rightarrow\infty\)</span> the relative frequency of observations <span class="math inline">\(X_i\)</span> in <span class="math inline">\([a,b]\)</span> converges to <span class="math inline">\(P(X\in [a,b])\)</span><br>
+\]</span> with <span class="math inline">\(m\to\infty\)</span> and do inference about <span class="math inline">\(\theta_0\)</span> using these bootstrap realizations.<br> This is justified asymptotically since for large <span class="math inline">\(n,\)</span> the empirical distribution <span class="math inline">\(F_n\)</span> is “close” to the unknown distribution <span class="math inline">\(F\)</span> (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a>). That is, for <span class="math inline">\(n\rightarrow\infty\)</span> the relative frequency of observations <span class="math inline">\(X_i\)</span> in <span class="math inline">\([a,b]\)</span> converges to <span class="math inline">\(P(X\in [a,b])\)</span><br>
 <span class="math display">\[
   \begin{align*}
   \underbrace{\frac{1}{n}\sum_{i=1}^n1_{(X_i\in[a,b])}}_{=F_n(b)-F_n(a)}&amp;\to_p \underbrace{P(X\in [a,b])}_{=F(b)-F(a)}
@@ -664,13 +681,13 @@ $$
 H_{n}(x)=P\left(\sqrt{n}\left(\hat\theta_n-\theta_0\right)\leq x\right)\quad\text{as}\quad n\to\infty.
 \]</span></p>
 <p>We could use asymptotic statistics to derive this limit. For instance, using the Lindeberg-Lévy CLT, we may be able to show that the limit of <span class="math inline">\(H_{n}(x)\)</span> is the distribution function of the normal distribution with mean zero and asymptotic variance <span class="math inline">\(\lim_{n\to\infty}n\cdot Var\big(\hat\theta_n\big).\)</span></p>
-<p>However, deriving a useful, <em>explicit</em> expression of the asymptotic variance <span class="math inline">\(\lim_{n\to\infty}n\cdot Var\big(\hat\theta_n\big)\)</span> can be <em>very</em> hard (see <a href="#sec-Illustration"><span class="quarto-unresolved-ref">sec-Illustration</span></a>). Then, one is happy to use the bootstrap instead of doing painful math. Moreover, specific versions of the Bootstrap (<a href="#sec-BootT"><span class="quarto-unresolved-ref">sec-BootT</span></a>) can be even more accurate than an asymptotic normality result.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>However, deriving a useful, <em>explicit</em> expression of the asymptotic variance <span class="math inline">\(\lim_{n\to\infty}n\cdot Var\big(\hat\theta_n\big)\)</span> can be <em>very</em> hard (see <a href="#sec-Illustration"><span>Section&nbsp;2.1</span></a>). Then, one is happy to use the bootstrap instead of doing painful math. Moreover, specific versions of the Bootstrap (<a href="#sec-BootT"><span>Section&nbsp;2.4</span></a>) can be even more accurate than an asymptotic normality result.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 The Core Part of the Bootstrap Algorithm
 </div>
 </div>
@@ -688,7 +705,7 @@ X_1^*,\dots,X_n^*
 </ol>
 </div>
 </div>
-<p>By the Clivenko-Cantelli (<a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a>) the bootstrap estimates <span class="math display">\[
+<p>By the Clivenko-Cantelli (<a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a>) the bootstrap estimates <span class="math display">\[
 \hat\theta_{n,1}^*,\hat\theta_{n,2}^*,\dots,\hat\theta_{n,m}^*
 \]</span> allow us to approximate the <strong>bootstrap distribution</strong><br>
 <span class="math display">\[
@@ -719,12 +736,12 @@ H_{n}(x)=P\left(\sqrt{n}\left(\hat\theta_n-\theta_0\right)\leq x\right)\quad\tex
 \underbrace{\text{distribution}\left(\sqrt{n}\big(\hat{\theta}_n-\theta_0\big)\right)}_{H_n}.
 \]</span> for large <span class="math inline">\(n.\)</span></p>
 <p>The following definition states this more precisely.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -789,7 +806,7 @@ is not asymptotically normal. (For instance, in case of extreme value problems.)
 <p>For doing <strong>inference (approximate for <span class="math inline">\(\boldsymbol{n\to\infty}\)</span>) about <span class="math inline">\(\boldsymbol{\mu_0}\)</span></strong> we need to know the (asymptotic) distribution of <span class="math display">\[
 \sqrt{n}\left(\bar{X}_n -\mu_0\right)\quad\text{as}\quad n\to\infty.
 \]</span></p>
-<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-note callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -831,7 +848,7 @@ H^{Asymp}_n(x)=\Phi_{\hat\sigma_n}(x)=\Phi\left(\frac{x}{\hat\sigma_n}\right)\qu
 \]</span> for computing, for instance, an estimator for the standard error <span class="math inline">\(\operatorname{SE}\big(\bar{X}_n\big),\)</span> <span id="eq-SEAsymp"><span class="math display">\[
 \widehat{\operatorname{SE}}^{Asymp}_{n}\big(\bar{X}_n\big)=\sqrt{\frac{\hat{v}^2}{n}}=\sqrt{\frac{\hat\sigma_n^2}{n}}.
 \tag{2.5}\]</span></span> Using <span class="math inline">\(\widehat{\operatorname{SE}}^{Asymp}_{n}\big(\bar{X}_n\big),\)</span> we can compute confidence intervals and statistical tests in the usual way.</p>
-<p><strong>Note:</strong> The estimator of the standard error in <a href="#eq-SEAsymp">Equation&nbsp;<span class="quarto-unresolved-ref">eq-SEAsymp</span></a> requires a formula for the asymptotic variance <span class="math inline">\(v^2=\sigma_0^2\)</span> as derived in <a href="#eq-AsympVarDeriv">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AsympVarDeriv</span></a>. Such derivations can be very challenging (see <a href="#sec-Illustration"><span class="quarto-unresolved-ref">sec-Illustration</span></a>).</p>
+<p><strong>Note:</strong> The estimator of the standard error in <a href="#eq-SEAsymp">Equation&nbsp;<span>2.5</span></a> requires a formula for the asymptotic variance <span class="math inline">\(v^2=\sigma_0^2\)</span> as derived in <a href="#eq-AsympVarDeriv">Equation&nbsp;<span>2.4</span></a>. Such derivations can be very challenging (see <a href="#sec-Illustration"><span>Section&nbsp;2.1</span></a>).</p>
 </div>
 </div>
 </div>
@@ -839,7 +856,7 @@ H^{Asymp}_n(x)=\Phi_{\hat\sigma_n}(x)=\Phi\left(\frac{x}{\hat\sigma_n}\right)\qu
 <p>Let us now check, whether the Bootstrap distribution <span class="math display">\[
 H^{Boot}_{n}(x)=P\left(\left.\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)\leq x\;\right|\;\mathcal{S}_n\right)
 \]</span> is a legit alternative to <span class="math inline">\(H^{Asymp}_n(x).\)</span> I.e. we check whether we can use <span class="math inline">\(H^{Boot}_{n}(x)\)</span> as an alternative for estimating the limit distribution <span class="math inline">\(\Phi_{v}(x)=\Phi_{\sigma_0}(x).\)</span></p>
-<p>Before we answer this question theoretically (see <a href="#sec-Theory1"><span class="quarto-unresolved-ref">sec-Theory1</span></a> and <a href="#sec-Theory2BootstrapConsist"><span class="quarto-unresolved-ref">sec-Theory2BootstrapConsist</span></a>), we check it empirically using an <strong>artifical data example.</strong> This is then, of course, not a generally valid mathematical proof.</p>
+<p>Before we answer this question theoretically (see <a href="#sec-Theory1"><span>Section&nbsp;2.3.1.2</span></a> and <a href="#sec-Theory2BootstrapConsist"><span>Section&nbsp;2.3.1.4</span></a>), we check it empirically using an <strong>artifical data example.</strong> This is then, of course, not a generally valid mathematical proof.</p>
 <section id="sec-PracticeXbar" class="level4" data-number="2.3.1.1">
 <h4 data-number="2.3.1.1" class="anchored" data-anchor-id="sec-PracticeXbar"><span class="header-section-number">2.3.1.1</span> <strong>Practice: Empirical Consideration of the Bootstrap distribution <span class="math inline">\(\boldsymbol{H^{Boot}_{n}}\)</span></strong></h4>
 <p>Let us consider the following (usually unknown) specific setup: <span class="math display">\[
@@ -849,7 +866,7 @@ X_1,\dots,X_n\overset{\text{i.i.d.}}{\sim}X,
 <li><span class="math inline">\(X\sim \chi^2_{\operatorname{df}}\)</span> with <span class="math inline">\(\operatorname{df}=2\)</span></li>
 <li>sample size <span class="math inline">\(n=100\)</span></li>
 </ul>
-<p>This setup implies (see <a href="#exm-AsympNorm">Example&nbsp;<span class="quarto-unresolved-ref">exm-AsympNorm</span></a>) that</p>
+<p>This setup implies (see <a href="#exm-AsympNorm">Example&nbsp;<span>2.2</span></a>) that</p>
 <ul>
 <li>True (usually unknown) mean: <span class="math inline">\(\mu_0=\mathbb{E}(X)=\operatorname{df}=2\)</span></li>
 <li>True (usually unknown) variance: <span class="math inline">\(\sigma_0^2=Var(X)=2\cdot\operatorname{df}=4\)</span></li>
@@ -861,7 +878,7 @@ X_1,\dots,X_n\overset{\text{i.i.d.}}{\sim}X,
 \end{align*}
 \]</span> for all continuity points <span class="math inline">\(x.\)</span></li>
 </ul>
-<p>When doing classic asymptotic inference (see <a href="#exm-AsympNorm">Example&nbsp;<span class="quarto-unresolved-ref">exm-AsympNorm</span></a>), we would use the feasible <span class="math display">\[
+<p>When doing classic asymptotic inference (see <a href="#exm-AsympNorm">Example&nbsp;<span>2.2</span></a>), we would use the feasible <span class="math display">\[
 H^{Asymp}_n(x)=\Phi_{\hat\sigma_n}(x)
 \]</span> to estimate the (usually unknown) asymptotic limit distribution <span class="math inline">\(\Phi_{2}(x).\)</span></p>
 <p>Let us now check (by simulation of artifical data) whether the bootstrap distribution <span class="math display">\[
@@ -869,8 +886,8 @@ H^{Boot}_{n}(x)=P\left(\left.\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)\leq x\;\
 \]</span> can be a legit alternative for estimating the (usually unknown) <span class="math inline">\(\Phi_{2}(x).\)</span></p>
 <p>The following <code>R</code>-code generates artifical data <span class="math display">\[
 \mathcal{S}_n=\{X_1,\dots,X_n\}
-\]</span> by (i.i.d.) sampling <span class="math inline">\(n=100\)</span> data points from a <span class="math inline">\(\chi^2\)</span>-distribution with <span class="math inline">\(\operatorname{df}=2.\)</span> The first six data points are shown in <a href="#tbl-ChiSqSample">Table&nbsp;<span class="quarto-unresolved-ref">tbl-ChiSqSample</span></a>.</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-2_a5f47be4721fb18718ad577d185d5831">
+\]</span> by (i.i.d.) sampling <span class="math inline">\(n=100\)</span> data points from a <span class="math inline">\(\chi^2\)</span>-distribution with <span class="math inline">\(\operatorname{df}=2.\)</span> The first six data points are shown in <a href="#tbl-ChiSqSample">Table&nbsp;<span>2.1</span></a>.</p>
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-2_e157778a4fd2d144c697fafad08ed008">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>observedSample <span class="ot">&lt;-</span> <span class="fu">rchisq</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">df =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -931,7 +948,7 @@ X_1^*,\dots,X_n^*.
 \]</span> The following <code>R</code> code generates realizations of <span class="math display">\[
 \bar{X}^*_{n,1},\dots,\bar{X}^*_{n,m}.
 \]</span> for <span class="math inline">\(m=10000\)</span> Bootstrap replications.</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-3_87f536b1339aa30b2dacd11eb0a484f7">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-3_4859b3ddf0c429949fb9ae2bf48360ec">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of bootstrap replications </span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>m                <span class="ot">&lt;-</span> <span class="dv">10000</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Container to save the bootstrap estimates</span></span>
@@ -948,7 +965,7 @@ X_1^*,\dots,X_n^*.
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Pinting the first three elements of Xbar_boot:</span></span>
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>Xbar_boot[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6649553 2.2564627 1.8510396</code></pre>
+<pre><code>[1] 1.718887 1.837014 2.048491</code></pre>
 </div>
 </div>
 <p>Based on the realizations of <span class="math display">\[
@@ -972,7 +989,7 @@ H^{Boot}_{n,m}(x)\approx \Phi_{2}(x)\quad\text{for all}\quad x,
 <li><span class="math inline">\(H^{Asymp}_{n}(x) = \Phi_{\hat{\sigma}_n}(x)=\Phi\left(\frac{x}{\hat{\sigma}_n}\right)\)</span></li>
 <li><span class="math inline">\(\Phi_{2}(x)=\Phi\left(\frac{x}{2}\right)\)</span></li>
 </ul>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-Compare_7099092499abf4c82033f5e364a20d74">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-Compare_57c71aab479de0c9bdbd99a4cab1ee7b">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>n                <span class="ot">&lt;-</span> <span class="fu">length</span>(observedSample)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Xbar             <span class="ot">&lt;-</span> <span class="fu">mean</span>(observedSample)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1001,12 +1018,12 @@ H^{Boot}_{n,m}(x)\approx \Phi_{2}(x)\quad\text{for all}\quad x,
 <div id="fig-Compare" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch3_Bootstrap_files/figure-html/fig-Compare-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.2: Both <span class="math inline">\(H^{Boot}_{n,m}(x)\)</span> and <span class="math inline">\(H^{Asymp}_{n}(x)\)</span> provide here good approximations to the (usually unknown) asymptotic limit distribution <span class="math inline">\(\Phi_{2}(x).\)</span></figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.2: Both <span class="math inline">\(H^{Boot}_{n,m}(x)\)</span> and <span class="math inline">\(H^{Asymp}_{n}(x)\)</span> provide here good approximations to the (usually unknown) asymptotic limit distribution <span class="math inline">\(\Phi_{2}(x).\)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p><a href="#fig-Compare">Figure&nbsp;<span class="quarto-unresolved-ref">fig-Compare</span></a> shows that both <span class="math display">\[
+<p><a href="#fig-Compare">Figure&nbsp;<span>2.2</span></a> shows that both <span class="math display">\[
 H^{Boot}_{n,m}(x)\quad\text{and}\quad H^{Asymp}_{n}(x)
 \]</span> provide good approximations to the (usually unknown) asymptotic limit distribution <span class="math inline">\(\Phi_{2}(x)\)</span>.</p>
 <p>The bootstrap distribution <span class="math display">\[
@@ -1014,7 +1031,7 @@ H^{Boot}_{n,m}(x)\quad\text{and}\quad H^{Asymp}_{n}(x)
 H^{Boot}_{n,m}(x)&amp;=\frac{1}{m}\sum_{j=1}^m 1_{\left(\sqrt{n}\left(\bar{X}^*_{n,j}-\bar{X}_n\right)\leq x\right)}\\[2ex]
 &amp;\overset{m\to\infty}{=}P\left(\left.\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)\;\right|\;\mathcal{S}_n\right)=H^{Boot}_n(x)
 \end{align*}
-\]</span> can be computed <strong>directly</strong> from <span class="math inline">\(\bar{X}^*_{n,1},\dots,\bar{X}^*_{n,m}.\)</span> There’s no need for deriving a formula <span class="math inline">\(v^2=\sigma_0^2\)</span> for the asymptotic variance as it is necessary for <span class="math inline">\(H^{Asymp}_{n}(x)\)</span> (see <a href="#exm-AsympNorm">Example&nbsp;<span class="quarto-unresolved-ref">exm-AsympNorm</span></a>).</p>
+\]</span> can be computed <strong>directly</strong> from <span class="math inline">\(\bar{X}^*_{n,1},\dots,\bar{X}^*_{n,m}.\)</span> There’s no need for deriving a formula <span class="math inline">\(v^2=\sigma_0^2\)</span> for the asymptotic variance as it is necessary for <span class="math inline">\(H^{Asymp}_{n}(x)\)</span> (see <a href="#exm-AsympNorm">Example&nbsp;<span>2.2</span></a>).</p>
 <p>In fact, using <span class="math display">\[
 H^{Boot}_n(x) = P\left(\left.\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)\;\right|\;\mathcal{S}_n\right),
 \]</span> we can derive an estimator for the asymptotic variance <span class="math display">\[
@@ -1040,9 +1057,9 @@ v^2=\lim_{n\to\infty}Var\big(\sqrt{n}\big(\bar{X}_n-\mu_0\big)\big)
 </blockquote>
 The estimator <span class="math display">\[
 \hat{v}^2_{Boot,n}=n \; \widehat{Var}_m\left(\left.\bar{X}^*_n\;\right|\;\mathcal{S}_n\right)
-\]</span> can be computed <em>directly</em> from <span class="math inline">\(\bar{X}^*_{n,1},\dots,\bar{X}^*_{n,m}.\)</span> There’s no need for deriving a formula <span class="math inline">\(v^2=\sigma_0^2\)</span> for the asymptotic variance as in <a href="#exm-AsympNorm">Example&nbsp;<span class="quarto-unresolved-ref">exm-AsympNorm</span></a>. For our artifical data example, we have that
+\]</span> can be computed <em>directly</em> from <span class="math inline">\(\bar{X}^*_{n,1},\dots,\bar{X}^*_{n,m}.\)</span> There’s no need for deriving a formula <span class="math inline">\(v^2=\sigma_0^2\)</span> for the asymptotic variance as in <a href="#exm-AsympNorm">Example&nbsp;<span>2.2</span></a>. For our artifical data example, we have that
 <center>
-<span class="math inline">\(\hat{v}^2_{Boot,n}=\)</span> <code>n * var(Xbar_boot_vec)</code> <span class="math inline">\(=\)</span> 3.41
+<span class="math inline">\(\hat{v}^2_{Boot,n}=\)</span> <code>n * var(Xbar_boot_vec)</code> <span class="math inline">\(=\)</span> 3.38
 </center>
 <p><br></p>
 <p>This yields an estimate of the standard error <span class="math inline">\(\operatorname{SE}\left(\bar{X}_n\right)\)</span></p>
@@ -1050,12 +1067,12 @@ The estimator <span class="math display">\[
 <span class="math inline">\(\widehat{SE}_{Boot,n}\left(\bar{X}_n\right)=\sqrt{\frac{\hat{v}^2_{Boot,n}}{n}}\;=\)</span> <code>sd(Xbar_boot_vec)</code> <span class="math inline">\(=\)</span> 0.18
 </center>
 <p><br></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Note
 </div>
 </div>
@@ -1086,12 +1103,12 @@ X_1^*,\dots,X_n^*\overset{\text{i.i.d.}}{\sim}X^*\quad\text{with}\quad X^*\sim F
 H^{Boot}_{n}(x)=P\left(\left.\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)\leq x\;\right|\;\mathcal{S}_n\right).
 \]</span></p>
 <p>We begin with focusing on the mean and the variance and check whether for large <span class="math inline">\(n\)</span> (<span class="math inline">\(b\to\infty\)</span>) the mean and the variance of <span class="math inline">\(H^{Boot}_{n}\)</span> equals the mean and the variance of <span class="math inline">\(H_n.\)</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Notation <span class="math inline">\(\mathbb{E}^*(\,\cdot\,),\)</span> <span class="math inline">\(Var^*(\,\cdot\,),\)</span> and <span class="math inline">\(P^*(\,\cdot\,)\)</span>
 </div>
 </div>
@@ -1110,12 +1127,12 @@ P^*(\,\cdot\,)=P(\,\cdot\,|\mathcal{S}_n),
 <p>The bootstrap focuses on the <strong>bootstrap distribution</strong>, i.e.&nbsp;on the conditional distribution of <span class="math display">\[
 \sqrt{n}(\bar X^*_n -\bar X_n)|\mathcal{S}_n.
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 We know the distribution of <span class="math inline">\(X_i^*|\mathcal{S}_n\)</span>
 </div>
 </div>
@@ -1161,12 +1178,12 @@ Var^*(X^*)
 \end{align*}
 \]</span> I.e., the empirical variance <span class="math inline">\(\hat\sigma^2_n=\frac{1}{n}\sum_{i=1}^n (X_i-\bar X)^2\)</span> of the original sample <span class="math inline">\(X_1,\dots,X_n\)</span> is the “population” variance of the bootstrap sample <span class="math inline">\(X^*_1,\dots,X^*_n.\)</span></p></li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 General case: Conditional moments of transformed <span class="math inline">\(g(X_i^*)\)</span>
 </div>
 </div>
@@ -1176,12 +1193,12 @@ General case: Conditional moments of transformed <span class="math inline">\(g(X
 \]</span> For instance, <span class="math inline">\(g(X_i)=1_{(X_i\leq x)}.\)</span></p>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Caution: Conditioning on <span class="math inline">\(\mathcal{S}_n\)</span> in important!
 </div>
 </div>
@@ -1244,12 +1261,12 @@ Var^*\left(\sqrt{n}\left(\bar X^*_n-\bar{X}_n\right)\right)
 \hat\sigma^2_n\to_p \sigma_0^2\quad\text{as}\quad n\to\infty.
 \]</span></p></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Summary
 </div>
 </div>
@@ -1296,7 +1313,7 @@ i^2 = -1.
 a+bi \quad \leftrightarrow \quad (a,b).
 \]</span></p>
 <p>So complex numbers are essentially two-dimensional numbers with special rules for multiplication.</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-complex-plane_41f8c9be75a27d0e493845803dc65168">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-complex-plane_56ccf624a6464c592225c416ca7d9f07">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NA</span>,</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>),</span>
@@ -1315,7 +1332,7 @@ a+bi \quad \leftrightarrow \quad (a,b).
 <div id="fig-complex-plane" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch3_Bootstrap_files/figure-html/fig-complex-plane-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.3: The complex number z = 2 + i as a point in the complex plane.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.3: The complex number z = 2 + i as a point in the complex plane.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1356,7 +1373,7 @@ e^{i\theta} := \cos(\theta) + i\sin(\theta).
 |e^{i\theta}|=1.
 \]</span></p>
 <p>So <span class="math inline">\(e^{i\theta}\)</span> always lies on the unit circle.</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-unit-circle_2bad1e45663bc2d87928227a0d272fa5">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-unit-circle_8701527e500350fab7ee85f34e519848">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="sc">*</span> pi, <span class="at">length.out =</span> <span class="dv">400</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
@@ -1393,7 +1410,7 @@ e^{i\theta} := \cos(\theta) + i\sin(\theta).
 <div id="fig-unit-circle" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch3_Bootstrap_files/figure-html/fig-unit-circle-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.4: Euler’s formula places e^{i theta} on the unit circle.</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.4: Euler’s formula places e^{i theta} on the unit circle.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1416,12 +1433,12 @@ e^{itX}
 \]</span></p>
 <p>This fact is important. Since <span class="math inline">\(|e^{itX}|=1\)</span>, the expectation of <span class="math inline">\(e^{itX}\)</span> always exists.</p>
 <p>We are now in the position to define the concept of a characteristic function.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -1482,13 +1499,13 @@ e^{itX}e^{itY},
 \varphi_X(t)\varphi_Y(t).
 \]</span></p>
 <p>This is the key property:</p>
-<p><span class="math display">\[
+<p><span id="eq-CharacFctSum"><span class="math display">\[
 \boxed{
 \varphi_{X+Y}(t)
 =
 \varphi_X(t)\varphi_Y(t)
 }
-\]</span></p>
+\tag{2.6}\]</span></span></p>
 <p>for independent <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
 <p>In words:</p>
 <blockquote class="blockquote">
@@ -1601,7 +1618,7 @@ e^{-\sigma^2t^2/2}.
 i\mu t - \frac12\sigma^2t^2
 \right)
 }
-\tag{2.6}\]</span></span></p>
+\tag{2.7}\]</span></span></p>
 <p>for</p>
 <p><span class="math display">\[
 X\sim N(\mu,\sigma^2).
@@ -1652,7 +1669,7 @@ X\sim N(\mu,\sigma^2).
 \]</span></p>
 <p>damps the oscillations.</p>
 <p>Larger variance means faster damping.</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-normal-cf_e4ab8094b917d2ddbde66100bdf05881">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/fig-normal-cf_0f7d1123178b182b4db6ab9e64f68f45">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1685,25 +1702,25 @@ X\sim N(\mu,\sigma^2).
 <div id="fig-normal-cf" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch3_Bootstrap_files/figure-html/fig-normal-cf-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.5: Real and imaginary parts of the characteristic function of N(1, 1).</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2.5: Real and imaginary parts of the characteristic function of N(1, 1).</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Lastly, we need to be able to approximate characteristic functions locally.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 An explicit bound
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Let <span class="math inline">\(W\)</span> be a random variable with <span class="math inline">\(\mathbb{E}(W)=0\)</span> and <span class="math inline">\(Var(W)=\sigma_W^2.\)</span> Then, we have that (see Equation (26.11) in <span class="citation" data-cites="Billingsley_1995">Billingsley (<a href="#ref-Billingsley_1995" role="doc-biblioref">1995</a>)</span>) <span id="eq-CharacFctBillingsley"><span class="math display">\[
 \psi_W(t)=1-\frac{1}{2}\sigma_W^2 \, t^2 + \lambda(t),
-\tag{2.7}\]</span></span> where <span class="math inline">\(|\lambda(t)|\leq t^2\,\mathbb{E}\left(\min(|t|\,|W|^3, W^2)\right).\)</span></p>
+\tag{2.8}\]</span></span> where <span class="math inline">\(|\lambda(t)|\leq t^2\,\mathbb{E}\left(\min(|t|\,|W|^3, W^2)\right).\)</span></p>
 </div>
 </div>
 </section>
@@ -1738,7 +1755,7 @@ H_n(x)=P\left(\sqrt{n}\left(\bar{X}_n-\mu_0\right)\leq x\right)\to\Phi_{\sigma_0
 &amp;Var(W_{n})=Var\left(\frac{X_i-\mu_0}{\sqrt{n}}\right)=\frac{1}{n}Var(X_i-\mu_0)=\frac{1}{n}Var(X_i)=\frac{1}{n}\sigma_0^2.
 \end{align*}
 \]</span></p>
-<p>Therefore, by <a href="#eq-CharacFctSum">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacFctSum</span></a> together with <a href="#eq-CharacFctBillingsley">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacFctBillingsley</span></a> <span class="math display">\[
+<p>Therefore, by <a href="#eq-CharacFctSum">Equation&nbsp;<span>2.6</span></a> together with <a href="#eq-CharacFctBillingsley">Equation&nbsp;<span>2.8</span></a> <span class="math display">\[
 \begin{align*}
 \psi_{\sqrt{n}\left(\bar{X}_n-\mu_0\right)}(t)
 &amp;=\psi_{\sum_{i=1}^n W_{i,n}}(t)\\[2ex]
@@ -1787,15 +1804,15 @@ $$ --> <span class="math display">\[
 &amp;=\exp\left(-\frac{1}{2}\sigma_0^2\,t^2\right)\\[2ex]
 &amp;=\psi_{\Phi_{\sigma_0}}(t),
 \end{align*}
-\]</span> where the latter step follows from <a href="#eq-CharacNormal">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacNormal</span></a>.</p>
+\]</span> where the latter step follows from <a href="#eq-CharacNormal">Equation&nbsp;<span>2.7</span></a>.</p>
 <p>OK, we have shown that <span class="math inline">\(H_n\)</span> tends to <span class="math inline">\(\Phi_{\sigma_0}\)</span> by showing that the characteristic function of <span class="math inline">\(H_n\)</span> tends to that of <span class="math inline">\(\Phi_{\sigma_0}.\)</span> That is, we just sketched the proof for the Lindeberg-Lévy CLT.**</p>
 <p>Now, to show convergence in distribution, we need to prove that <span class="math inline">\(H_n(x)\to \Phi_{\sigma_0}(x)\)</span> for all <span class="math inline">\(x\in \mathbb R\)</span>. However, this follows directly from the convergence of the characteristic function, since</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -1806,12 +1823,12 @@ $$ --> <span class="math display">\[
 </div>
 </div>
 <p>Moreover, since the limiting distribution is normal, and therefefore continuous, Polya’s uniform convergence theorem applies.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -1846,7 +1863,7 @@ X_1^*,\dots,X_n^*\overset{\text{i.i.d.}}{\sim}X^*
 &amp;\phantom{Var(W^*_{n}|\mathcal{S}_n)}=\frac{1}{n}Var(X_i^*-\bar{X}_n|\mathcal{S}_n)=\frac{1}{n}Var(X_i^*|\mathcal{S}_n)=\frac{1}{n}\hat\sigma_n^2
 \end{align*}
 \]</span></p>
-<p>Therefore, by <a href="#eq-CharacFctSum">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacFctSum</span></a> together with <a href="#eq-CharacFctBillingsley">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacFctBillingsley</span></a> <span class="math display">\[
+<p>Therefore, by <a href="#eq-CharacFctSum">Equation&nbsp;<span>2.6</span></a> together with <a href="#eq-CharacFctBillingsley">Equation&nbsp;<span>2.8</span></a> <span class="math display">\[
 \begin{align*}
 \psi_{\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)|\mathcal{S}_n}(t)
 &amp;=\psi_{\sum_{i=1}^n W_{i,n}^*|\mathcal{S}_n}(t)\\[2ex]
@@ -1869,7 +1886,7 @@ n{\color{red}|\lambda^*_n(t)|}&amp;\to_{a.s.} 0\quad\text{as}\quad n\to\infty\\[
 <p>Moreover, <span class="math display">\[
 {\color{darkgreen}\hat\sigma_n^2} = \frac{1}{n}\sum_{i=1}^n\left(X_i-\bar{X}_n\right)^2\to_{a.s.}\sigma_0^2\quad\text{as}\quad n\to\infty.
 \]</span></p>
-<p>Thus, we have that (using <a href="#eq-CharacNormal">Equation&nbsp;<span class="quarto-unresolved-ref">eq-CharacNormal</span></a>) <span class="math display">\[
+<p>Thus, we have that (using <a href="#eq-CharacNormal">Equation&nbsp;<span>2.7</span></a>) <span class="math display">\[
 \begin{align*}
 \psi_{\sqrt{n}\left(\bar{X}^*_n-\bar{X}_n\right)|\mathcal{S}_n}(t)
 \to_{a.s.}&amp;
@@ -2074,12 +2091,12 @@ $$
 </section>
 <section id="the-basic-bootstrap-confidence-interval" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="the-basic-bootstrap-confidence-interval"><span class="header-section-number">2.3.2</span> The Basic Bootstrap Confidence Interval</h3>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Recall: Confidence Interval for <span class="math inline">\(\theta_0\)</span> using Classic Asymptotic Statistics
 </div>
 </div>
@@ -2096,7 +2113,7 @@ Recall: Confidence Interval for <span class="math inline">\(\theta_0\)</span> us
 \hat{\theta}_n + z_{1-\frac{\alpha}{2}}\frac{\hat v_n}{\sqrt{n}}
 \right],
 \]</span> where <span class="math inline">\(z_{1-\frac{\alpha}{2}}\)</span> denotes the <span class="math inline">\((1-\alpha)/2\)</span> quantile of the standard Normal distribution <span class="math inline">\((z_{0.975}=1.96).\)</span> This confidence interval is approximate, since it is only asymptotically justified, and, thus, is generally not exact in finite samples.</p>
-<p><strong>Note:</strong> Often, however, very difficult to obtain a consistent estimator <span class="math inline">\(\hat v_n\)</span> of <span class="math inline">\(v_0\)</span> (see <a href="#sec-Illustration"><span class="quarto-unresolved-ref">sec-Illustration</span></a>). Statistical inference is then usually based on the <strong>bootstrap confidence intervals</strong>.</p>
+<p><strong>Note:</strong> Often, however, very difficult to obtain a consistent estimator <span class="math inline">\(\hat v_n\)</span> of <span class="math inline">\(v_0\)</span> (see <a href="#sec-Illustration"><span>Section&nbsp;2.1</span></a>). Statistical inference is then usually based on the <strong>bootstrap confidence intervals</strong>.</p>
 </div>
 </div>
 <section id="algorithm-of-the-basic-bootstrap-confidence-interval-for-theta_0" class="level4 unnumbered">
@@ -2110,12 +2127,12 @@ Recall: Confidence Interval for <span class="math inline">\(\theta_0\)</span> us
 <li><span class="math inline">\(\hat{\theta}_n\)</span> denotes the estimator of <span class="math inline">\(\theta_0\in\mathbb{R}.\)</span></li>
 <li><strong>Problem:</strong> Construct a confidence interval for <span class="math inline">\(\theta_0\in\mathbb{R}.\)</span></li>
 </ul>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Assumption: Bootstrap is Consistent
 </div>
 </div>
@@ -2130,7 +2147,7 @@ Assumption: Bootstrap is Consistent
 \end{align*}
 \]</span> if <span class="math inline">\(n\)</span> is sufficiently large.</p>
 <p>Caution: This is not always the case and in cases of doubt one needs to show this property.</p>
-<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-tip callout callout-style-simple no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -2156,23 +2173,23 @@ Assumption: Bootstrap is Consistent
   \hat\theta^*_{n,(\lfloor mp\rfloor+1)},           &amp;\text{if $mp$ is not an integer}\\
   (\hat\theta^*_{n,(mp)}+\hat\theta^*_{n,(mp+1)})/2,&amp;\text{if $mp$ is an integer}
 \end{array}\right.
-\tag{2.8}\]</span></span> for <span class="math inline">\(p=\frac{\alpha}{2}\)</span> or <span class="math inline">\(p=1-\frac{\alpha}{2},\)</span> where <span class="math inline">\(\hat\theta_{n,(j)}^*\)</span> denotes the <span class="math inline">\(j\)</span>th order statistic <span class="math display">\[
+\tag{2.9}\]</span></span> for <span class="math inline">\(p=\frac{\alpha}{2}\)</span> or <span class="math inline">\(p=1-\frac{\alpha}{2},\)</span> where <span class="math inline">\(\hat\theta_{n,(j)}^*\)</span> denotes the <span class="math inline">\(j\)</span>th order statistic <span class="math display">\[
 \hat\theta_{n,(1)}^* \leq \hat\theta_{n,(2)}^*\leq \dots\leq \hat\theta_{n,(m)}^*,
 \]</span> and <span class="math inline">\(\lfloor mp\rfloor\)</span> denotes the greatest whole number less than or equal to <span class="math inline">\(mp\)</span> (e.g.&nbsp;<span class="math inline">\(\lfloor 4.9\rfloor = 4\)</span>).</p></li>
 <li><p>The <span class="math inline">\((1-\alpha)\times 100\%\)</span> <strong>basic bootstrap confidence interval</strong> is then given by <span id="eq-NPBootCI"><span class="math display">\[
 \left[2\hat{\theta}_n-\hat q^*_{n,1-\frac{\alpha}{2}}, 2\hat{\theta}_n-\hat q^*_{n,\frac{\alpha}{2}}\right],
-\tag{2.9}\]</span></span> where</p>
+\tag{2.10}\]</span></span> where</p>
 <ul>
 <li><span class="math inline">\(\hat{\theta}_n\)</span> is computed from the original sample <span class="math inline">\(\mathcal{S}_n=\{X_1,\dots,X_n\}\)</span> and</li>
 <li><span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> are computed from the bootstrap estimates <span class="math inline">\(\hat\theta_{n,1}^*,\dots,\hat\theta_{n,m}^*.\)</span></li>
 </ul></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Note
 </div>
 </div>
@@ -2181,10 +2198,10 @@ Note
 G_{n,m}^{Boot}(x)=\frac{1}{m}\sum_{j=1}^m1_{\left(\hat{\theta}^*_{n,j}\leq x\right)}.
 \]</span> However, we’ll treat the quantiles <span class="math inline">\(\hat q^*_{n,p}\)</span> as quantiles of the distribution <span class="math display">\[
 G_{n}^{Boot}(x)=P\left(\hat{\theta}^*_{n}\leq x\,\big|\,\mathcal{S}_n\right),
-\]</span> since for large <span class="math inline">\(m\)</span> (<span class="math inline">\(m\to\infty\)</span>) the difference between <span class="math inline">\(G_{n,m}^{Boot}\)</span> and <span class="math inline">\(G_{n}^{Boot}\)</span> is negligible (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a>) and we can choose <span class="math inline">\(m\)</span> to be large.</p>
+\]</span> since for large <span class="math inline">\(m\)</span> (<span class="math inline">\(m\to\infty\)</span>) the difference between <span class="math inline">\(G_{n,m}^{Boot}\)</span> and <span class="math inline">\(G_{n}^{Boot}\)</span> is negligible (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a>) and we can choose <span class="math inline">\(m\)</span> to be large.</p>
 </div>
 </div>
-<p><strong>Justifying the Basic Bootstrap CI (<a href="#eq-NPBootCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-NPBootCI</span></a>) for <span class="math inline">\(\theta_0\)</span>:</strong></p>
+<p><strong>Justifying the Basic Bootstrap CI (<a href="#eq-NPBootCI">Equation&nbsp;<span>2.10</span></a>) for <span class="math inline">\(\theta_0\)</span>:</strong></p>
 <p>The following three approximate statements <span class="math inline">\((\approx (1-\alpha))\)</span> are exact for <span class="math inline">\(m\to\infty:\)</span> <span class="math display">\[
 \begin{align*}
 &amp;P^*\left(\hat q^*_{n,\frac{\alpha}{2}} \leq \hat{\theta}^*_n \leq \hat q^*_{n,1-\frac{\alpha}{2}}\right)
@@ -2211,7 +2228,7 @@ G_{n}^{Boot}(x)=P\left(\hat{\theta}^*_{n}\leq x\,\big|\,\mathcal{S}_n\right),
 \hat q^*_{n,\frac{\alpha}{2}}\right)\approx 1-\alpha\\[2ex]
 \Leftrightarrow\; &amp;P\left(\theta_0\in\left[2\hat{\theta}_n-\hat q^*_{n,1-\frac{\alpha}{2}}, \; 2\hat{\theta}_n-\hat q^*_{n,\frac{\alpha}{2}}\right]\right)\approx 1-\alpha.
 \end{align*}
-\]</span> This demonstrates that the <strong>basic bootstrap confidence interval</strong> in <a href="#eq-NPBootCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-NPBootCI</span></a> <span class="math display">\[
+\]</span> This demonstrates that the <strong>basic bootstrap confidence interval</strong> in <a href="#eq-NPBootCI">Equation&nbsp;<span>2.10</span></a> <span class="math display">\[
 \left[2\hat{\theta}_n-\hat q^*_{n,1-\frac{\alpha}{2}}, \; 2\hat{\theta}_n-\hat q^*_{n,\frac{\alpha}{2}}\right],
 \]</span> is indeed an asymptotically (<span class="math inline">\(n\to\infty\)</span> and <span class="math inline">\(m\to\infty\)</span>) valid <span class="math inline">\((1-\alpha)\times 100\%\)</span> confidence interval.</p>
 </section>
@@ -2223,12 +2240,12 @@ G_{n}^{Boot}(x)=P\left(\hat{\theta}^*_{n}\leq x\,\big|\,\mathcal{S}_n\right),
 <li><strong>Estimator:</strong> <span class="math inline">\(\bar X_n = \frac{1}{n} \sum_{i=1}^n X_i\)</span> is an unbiased estimator of <span class="math inline">\(\mu_0.\)</span></li>
 <li><strong>Inference Problem:</strong> Construct a confidence interval for <span class="math inline">\(\mu_0.\)</span></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Recall: Confidence Interval for <span class="math inline">\(\mu_0\)</span> using Classic Asymptotic Statistics
 </div>
 </div>
@@ -2261,13 +2278,13 @@ Recall: Confidence Interval for <span class="math inline">\(\mu_0\)</span> using
 </section>
 <section id="algorithm-of-the-basic-bootstrap-confidence-interval-for-boldsymbolmu_0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="algorithm-of-the-basic-bootstrap-confidence-interval-for-boldsymbolmu_0"><strong>Algorithm of the basic bootstrap confidence interval for <span class="math inline">\(\boldsymbol{\mu_0}\)</span>:</strong></h4>
-<p>The bootstrap offers an alternative method for constructing approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> confidence intervals. We already know that the bootstrap is consistent in this situation (see <a href="#sec-Theory2BootstrapConsist"><span class="quarto-unresolved-ref">sec-Theory2BootstrapConsist</span></a>).</p>
+<p>The bootstrap offers an alternative method for constructing approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> confidence intervals. We already know that the bootstrap is consistent in this situation (see <a href="#sec-Theory2BootstrapConsist"><span>Section&nbsp;2.3.1.4</span></a>).</p>
 <ol type="1">
 <li><p>Draw <span class="math inline">\(m\)</span> bootstrap samples (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) and calculate the corresponding estimates <span class="math display">\[
 \bar X^*_{n,1},\bar X^*_{n,2},\dots,\bar X^*_{n,m}.
 \]</span></p></li>
-<li><p>Compute the empirical quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> from <span class="math inline">\(\bar X^*_{n,1},\bar X^*_{n,2},\dots,\bar X^*_{n,m}\)</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span class="quarto-unresolved-ref">eq-empiricalQuantile</span></a>.</p></li>
-<li><p>Compute the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> basic bootstrap confidence interval according to <a href="#eq-NPBootCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-NPBootCI</span></a>: <span class="math display">\[
+<li><p>Compute the empirical quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> from <span class="math inline">\(\bar X^*_{n,1},\bar X^*_{n,2},\dots,\bar X^*_{n,m}\)</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span>2.9</span></a>.</p></li>
+<li><p>Compute the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> basic bootstrap confidence interval according to <a href="#eq-NPBootCI">Equation&nbsp;<span>2.10</span></a>: <span class="math display">\[
 \left[2\bar X_n -\hat q^*_{n,1-\frac{\alpha}{2}},
    2\bar X_n -\hat q^*_{n,\frac{\alpha}{2}}\right],
 \]</span> where</p>
@@ -2298,12 +2315,12 @@ Recall: Confidence Interval for <span class="math inline">\(\mu_0\)</span> using
 \end{align*}
 \]</span></li>
 </ul>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -2352,12 +2369,12 @@ T_n^*\big|\mathcal{S}_n =\sqrt{n}\frac{(\hat{\theta}_n^*-\hat{\theta}_n)}{\hat v
 \]</span> given <span class="math inline">\(\mathcal{S}_n=\{X_1,\dots,X_n\},\)</span> where the standard deviation estimate <span class="math inline">\(\hat{v}_n^*\)</span> is computed from the bootstrap sample <span class="math inline">\(X_1^*,\dots,X_n^*,\)</span> i.e. <span class="math display">\[
 \hat v_n^*\equiv \hat{v}(X_1^*,\dots,X_n^*).
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Good news: Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> consistency follows if the basic bootstrap is consistent
 </div>
 </div>
@@ -2404,25 +2421,25 @@ T_n^*&amp;=\sqrt{n}\frac{\hat{\theta}^*_n-\hat{\theta}_n}{\hat v^*_n}.
 \]</span> Repeating this yields <span class="math inline">\(m\)</span> (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) many bootstrap estimators <span class="math display">\[
 T_{n,1}^*,T_{n,2}^*, \dots, T_{n,m}^*.
 \]</span> conditionally on <span class="math inline">\(\mathcal{S}_n.\)</span></p></li>
-<li><p>Compute the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> of the bootstrap estimates <span class="math inline">\(T_{n,1}^*,T_{n,2}^*, \dots, T_{n,m}^*\)</span> (see <a href="#eq-empiricalQuantile">Equation&nbsp;<span class="quarto-unresolved-ref">eq-empiricalQuantile</span></a>).</p></li>
+<li><p>Compute the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> of the bootstrap estimates <span class="math inline">\(T_{n,1}^*,T_{n,2}^*, \dots, T_{n,m}^*\)</span> (see <a href="#eq-empiricalQuantile">Equation&nbsp;<span>2.9</span></a>).</p></li>
 <li><p>Compute the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> bootstrap-<span class="math inline">\(t\)</span> confidence interval<br>
 <span id="eq-Boot_tCI"><span class="math display">\[
 \left[\hat{\theta}_n - \hat q^*_{n,1-\frac{\alpha}{2}} \left(\frac{\hat v_n}{\sqrt{n}}\right),\;
    \hat{\theta}_n - \hat q^*_{n,  \frac{\alpha}{2}}   \left(\frac{\hat v_n}{\sqrt{n}}\right)\right],
-\tag{2.10}\]</span></span> where</p>
+\tag{2.11}\]</span></span> where</p>
 <ul>
 <li><span class="math inline">\(\hat\theta_n\)</span> and <span class="math inline">\(\hat v_n\)</span> are the estimates of <span class="math inline">\(\theta_0\)</span> and <span class="math inline">\(v_0\)</span> computed from the original sample <span class="math inline">\(\mathcal{S}_n=\left\{X_1,\dots,X_n\right\},\)</span> and</li>
 <li><span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> are computed from the bootstrap estimators <span class="math inline">\(T_{n,1}^*,T_{n,2}^*, \dots, T_{n,m}^*.\)</span></li>
 </ul></li>
 </ol>
-<p><strong>Justifying the Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> CI (<a href="#eq-Boot_tCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Boot_tCI</span></a>) for <span class="math inline">\(\boldsymbol{\theta_0}\)</span>:</strong></p>
+<p><strong>Justifying the Bootstrap-<span class="math inline">\(\boldsymbol{t}\)</span> CI (<a href="#eq-Boot_tCI">Equation&nbsp;<span>2.11</span></a>) for <span class="math inline">\(\boldsymbol{\theta_0}\)</span>:</strong></p>
 <p>The bootstrap estimates <span class="math display">\[
 T_{n,1}^*,T_{n,2}^*, \dots, T_{n,m}^*
 \]</span> yield the empirical bootstrap distribution <span class="math display">\[
 H_{n,m}^{Boot}(x)=\frac{1}{m}\sum_{j=1}^m1_{\left(T_{n,j}^*\;\leq\; x\right)}
 \]</span> which approximates the bootstrap distribution <span class="math display">\[
 H_{n}^{Boot}(x)=P\left(\left.T_{n}^*\leq x\;\right|\;\mathcal{S}_n\right)
-\]</span> arbitrarily precise as <span class="math inline">\(m\to\infty\)</span> (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a>).</p>
+\]</span> arbitrarily precise as <span class="math inline">\(m\to\infty\)</span> (Glivenko-Cantelli <a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a>).</p>
 <p>Thus, the empirical bootstrap quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> of <span class="math inline">\(H_{n,m}^{Boot}\)</span> are indeed consistent (<span class="math inline">\(m\to\infty\)</span>) for the quantiles <span class="math inline">\(\hat q_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q_{n,1-\frac{\alpha}{2}}\)</span> of the bootstrap distribution <span class="math inline">\(H_{n}^{Boot}.\)</span> This implies, for large <span class="math inline">\(m,\)</span> <span class="math display">\[
 P^*\left(\hat q^*_{n,\frac{\alpha}{2}}\leq {\color{red}\sqrt{n}\frac{\hat{\theta}^*_n-\hat{\theta}_n}{\hat v^*_n}} \leq \hat q^*_{n,1-\frac{\alpha}{2}}\right)
 \approx 1-\alpha.
@@ -2444,7 +2461,7 @@ P^*\left(\hat q^*_{n,\frac{\alpha}{2}}\leq {\color{red}\sqrt{n}\frac{\hat{\theta
       \hat{\theta}_n - \hat q^*_{n,  \frac{\alpha}{2}}   \left(\frac{\hat v_n}{\sqrt{n}}\right)\right]\right)
 \approx 1-\alpha.
 \end{align*}
-\]</span> Thus, the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> bootstrap-<span class="math inline">\(t\)</span> confidence interval (<a href="#eq-Boot_tCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Boot_tCI</span></a>) <span class="math display">\[
+\]</span> Thus, the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> bootstrap-<span class="math inline">\(t\)</span> confidence interval (<a href="#eq-Boot_tCI">Equation&nbsp;<span>2.11</span></a>) <span class="math display">\[
 \left[\hat{\theta}_n - \hat q^*_{n,1-\frac{\alpha}{2}} \left(\frac{\hat v_n}{\sqrt{n}}\right),\;
       \hat{\theta}_n - \hat q^*_{n,  \frac{\alpha}{2}}   \left(\frac{\hat v_n}{\sqrt{n}}\right)\right],
 \]</span> is indeed an asymptotic (i.e.&nbsp;approximate) <span class="math inline">\((1-\alpha)\times 100\%\)</span> CI.</p>
@@ -2464,8 +2481,8 @@ T^*_{n,1}=\sqrt{n}\frac{\bar X^*_{n,1}-\bar X_n}{\hat\sigma^*_{n,1}},\dots,T^*_{
 \]</span></li>
 <li>Determine <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^*_{n,\frac{\alpha}{2}}\)</span> and <span class="math inline">\(\hat q^*_{n,1-\frac{\alpha}{2}}\)</span> from <span class="math display">\[
 T^*_{n,1},\dots,T^*_{n,m}
-\]</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span class="quarto-unresolved-ref">eq-empiricalQuantile</span></a>.</li>
-<li>This yields the <span class="math inline">\((1-\alpha)\times 100 \%\)</span> confidence interval (using <a href="#eq-Boot_tCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Boot_tCI</span></a>): <span class="math display">\[
+\]</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span>2.9</span></a>.</li>
+<li>This yields the <span class="math inline">\((1-\alpha)\times 100 \%\)</span> confidence interval (using <a href="#eq-Boot_tCI">Equation&nbsp;<span>2.11</span></a>): <span class="math display">\[
 \left[\bar X_n - \hat q^*_{n,1-\frac{\alpha}{2}} \left(\frac{s_n}{\sqrt{n}}\right),
     \bar X_n - \hat q^*_{n,  \frac{\alpha}{2}} \left(\frac{s_n}{\sqrt{n}}\right)\right],
 \]</span> where
@@ -2511,12 +2528,12 @@ U_n\equiv U(X_1,\dots,X_n)
 <li>Bootstrap-<span class="math inline">\(t\)</span> confidence intervals are <strong>second-order</strong> accurate.</li>
 </ul>
 <p>The difference between first and second-order accuracy is not just a theoretical nicety. In many practically important situations second-order accurate intervals lead to <em>much</em> better approximations.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Note
 </div>
 </div>
@@ -2530,21 +2547,21 @@ Note
 <h2 data-number="2.5" class="anchored" data-anchor-id="bootstrap-and-linear-regression-analysis"><span class="header-section-number">2.5</span> Bootstrap and Linear Regression Analysis</h2>
 <p>In this chapter we consider two different bootstrap resampling procedures that can be applied in linear regression analysis:</p>
 <ul>
-<li><a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a> considers the <strong>Bootstrapping Pairs</strong> algorithm<br>
+<li><a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a> considers the <strong>Bootstrapping Pairs</strong> algorithm<br>
 </li>
-<li><a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a> considers the <strong>Residual Bootstrap</strong> algorithm.</li>
+<li><a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a> considers the <strong>Residual Bootstrap</strong> algorithm.</li>
 </ul>
 <p><strong>Setup:</strong> Linear regression model <span class="math display">\[
 Y_i=X_i^T\beta_0 + \varepsilon_i,\quad  i=1,\dots,n,
 \]</span> where <span class="math inline">\(Y_i\in\mathbb{R}\)</span> denotes the response (or “dependent”) variable and <span class="math display">\[
 X_i:=(\underbrace{X_{i1}}_{=1},X_{i2},\ldots,X_{ip})^T\in\mathbb{R}^p
 \]</span> denotes the vector of predictor variables. In the following, we differentiate between a <strong>random design</strong> and a <strong>fixed design</strong>.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 
 </div>
 </div>
@@ -2578,7 +2595,7 @@ X_1, X_2, \dots, X_n
 \]</span></p>
 <section id="sec-bootPairs" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-bootPairs"><span class="header-section-number">2.5.1</span> Bootstrap under Random Design: Bootstrapping Pairs</h3>
-<p>Under a random design (<a href="#def-RandomFixedDesign">Definition&nbsp;<span class="quarto-unresolved-ref">def-RandomFixedDesign</span></a>), we assume that there exists a non-singular (thus invertible) matrix <span class="math inline">\(M\)</span> <span class="math display">\[
+<p>Under a random design (<a href="#def-RandomFixedDesign">Definition&nbsp;<span>2.8</span></a>), we assume that there exists a non-singular (thus invertible) matrix <span class="math inline">\(M\)</span> <span class="math display">\[
 M=\mathbb{E}(X_iX_i^T).
 \]</span> This implies that the following matrix <span class="math inline">\(Q\)</span> is also non-singular: <span class="math display">\[
 \begin{align*}
@@ -2589,12 +2606,12 @@ Q
 &amp;=\mathbb{E}(\sigma^2_0(X_i)X_iX_i^T)
 \end{align*}
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
@@ -2635,24 +2652,24 @@ Q
 <h3 data-number="2.5.2" class="anchored" data-anchor-id="sec-bootResid"><span class="header-section-number">2.5.2</span> Bootstrap under Fixed Design: The Residual Bootstrap</h3>
 <p>If the sample <span class="math display">\[
 (Y_1,X_1),\dots,(Y_n,X_n)
-\]</span> is <strong>not</strong> an i.i.d. sample, the bootstrapping pairs procedure (<a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) proposed above will generally not be consistent. Therefore, bootstrapping pairs is not necessarily applicable for <strong>fixed designs</strong> and also generally not in time-series regression contexts. However, if error terms are <strong>homoskedastic</strong>, then it is possible to rely on the <strong>residual bootstrap</strong>.</p>
+\]</span> is <strong>not</strong> an i.i.d. sample, the bootstrapping pairs procedure (<a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) proposed above will generally not be consistent. Therefore, bootstrapping pairs is not necessarily applicable for <strong>fixed designs</strong> and also generally not in time-series regression contexts. However, if error terms are <strong>homoskedastic</strong>, then it is possible to rely on the <strong>residual bootstrap</strong>.</p>
 <p>In the following we will formally assume a regression model <span class="math display">\[
 Y_i=X_i^T\beta_0 + \varepsilon_i, \quad i=1,\dots,n,
 \]</span> with <span class="math display">\[
 X_i:=(\underbrace{X_{i1}}_{=1},X_{i2},\ldots,X_{ip})^T\in\mathbb{R}^p,
-\]</span> under the <strong>fixed design</strong> (<a href="#def-RandomFixedDesign">Definition&nbsp;<span class="quarto-unresolved-ref">def-RandomFixedDesign</span></a>), where <span class="math display">\[
+\]</span> under the <strong>fixed design</strong> (<a href="#def-RandomFixedDesign">Definition&nbsp;<span>2.8</span></a>), where <span class="math display">\[
 \varepsilon_1,\dots,\varepsilon_n\overset{\text{i.i.d.}}{\sim}\varepsilon
 \]</span> are i.i.d. with zero mean <span class="math display">\[
 \mathbb{E}(\varepsilon)=0
 \]</span> and <strong>homoskedastic</strong> variance <span class="math display">\[
 \mathbb{E}(\varepsilon^2)=\sigma^2_0.
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Applicability of the Residual Bootstrap under Random Designs
 </div>
 </div>
@@ -2727,7 +2744,7 @@ where $\hat\sigma^2_n\to\sigma^2_0$ as $n\to\infty.$
 </section>
 <section id="sec-bootWild" class="level3" data-number="2.5.3">
 <h3 data-number="2.5.3" class="anchored" data-anchor-id="sec-bootWild"><span class="header-section-number">2.5.3</span> Bootstrap under Fixed Design: The Wild Bootstrap</h3>
-<p>The wild bootstrap is a method for generating bootstrap samples that do not consist of resampling the original data (bootstrapping pairs in <a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) or residuals (bootstrapping residuals in <a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>). Rather, the wild bootstrap combines the data with random variables drawn from a known distribution to form a bootstrap sample.</p>
+<p>The wild bootstrap is a method for generating bootstrap samples that do not consist of resampling the original data (bootstrapping pairs in <a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) or residuals (bootstrapping residuals in <a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>). Rather, the wild bootstrap combines the data with random variables drawn from a known distribution to form a bootstrap sample.</p>
 <p>The wild bootstrap provides a way to deal with issues such as <strong>heteroskedasticity of unknown form in fixed-design</strong> regression models or random-design models in which one conditions on the predictors <span class="math inline">\(X_1,\dots,X_n.\)</span></p>
 <p>In the following we will formally assume a regression model <span class="math display">\[
 Y_i=X_i^T\beta_0 + \varepsilon_i, \quad i=1,\dots,n,
@@ -2742,12 +2759,12 @@ X_i:=(\underbrace{X_{i1}}_{=1},X_{i2},\ldots,X_{ip})^T\in\mathbb{R}^p,
 0&lt;\mathbb{E}(\varepsilon_i^2)=\sigma^2_{0,i}&lt;\infty\quad\text{for all}\quad i=1,\dots,n.
 \]</span></p>
 <p>That is, the data generating process is here independent across <span class="math inline">\(i=1,\dots,n,\)</span> but not necessarily identically distributed across <span class="math inline">\(i=1,\dots,n.\)</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Applicability of the Wild Bootstrap under Random Designs
 </div>
 </div>
@@ -2757,7 +2774,7 @@ Applicability of the Wild Bootstrap under Random Designs
 <p>The above assumptions on the error terms then, of course, also have to be satisfied <em>conditionally</em> on <span class="math inline">\(X_1,\dots,X_n.\)</span></p>
 </div>
 </div>
-<p>As the residual bootstrap (<a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>), the wild bootstrap uses the <span class="math inline">\(X_i\)</span>’s from the original data. I.e., the <span class="math inline">\(X_i\)</span>’s are not resampled. The wild bootstrap generates bootstrap samples <span class="math display">\[
+<p>As the residual bootstrap (<a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>), the wild bootstrap uses the <span class="math inline">\(X_i\)</span>’s from the original data. I.e., the <span class="math inline">\(X_i\)</span>’s are not resampled. The wild bootstrap generates bootstrap samples <span class="math display">\[
 \{(\underbrace{X_1^\top\hat\beta_n + \varepsilon^\ast_1}_{=Y_1^\ast},X_1),\dots,(\underbrace{X_n^\top\hat\beta_n + \varepsilon^\ast_n}_{=Y_n^\ast},X_n)\},
 \]</span> where <span class="math inline">\(\hat\beta_n\)</span> is computed from the original sample. Repeatedly (<span class="math inline">\(m\)</span> times) generating such bootstrap samples allows generating <span class="math inline">\(m\)</span> realizations of the bootstrap estimator <span class="math display">\[
 \hat\beta^\ast_{n,j} = \left(X^\top X\right)^{-1}X^\top Y^\ast,\quad j=1,\dots,m.
@@ -2799,19 +2816,19 @@ P\left(W_i = \left(1+\sqrt{5}\right)\frac{\hat\varepsilon_i}{2}\right)&amp;=1 - 
 </section>
 <section id="bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0" class="level3" data-number="2.5.4">
 <h3 data-number="2.5.4" class="anchored" data-anchor-id="bootstrap-confidence-intervals-for-the-boldsymboljth-component-of-the-regression-coefficient-boldsymbolbeta_0"><span class="header-section-number">2.5.4</span> Bootstrap Confidence Intervals for the <span class="math inline">\(\boldsymbol{j}\)</span>th Component of the Regression Coefficient <span class="math inline">\(\boldsymbol{\beta_{0}}\)</span></h3>
-<p>This chapter introduces two confidence intervals. The first uses the basic bootstrap method (<a href="#sec-BasicBootstrap"><span class="quarto-unresolved-ref">sec-BasicBootstrap</span></a>); the second uses the bootstrap-<span class="math inline">\(t\)</span> method (<a href="#sec-BootT"><span class="quarto-unresolved-ref">sec-BootT</span></a>).</p>
-<p>Both confidence intervals can be constructed either via bootstrapping pairs (<a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) or via bootstrapping residuals (<a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>).</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<p>This chapter introduces two confidence intervals. The first uses the basic bootstrap method (<a href="#sec-BasicBootstrap"><span>Section&nbsp;2.3</span></a>); the second uses the bootstrap-<span class="math inline">\(t\)</span> method (<a href="#sec-BootT"><span>Section&nbsp;2.4</span></a>).</p>
+<p>Both confidence intervals can be constructed either via bootstrapping pairs (<a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) or via bootstrapping residuals (<a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>).</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>While the bootstrap confidence intervals based on bootstrapping pairs (<a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) are heteroskedasticity robust, the bootstrap confidence intervals based on bootstrapping residuals are only valid for homoskedastic errors.</p>
+<p>While the bootstrap confidence intervals based on bootstrapping pairs (<a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) are heteroskedasticity robust, the bootstrap confidence intervals based on bootstrapping residuals are only valid for homoskedastic errors.</p>
 </div>
 </div>
 <section id="basic-bootstrap-confidence-intervals-for-boldsymbolbeta_0j" class="level4" data-number="2.5.4.1">
@@ -2823,11 +2840,11 @@ Tip
 \]</span> denote the <span class="math inline">\(j\)</span>th component of the estimator <span class="math inline">\(\hat\beta_n\in\mathbb{R}^p.\)</span></p>
 <p>The basic bootstrap confidence interval for <span class="math inline">\(\beta_{0,j}\in\mathbb{R}\)</span> can be constructed as following:</p>
 <ol type="1">
-<li><p>Use either bootstrapping pairs (<a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) or bootstrapping residuals (<a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>) or the wild bootstrap (<a href="#sec-bootWild"><span class="quarto-unresolved-ref">sec-bootWild</span></a>) to generate <span class="math inline">\(m\)</span> (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) bootstrap realizations <span class="math display">\[
+<li><p>Use either bootstrapping pairs (<a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) or bootstrapping residuals (<a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>) or the wild bootstrap (<a href="#sec-bootWild"><span>Section&nbsp;2.5.3</span></a>) to generate <span class="math inline">\(m\)</span> (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) bootstrap realizations <span class="math display">\[
 \hat{\beta}_{j,n,1}^\ast,\dots,\hat\beta_{j,n,m}^\ast.
 \]</span></p></li>
-<li><p>Determine the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^\ast_{n,\frac{\alpha}{2},j}\)</span> and <span class="math inline">\(\hat q^\ast_{n,1-\frac{\alpha}{2},j}\)</span> from the bootstrap realizations <span class="math inline">\(\hat{\beta}_{j,n,1}^\ast,\dots,\hat\beta_{j,n,m}^\ast\)</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span class="quarto-unresolved-ref">eq-empiricalQuantile</span></a>.</p></li>
-<li><p>Compute the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> confidence interval as in <a href="#eq-NPBootCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-NPBootCI</span></a>: <span class="math display">\[
+<li><p>Determine the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^\ast_{n,\frac{\alpha}{2},j}\)</span> and <span class="math inline">\(\hat q^\ast_{n,1-\frac{\alpha}{2},j}\)</span> from the bootstrap realizations <span class="math inline">\(\hat{\beta}_{j,n,1}^\ast,\dots,\hat\beta_{j,n,m}^\ast\)</span> using <a href="#eq-empiricalQuantile">Equation&nbsp;<span>2.9</span></a>.</p></li>
+<li><p>Compute the approximate <span class="math inline">\((1-\alpha)\times 100\%\)</span> confidence interval as in <a href="#eq-NPBootCI">Equation&nbsp;<span>2.10</span></a>: <span class="math display">\[
 \left[2\hat\beta_{nj}-\hat q^\ast_{n,1-\frac{\alpha}{2},j},
    2\hat\beta_{nj}-\hat q^\ast_{n,\frac{\alpha}{2},j}\right],
 \]</span> where</p>
@@ -2836,12 +2853,12 @@ Tip
 <li><p><span class="math inline">\(\hat q^\ast_{n,1-\frac{\alpha}{2},j}\)</span> and <span class="math inline">\(\hat q^\ast_{n,\frac{\alpha}{2},j}\)</span> are the empirical quantiles computed from the bootstrap estimators <span class="math inline">\(\hat{\beta}_{j,n,1}^\ast,\dots,\hat\beta_{j,n,m}^\ast.\)</span></p></li>
 </ul></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Remark
 </div>
 </div>
@@ -2883,7 +2900,7 @@ T_n = \frac{\hat\beta_{j,n} -\beta_{0,j}}{\widehat{\operatorname{SE}}(\hat\beta_
 <p>In the case of homoskedastic error terms <span id="eq-homoskedSE"><span class="math display">\[
 \widehat{\operatorname{SE}}(\hat\beta_{j,n})
 =\frac{\hat{\sigma}_n\sqrt{\hat{\gamma}_{jj,n}}}{\sqrt{n}},
-\tag{2.11}\]</span></span> where <span class="math inline">\(\hat{\sigma}_n=\sqrt{\frac{1}{n}\sum_{i=1}^n\hat{\varepsilon}_i^2}\)</span> and where <span class="math display">\[
+\tag{2.12}\]</span></span> where <span class="math inline">\(\hat{\sigma}_n=\sqrt{\frac{1}{n}\sum_{i=1}^n\hat{\varepsilon}_i^2}\)</span> and where <span class="math display">\[
 \hat{\gamma}_{jj,n}
 =\left[\widehat{M}_n^{-1}\right]_{jj}
 =\left[\left(\frac{1}{n}\sum_{i=1}^n X_iX_i^\top\right)^{-1}\right]_{jj}
@@ -2891,7 +2908,7 @@ T_n = \frac{\hat\beta_{j,n} -\beta_{0,j}}{\widehat{\operatorname{SE}}(\hat\beta_
 <p>In the case of heteroskedastic errors, one can use <span id="eq-heterokedSE"><span class="math display">\[
 \widehat{\operatorname{SE}}(\hat\beta_{j,n})
 =\frac{\sqrt{\left[\widehat{M}_n^{-1}\widehat{Q}_n\widehat{M}_n^{-1}\right]_{jj}}}{\sqrt{n}}
-\tag{2.12}\]</span></span> where</p>
+\tag{2.13}\]</span></span> where</p>
 <ul>
 <li><span class="math inline">\(\widehat{M}_n^{-1}=(\frac{1}{n}\sum_{i=1}^n X_iX_i^T)^{-1}\)</span></li>
 <li><span class="math inline">\(\widehat{Q}_n=\widehat{\mathbb{E}}(\varepsilon_i^2X_iX_i^\top)\)</span> denotes a Heteroskedasticity Consistent (HC) estimators of <span class="math inline">\(\mathbb{E}(\varepsilon_i^2X_iX_i^\top);\)</span> e.g.&nbsp;the HC2-estimator <span class="math inline">\(\widehat{\mathbb{E}}(\varepsilon_i^2X_iX_i^\top)=\frac{1}{n-p}\sum_{i=1}^n\hat\varepsilon_i^2X_iX_i^\top.\)</span></li>
@@ -2901,21 +2918,21 @@ T_n= \frac{(\hat\beta_{n,j}-\beta_{0,j})}{\widehat{\operatorname{SE}}(\hat\beta_
 \]</span></p>
 <p>A bootstrap-<span class="math inline">\(t\)</span> interval for <span class="math inline">\(\beta_{0,j}\)</span>, <span class="math inline">\(j=1,\dots,p\)</span>, can thus be constructed as follows:</p>
 <ol type="1">
-<li><p>Use either <strong>bootstrapping pairs</strong> (<a href="#sec-bootPairs"><span class="quarto-unresolved-ref">sec-bootPairs</span></a>) for random designs, or <strong>bootstrapping residuals</strong> (<a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>) for fixed designs and homoskedastic errors, or the <strong>wild bootstrap</strong> (<a href="#sec-bootWild"><span class="quarto-unresolved-ref">sec-bootWild</span></a>) for fixed desgins and heteroskedastic errors, to generate <span class="math inline">\(m\)</span> (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) bootstrap realizations <span class="math display">\[
+<li><p>Use either <strong>bootstrapping pairs</strong> (<a href="#sec-bootPairs"><span>Section&nbsp;2.5.1</span></a>) for random designs, or <strong>bootstrapping residuals</strong> (<a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>) for fixed designs and homoskedastic errors, or the <strong>wild bootstrap</strong> (<a href="#sec-bootWild"><span>Section&nbsp;2.5.3</span></a>) for fixed desgins and heteroskedastic errors, to generate <span class="math inline">\(m\)</span> (e.g.&nbsp;<span class="math inline">\(m=10,000\)</span>) bootstrap realizations <span class="math display">\[
 T^*_{n,1},T_{n,2}^*,\dots, T_{n,m}^*,
 \]</span> with <span class="math display">\[
 T^*_{n,k}=\frac{\hat\beta_{n,j}^*-\hat\beta_{0,j}}{\widehat{\operatorname{SE}}(\hat\beta^*_{j,n})},\quad k=1,\dots,m,
 \]</span> where</p>
 <ul>
 <li><span class="math inline">\(\hat\beta_{0,j}\)</span> is computed from the original sample</li>
-<li><span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta^*_{j,n})\)</span> is an appropriate estimate of the standard error (e.g. <a href="#eq-homoskedSE">Equation&nbsp;<span class="quarto-unresolved-ref">eq-homoskedSE</span></a> or <a href="#eq-heterokedSE">Equation&nbsp;<span class="quarto-unresolved-ref">eq-heterokedSE</span></a>)
+<li><span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta^*_{j,n})\)</span> is an appropriate estimate of the standard error (e.g. <a href="#eq-homoskedSE">Equation&nbsp;<span>2.12</span></a> or <a href="#eq-heterokedSE">Equation&nbsp;<span>2.13</span></a>)
 <ul>
 <li>the residual components in <span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta^*_{j,n})\)</span> are resampled</li>
 <li>the <span class="math inline">\(X\)</span>-components in <span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta^*_{j,n})\)</span> are resampled only in random designs, but kept fix in fixed desgins.</li>
 </ul></li>
 </ul></li>
-<li><p>Compute the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^\ast_{n,\frac{\alpha}{2},j}\)</span> and <span class="math inline">\(\hat q^\ast_{n,1-\frac{\alpha}{2},j}\)</span> (see <a href="#eq-empiricalQuantile">Equation&nbsp;<span class="quarto-unresolved-ref">eq-empiricalQuantile</span></a>) from the bootstrap estimates <span class="math inline">\(T^*_{n,1},T_{n,2}^*,\dots, T_{n,m}^*.\)</span></p></li>
-<li><p>Compute the <span class="math inline">\((1-\alpha)\times 100\%\)</span> bootstrap-<span class="math inline">\(t\)</span> confidence interval as in <a href="#eq-Boot_tCI">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Boot_tCI</span></a>: <span class="math display">\[
+<li><p>Compute the empirical <span class="math inline">\(\frac{\alpha}{2}\)</span> and <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantiles <span class="math inline">\(\hat q^\ast_{n,\frac{\alpha}{2},j}\)</span> and <span class="math inline">\(\hat q^\ast_{n,1-\frac{\alpha}{2},j}\)</span> (see <a href="#eq-empiricalQuantile">Equation&nbsp;<span>2.9</span></a>) from the bootstrap estimates <span class="math inline">\(T^*_{n,1},T_{n,2}^*,\dots, T_{n,m}^*.\)</span></p></li>
+<li><p>Compute the <span class="math inline">\((1-\alpha)\times 100\%\)</span> bootstrap-<span class="math inline">\(t\)</span> confidence interval as in <a href="#eq-Boot_tCI">Equation&nbsp;<span>2.11</span></a>: <span class="math display">\[
 \left[
   \hat\beta_{j,n}-\hat q^\ast_{1-\frac{\alpha}{2},n,j}\;\left(\widehat{\operatorname{SE}}(\hat\beta_{j,n})\right),\;
   \hat\beta_{j,n}-\hat q^\ast_{\frac{\alpha}{2},n,j}\;\left(\widehat{\operatorname{SE}}(\hat\beta_{j,n})\right)
@@ -2930,7 +2947,7 @@ T^*_{n,k}=\frac{\hat\beta_{n,j}^*-\hat\beta_{0,j}}{\widehat{\operatorname{SE}}(\
 </section>
 <section id="statistical-hypothesis-testing" class="level3" data-number="2.5.5">
 <h3 data-number="2.5.5" class="anchored" data-anchor-id="statistical-hypothesis-testing"><span class="header-section-number">2.5.5</span> Statistical Hypothesis Testing</h3>
-<p>In the following, we consider a fixed design, where one can use the <strong>residual bootstrap</strong> (<a href="#sec-bootResid"><span class="quarto-unresolved-ref">sec-bootResid</span></a>) or the <strong>wild bootstrap</strong> (<a href="#sec-bootWild"><span class="quarto-unresolved-ref">sec-bootWild</span></a>).</p>
+<p>In the following, we consider a fixed design, where one can use the <strong>residual bootstrap</strong> (<a href="#sec-bootResid"><span>Section&nbsp;2.5.2</span></a>) or the <strong>wild bootstrap</strong> (<a href="#sec-bootWild"><span>Section&nbsp;2.5.3</span></a>).</p>
 <p>Suppose we want to test the hypothesis <span class="math display">\[
 \begin{align*}
 H_0                    &amp;: \beta_{0,j}    = 0\\[2ex]
@@ -2942,7 +2959,7 @@ T_n = \frac{\hat\beta_{j,n} - 0}{\widehat{\operatorname{SE}}(\hat\beta_{j,n})},
 <ul>
 <li><span class="math inline">\(\beta_{0,j}\)</span> denotes the <span class="math inline">\(j\)</span>th element of <span class="math inline">\(\beta_0\in\mathbb{R}^p,\)</span></li>
 <li><span class="math inline">\(\hat\beta_{j,n}\)</span> denotes the <span class="math inline">\(j\)</span>th element of the OLS estimator <span class="math inline">\(\hat\beta_n\in\mathbb{R}^p.\)</span></li>
-<li><span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta_{j,n})\)</span> is an appropriate estimator of the standard error (e.g. <a href="#eq-homoskedSE">Equation&nbsp;<span class="quarto-unresolved-ref">eq-homoskedSE</span></a> or <a href="#eq-heterokedSE">Equation&nbsp;<span class="quarto-unresolved-ref">eq-heterokedSE</span></a>)</li>
+<li><span class="math inline">\(\widehat{\operatorname{SE}}(\hat\beta_{j,n})\)</span> is an appropriate estimator of the standard error (e.g. <a href="#eq-homoskedSE">Equation&nbsp;<span>2.12</span></a> or <a href="#eq-heterokedSE">Equation&nbsp;<span>2.13</span></a>)</li>
 </ul>
 <p>The <span class="math inline">\(p\)</span>-value is defined as <span class="math display">\[
 \begin{align*}
@@ -3015,12 +3032,12 @@ T_{n,1}^{\ast},\dots,T_{n,m}^{\ast}
   \right\}
 \end{align*}
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
@@ -3047,17 +3064,17 @@ X_1,\dots,X_n\overset{\text{i.i.d.}}{\sim} F.
 </section>
 <section id="exercise-2." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="exercise-2.">Exercise 2.</h4>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Exercise 1 shows that the empirical distribution function is a <strong>point-wise</strong> consistent estimator for each given <span class="math inline">\(x\in\mathbb{R}.\)</span> However, point-wise consistency generally does not imply <strong>uniformly</strong> consistency for all <span class="math inline">\(x\in\mathbb{R},\)</span> and therefore the Clivenko-Cantelli (<a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span class="quarto-unresolved-ref">thm-Clivenko-Cantelli</span></a>), which shows <strong>uniform</strong> consistency of the empirical distribution function, is so important.</p>
+<p>Exercise 1 shows that the empirical distribution function is a <strong>point-wise</strong> consistent estimator for each given <span class="math inline">\(x\in\mathbb{R}.\)</span> However, point-wise consistency generally does not imply <strong>uniformly</strong> consistency for all <span class="math inline">\(x\in\mathbb{R},\)</span> and therefore the Clivenko-Cantelli (<a href="#thm-Clivenko-Cantelli">Theorem&nbsp;<span>2.1</span></a>), which shows <strong>uniform</strong> consistency of the empirical distribution function, is so important.</p>
 <p>This exercise is intended to show that that point-wise convergence does generally not imply uniform convergence.</p>
 </div>
 </div>
@@ -3195,12 +3212,12 @@ F_n(x)\to_{p} F(x)
 </section>
 <section id="solution-of-exercise-2." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="solution-of-exercise-2.">Solution of Exercise 2.</h4>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
+<div class="callout-caption-container flex-fill">
 Tip
 </div>
 </div>
@@ -3269,7 +3286,7 @@ g(x)=0,
 P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\quad\text{as}\quad n\to\infty.
 \]</span></p>
 <p>Let us consider the finite-<span class="math inline">\(n\)</span> (with <span class="math inline">\(n=20\)</span>) performance of the classic confidence interval for the case where <span class="math inline">\(F\)</span> is a <strong>normal distribution</strong> with mean <span class="math inline">\(\mu=1\)</span> and standard deviation <span class="math inline">\(\sigma=2\)</span>:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-4_1e5f944cbbed217e5273e53048fd41d0">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-4_e95b9717717bf45a2515c8bccc62995c">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">##  Setup:</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span> <span class="co"># Sample Size</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>mean  <span class="ot">&lt;-</span>    <span class="dv">1</span> <span class="co"># Mean</span></span>
@@ -3329,7 +3346,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 <section id="a-part-2-classic-confidence-interval-n20-and-x_isim-chi2_1" class="level5 unnumbered">
 <h5 class="unnumbered anchored" data-anchor-id="a-part-2-classic-confidence-interval-n20-and-x_isim-chi2_1">(a) Part 2: Classic Confidence Interval (<span class="math inline">\(n=20\)</span> and <span class="math inline">\(X_i\sim \chi^2_1\)</span>)</h5>
 <p>Now, we consider the finite-<span class="math inline">\(n\)</span> performance of the classic confidence interval under the same setup as above, but for the case where <span class="math inline">\(F\)</span> is a <strong>non-normal distribution</strong>, namely, a <span class="math inline">\(\chi^2_1\)</span>-distribution with <span class="math inline">\(1\)</span> degree of freedom:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-5_4330b5901df784b3c28b075a1c065294">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-5_21ed72226fcfd97bd26fca6875ec10a9">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup:</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span>  <span class="co"># Sample Size</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df    <span class="ot">&lt;-</span>    <span class="dv">1</span>  <span class="co"># (=&gt; mean==1)</span></span>
@@ -3388,7 +3405,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 <section id="b-basic-bootstrap-confidence-interval-n20-and-x_isim-chi2_1" class="level5 unnumbered">
 <h5 class="unnumbered anchored" data-anchor-id="b-basic-bootstrap-confidence-interval-n20-and-x_isim-chi2_1">(b) Basic Bootstrap Confidence Interval (<span class="math inline">\(n=20\)</span> and <span class="math inline">\(X_i\sim \chi^2_1\)</span>)</h5>
 <p>Let’s generate an iid random sample <span class="math inline">\(S_n\)</span> with <span class="math inline">\(X_i\sim\chi^2_1\)</span> and the corresponding estimate <span class="math inline">\(\bar X_n\)</span>:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-6_4f1aab2b69ec10954e9e1627756f6321">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-6_531586c0ab61058eed2d6b8304847a27">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup:</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span>  <span class="co"># Sample Size</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>df    <span class="ot">&lt;-</span>    <span class="dv">1</span>  <span class="co"># (=&gt; mean==1)</span></span>
@@ -3409,7 +3426,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 <p>In the following we first generate the <span class="math inline">\(m\)</span> bootstrap realizations <span class="math display">\[
 \bar{X}_{n,1}^\ast,\dots,\bar{X}_{n,m}^\ast,
 \]</span> compute their quantiles <span class="math inline">\(\hat{q}^\ast_{n,\alpha/2}\)</span> and <span class="math inline">\(\hat{q}^\ast_{n,1-\alpha/2},\)</span> and plot all of this:</p>
-<div class="cell" data-fig.margin="true" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-7_40d5f73031b6a5deaba9edcdac5be449">
+<div class="cell" data-fig.margin="true" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-7_a58e4281504b1631fb80bdd137c5b900">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Bootstr-Setup:</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>alpha            <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>n.Bootsrap.draws <span class="ot">&lt;-</span> <span class="dv">1500</span></span>
@@ -3435,7 +3452,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 </div>
 </div>
 <p>Using our preparatory work above, the basic bootstrap confidence interval can be computed as following:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-8_9270c15027543639a0f508455483262d">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-8_79675c706edffc9c810ba1ee99bf9a28">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Basic Bootstrap Confidence Interval:</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>CI.Basic.Bootstr.lo <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>X.bar <span class="sc">-</span> q<span class="fl">.1</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>CI.Basic.Bootstr.up <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>X.bar <span class="sc">-</span> q<span class="fl">.2</span></span>
@@ -3451,7 +3468,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 </div>
 </div>
 <p>Now, we can investigate the finite-<span class="math inline">\(n\)</span> performance of the standard bootstrap confidence interval:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-9_e0480480410b406bf8684715b31e26c1">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-9_60f30d0dd58e602b314632a742a6be68">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup:</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span>  <span class="co"># Sample Size</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>df    <span class="ot">&lt;-</span>    <span class="dv">1</span>  <span class="co"># (=&gt; mean==1)</span></span>
@@ -3527,7 +3544,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 <p>In the following we first generate the <span class="math inline">\(m\)</span> bootstrap realizations <span class="math display">\[
 \sqrt{n}\frac{\bar{X}_{n,j}^\ast-\bar{X}_n}{s_{n,j}^\ast}\quad j=1,\dots,m,
 \]</span> compute their quantiles <span class="math inline">\(\hat{q}^\ast_{n,\alpha/2}\)</span> and <span class="math inline">\(\hat{q}^\ast_{n,1-\alpha/2}\)</span>, and plot all of this:</p>
-<div class="cell" data-fig.margin="true" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-10_8938c28464be99817c74b1697a13ef8d">
+<div class="cell" data-fig.margin="true" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-10_c52a968a9ad9b29cc440dfeb571816f1">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup:</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span>  <span class="co"># Sample Size</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df    <span class="ot">&lt;-</span>    <span class="dv">1</span>  <span class="co"># (=&gt; mean==1)</span></span>
@@ -3568,7 +3585,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 </div>
 </div>
 <p>Using our preparatory work above, the bootstrap-<span class="math inline">\(t\)</span> confidence interval can be computed as following:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-11_9f42d0163a877411955f65e38a085146">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-11_7972db48fc8f5302514aa125fed19384">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Basic Bootstrap Confidence Interval:</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>CI.Bstr.t.lo <span class="ot">&lt;-</span> X.bar <span class="sc">-</span> q<span class="fl">.1</span> <span class="sc">*</span> sd.hat<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>CI.Bstr.t.up <span class="ot">&lt;-</span> X.bar <span class="sc">-</span> q<span class="fl">.2</span> <span class="sc">*</span> sd.hat<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
@@ -3584,7 +3601,7 @@ P\left(\mu\in \operatorname{CI}_{\operatorname{classic},n}\right)\to 1-\alpha\qu
 </div>
 </div>
 <p>Let us investigate the finite-<span class="math inline">\(n\)</span> performance of the bootstrap-t confidence interval:</p>
-<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-12_09125772e5c59b60743b2dca52ad03c7">
+<div class="cell" data-hash="Ch3_Bootstrap_cache/html/unnamed-chunk-12_553fa9875b9edddf24e2d95a058a26e5">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup:</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>n     <span class="ot">&lt;-</span>   <span class="dv">20</span>  <span class="co"># Sample Size</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>df    <span class="ot">&lt;-</span>    <span class="dv">1</span>  <span class="co"># (=&gt; mean==1)</span></span>
@@ -3701,35 +3718,35 @@ P(Y^*=Y_n|\mathcal{S}_n)&amp;=\frac{1}{n}.
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Billingsley_1995" class="csl-entry" role="listitem">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Billingsley_1995" class="csl-entry" role="doc-biblioentry">
 Billingsley, Patrick. 1995. <em>Probability and Measure</em>. 3rd ed. Wiley.
 </div>
-<div id="ref-Davidson_and_Flachaire_2008" class="csl-entry" role="listitem">
+<div id="ref-Davidson_and_Flachaire_2008" class="csl-entry" role="doc-biblioentry">
 Davidson, Russell, and Emmanuel Flachaire. 2008. <span>“The Wild Bootstrap, Tamed at Last.”</span> <em>Journal of Econometrics</em> 146 (1): 162–69.
 </div>
-<div id="ref-Davison_Hinkley_2013" class="csl-entry" role="listitem">
+<div id="ref-Davison_Hinkley_2013" class="csl-entry" role="doc-biblioentry">
 Davison, Anthony Christopher, and David Victor Hinkley. 2013. <em>Bootstrap Methods and Their Application</em>. Cambridge University Press.
 </div>
-<div id="ref-Efron_Tibshirani_1994" class="csl-entry" role="listitem">
+<div id="ref-Efron_Tibshirani_1994" class="csl-entry" role="doc-biblioentry">
 Efron, Bradley, and Robert J Tibshirani. 1994. <em>An Introduction to the Bootstrap</em>. CRC press.
 </div>
-<div id="ref-Hall_1992" class="csl-entry" role="listitem">
+<div id="ref-Hall_1992" class="csl-entry" role="doc-biblioentry">
 Hall, Peter. 1992. <em>The Bootstrap and Edgeworth Expansion</em>. Springer Science.
 </div>
-<div id="ref-Horowitz_2001" class="csl-entry" role="listitem">
+<div id="ref-Horowitz_2001" class="csl-entry" role="doc-biblioentry">
 Horowitz, Joel L. 2001. <span>“The Bootstrap.”</span> In <em>Handbook of Econometrics</em>, 5:3159–3228.
 </div>
-<div id="ref-koike2024high" class="csl-entry" role="listitem">
+<div id="ref-koike2024high" class="csl-entry" role="doc-biblioentry">
 Koike, Yuta. 2024. <span>“High-Dimensional Bootstrap and Asymptotic Expansion.”</span> <em>arXiv Preprint arXiv:2404.05006</em>.
 </div>
-<div id="ref-Mammen_1992_Book" class="csl-entry" role="listitem">
+<div id="ref-Mammen_1992_Book" class="csl-entry" role="doc-biblioentry">
 Mammen, Enno. 1992. <span>“When Does Bootstrap Work: Asymptotic Results and Simulations.”</span> <em>Lecture Notes in Statistics</em> 77.
 </div>
-<div id="ref-Mammen_1993" class="csl-entry" role="listitem">
+<div id="ref-Mammen_1993" class="csl-entry" role="doc-biblioentry">
 ———. 1993. <span>“Bootstrap and Wild Bootstrap for High Dimensional Linear Models.”</span> <em>The Annals of Statistics</em> 21 (1): 255–85.
 </div>
-<div id="ref-Shao_Tu_1996" class="csl-entry" role="listitem">
+<div id="ref-Shao_Tu_1996" class="csl-entry" role="doc-biblioentry">
 Shao, Jun, and Dongsheng Tu. 1996. <em>The Jackknife and Bootstrap</em>. Springer Science.
 </div>
 </div>
@@ -3763,23 +3780,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -3844,92 +3847,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
