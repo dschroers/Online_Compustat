@@ -212,9 +212,63 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#from-raw-data-to-functional-data" id="toc-from-raw-data-to-functional-data" class="nav-link active" data-scroll-target="#from-raw-data-to-functional-data"><span class="toc-section-number">4.1</span>  From Raw Data to Functional Data</a></li>
-  <li><a href="#sample-mean-and-covariance" id="toc-sample-mean-and-covariance" class="nav-link" data-scroll-target="#sample-mean-and-covariance"><span class="toc-section-number">4.2</span>  Sample Mean and Covariance</a></li>
-  <li><a href="#functional-principal-component-analysis" id="toc-functional-principal-component-analysis" class="nav-link" data-scroll-target="#functional-principal-component-analysis"><span class="toc-section-number">4.3</span>  Functional Principal Component Analysis</a></li>
+  <li><a href="#literature-and-software" id="toc-literature-and-software" class="nav-link active" data-scroll-target="#literature-and-software">Literature and software</a></li>
+  <li><a href="#from-raw-observations-to-random-functions" id="toc-from-raw-observations-to-random-functions" class="nav-link" data-scroll-target="#from-raw-observations-to-random-functions"><span class="toc-section-number">4.1</span>  From raw observations to random functions</a></li>
+  <li><a href="#why-a-dense-grid-is-not-automatically-a-high-dimensional-problem" id="toc-why-a-dense-grid-is-not-automatically-a-high-dimensional-problem" class="nav-link" data-scroll-target="#why-a-dense-grid-is-not-automatically-a-high-dimensional-problem"><span class="toc-section-number">4.2</span>  Why a dense grid is not automatically a high-dimensional problem</a>
+  <ul class="collapse">
+  <li><a href="#the-function-norm-averages-over-the-domain" id="toc-the-function-norm-averages-over-the-domain" class="nav-link" data-scroll-target="#the-function-norm-averages-over-the-domain"><span class="toc-section-number">4.2.1</span>  The function norm averages over the domain</a></li>
+  <li><a href="#convergence-of-sampled-curves" id="toc-convergence-of-sampled-curves" class="nav-link" data-scroll-target="#convergence-of-sampled-curves"><span class="toc-section-number">4.2.2</span>  Convergence of sampled curves</a></li>
+  </ul></li>
+  <li><a href="#two-gaussian-models-cylindrical-noise-and-a-smooth-random-curve" id="toc-two-gaussian-models-cylindrical-noise-and-a-smooth-random-curve" class="nav-link" data-scroll-target="#two-gaussian-models-cylindrical-noise-and-a-smooth-random-curve"><span class="toc-section-number">4.3</span>  Two Gaussian models: cylindrical noise and a smooth random curve</a>
+  <ul class="collapse">
+  <li><a href="#case-1-the-cylindrical-model-nmui" id="toc-case-1-the-cylindrical-model-nmui" class="nav-link" data-scroll-target="#case-1-the-cylindrical-model-nmui"><span class="toc-section-number">4.3.1</span>  Case 1: the cylindrical model <span class="math inline">\(N(\mu,I)\)</span></a></li>
+  <li><a href="#case-2-a-smooth-gaussian-model-nmuk" id="toc-case-2-a-smooth-gaussian-model-nmuk" class="nav-link" data-scroll-target="#case-2-a-smooth-gaussian-model-nmuk"><span class="toc-section-number">4.3.2</span>  Case 2: a smooth Gaussian model <span class="math inline">\(N(\mu,K)\)</span></a></li>
+  <li><a href="#a-simulation-adding-more-directions" id="toc-a-simulation-adding-more-directions" class="nav-link" data-scroll-target="#a-simulation-adding-more-directions"><span class="toc-section-number">4.3.3</span>  A simulation: adding more directions</a></li>
+  </ul></li>
+  <li><a href="#estimating-the-mean-in-the-two-gaussian-models" id="toc-estimating-the-mean-in-the-two-gaussian-models" class="nav-link" data-scroll-target="#estimating-the-mean-in-the-two-gaussian-models"><span class="toc-section-number">4.4</span>  Estimating the mean in the two Gaussian models</a>
+  <ul class="collapse">
+  <li><a href="#cylindrical-model" id="toc-cylindrical-model" class="nav-link" data-scroll-target="#cylindrical-model"><span class="toc-section-number">4.4.1</span>  Cylindrical model</a></li>
+  <li><a href="#smooth-functional-model" id="toc-smooth-functional-model" class="nav-link" data-scroll-target="#smooth-functional-model"><span class="toc-section-number">4.4.2</span>  Smooth functional model</a></li>
+  </ul></li>
+  <li><a href="#why-functional-high-dimensionality-is-often-manageable" id="toc-why-functional-high-dimensionality-is-often-manageable" class="nav-link" data-scroll-target="#why-functional-high-dimensionality-is-often-manageable"><span class="toc-section-number">4.5</span>  Why functional high dimensionality is often manageable</a>
+  <ul class="collapse">
+  <li><a href="#neighboring-coordinates-are-linked" id="toc-neighboring-coordinates-are-linked" class="nav-link" data-scroll-target="#neighboring-coordinates-are-linked"><span class="toc-section-number">4.5.1</span>  1. Neighboring coordinates are linked</a></li>
+  <li><a href="#there-is-a-finite-variance-budget" id="toc-there-is-a-finite-variance-budget" class="nav-link" data-scroll-target="#there-is-a-finite-variance-budget"><span class="toc-section-number">4.5.2</span>  2. There is a finite variance budget</a></li>
+  <li><a href="#smoothness-shrinks-rough-directions" id="toc-smoothness-shrinks-rough-directions" class="nav-link" data-scroll-target="#smoothness-shrinks-rough-directions"><span class="toc-section-number">4.5.3</span>  3. Smoothness shrinks rough directions</a></li>
+  <li><a href="#basis-expansions-express-the-same-idea" id="toc-basis-expansions-express-the-same-idea" class="nav-link" data-scroll-target="#basis-expansions-express-the-same-idea"><span class="toc-section-number">4.5.4</span>  4. Basis expansions express the same idea</a></li>
+  <li><a href="#the-covariance-is-a-surface-not-j2-unrelated-numbers" id="toc-the-covariance-is-a-surface-not-j2-unrelated-numbers" class="nav-link" data-scroll-target="#the-covariance-is-a-surface-not-j2-unrelated-numbers"><span class="toc-section-number">4.5.5</span>  5. The covariance is a surface, not <span class="math inline">\(J^2\)</span> unrelated numbers</a></li>
+  <li><a href="#grid-density-and-sample-size-play-different-roles" id="toc-grid-density-and-sample-size-play-different-roles" class="nav-link" data-scroll-target="#grid-density-and-sample-size-play-different-roles"><span class="toc-section-number">4.5.6</span>  6. Grid density and sample size play different roles</a></li>
+  </ul></li>
+  <li><a href="#pre-processing-using-basis-expansions" id="toc-pre-processing-using-basis-expansions" class="nav-link" data-scroll-target="#pre-processing-using-basis-expansions"><span class="toc-section-number">4.6</span>  Pre-processing using basis expansions</a>
+  <ul class="collapse">
+  <li><a href="#b-spline-basis-functions" id="toc-b-spline-basis-functions" class="nav-link" data-scroll-target="#b-spline-basis-functions"><span class="toc-section-number">4.6.1</span>  B-spline basis functions</a></li>
+  <li><a href="#fourier-basis-functions" id="toc-fourier-basis-functions" class="nav-link" data-scroll-target="#fourier-basis-functions"><span class="toc-section-number">4.6.2</span>  Fourier basis functions</a></li>
+  <li><a href="#berkeley-growth-curves" id="toc-berkeley-growth-curves" class="nav-link" data-scroll-target="#berkeley-growth-curves"><span class="toc-section-number">4.6.3</span>  Berkeley growth curves</a></li>
+  <li><a href="#first-derivative-growth-velocity" id="toc-first-derivative-growth-velocity" class="nav-link" data-scroll-target="#first-derivative-growth-velocity"><span class="toc-section-number">4.6.4</span>  First derivative: growth velocity</a></li>
+  <li><a href="#second-derivative-growth-acceleration" id="toc-second-derivative-growth-acceleration" class="nav-link" data-scroll-target="#second-derivative-growth-acceleration"><span class="toc-section-number">4.6.5</span>  Second derivative: growth acceleration</a></li>
+  </ul></li>
+  <li><a href="#functional-mean-and-covariance" id="toc-functional-mean-and-covariance" class="nav-link" data-scroll-target="#functional-mean-and-covariance"><span class="toc-section-number">4.7</span>  Functional mean and covariance</a>
+  <ul class="collapse">
+  <li><a href="#smooth-gaussian-example" id="toc-smooth-gaussian-example" class="nav-link" data-scroll-target="#smooth-gaussian-example"><span class="toc-section-number">4.7.1</span>  Smooth Gaussian example</a></li>
+  </ul></li>
+  <li><a href="#functional-principal-component-analysis" id="toc-functional-principal-component-analysis" class="nav-link" data-scroll-target="#functional-principal-component-analysis"><span class="toc-section-number">4.8</span>  Functional principal component analysis</a>
+  <ul class="collapse">
+  <li><a href="#from-covariance-to-modes-of-variation" id="toc-from-covariance-to-modes-of-variation" class="nav-link" data-scroll-target="#from-covariance-to-modes-of-variation"><span class="toc-section-number">4.8.1</span>  From covariance to modes of variation</a></li>
+  <li><a href="#scores-and-reconstruction" id="toc-scores-and-reconstruction" class="nav-link" data-scroll-target="#scores-and-reconstruction"><span class="toc-section-number">4.8.2</span>  Scores and reconstruction</a></li>
+  <li><a href="#why-fpca-is-a-regularizer" id="toc-why-fpca-is-a-regularizer" class="nav-link" data-scroll-target="#why-fpca-is-a-regularizer"><span class="toc-section-number">4.8.3</span>  Why FPCA is a regularizer</a></li>
+  <li><a href="#best-basis-property" id="toc-best-basis-property" class="nav-link" data-scroll-target="#best-basis-property"><span class="toc-section-number">4.8.4</span>  Best-basis property</a></li>
+  </ul></li>
+  <li><a href="#fpca-application-1-human-growth" id="toc-fpca-application-1-human-growth" class="nav-link" data-scroll-target="#fpca-application-1-human-growth"><span class="toc-section-number">4.9</span>  FPCA application 1: human growth</a>
+  <ul class="collapse">
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="toc-section-number">4.9.1</span>  Interpretation</a></li>
+  <li><a href="#scores-turn-curves-into-interpretable-variables" id="toc-scores-turn-curves-into-interpretable-variables" class="nav-link" data-scroll-target="#scores-turn-curves-into-interpretable-variables"><span class="toc-section-number">4.9.2</span>  Scores turn curves into interpretable variables</a></li>
+  <li><a href="#fpca-of-growth-velocities" id="toc-fpca-of-growth-velocities" class="nav-link" data-scroll-target="#fpca-of-growth-velocities"><span class="toc-section-number">4.9.3</span>  FPCA of growth velocities</a></li>
+  </ul></li>
+  <li><a href="#fpca-application-2-canadian-temperature-curves" id="toc-fpca-application-2-canadian-temperature-curves" class="nav-link" data-scroll-target="#fpca-application-2-canadian-temperature-curves"><span class="toc-section-number">4.10</span>  FPCA application 2: Canadian temperature curves</a>
+  <ul class="collapse">
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1"><span class="toc-section-number">4.10.1</span>  Interpretation</a></li>
+  <li><a href="#scores-reveal-geographic-structure" id="toc-scores-reveal-geographic-structure" class="nav-link" data-scroll-target="#scores-reveal-geographic-structure"><span class="toc-section-number">4.10.2</span>  Scores reveal geographic structure</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -238,71 +292,61 @@ div.csl-indent {
 
 </header>
 
-<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/setup_5d51d30e5d17e364cc8655cd356c2c78">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'fda' was built under R version 4.3.3</code></pre>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fda-chapter-setup_f7e5f5c10ee53794a010c8d87852b049">
+
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'rainbow' was built under R version 4.3.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'pcaPP' was built under R version 4.3.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'RCurl' was built under R version 4.3.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'deSolve' was built under R version 4.3.3</code></pre>
-</div>
-</div>
-<p>Literature:</p>
-<ul>
-<li>Main reference for this chapter:
+<section id="literature-and-software" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="literature-and-software">Literature and software</h2>
+<p>Main reference for this chapter:</p>
 <ul>
 <li>Introduction to Functional Data Analysis (<span class="citation" data-cites="Book_KokoszkaReimherr_2017">Kokoszka and Reimherr (<a href="#ref-Book_KokoszkaReimherr_2017" role="doc-biblioref">2017</a>)</span>)</li>
-</ul></li>
-<li>Further textbooks:
-<ul>
-<li>Functional Data Analysi (<span class="citation" data-cites="RS_2005_book">Ramsay and Silverman (<a href="#ref-RS_2005_book" role="doc-biblioref">2005</a>)</span>)</li>
-<li>Nonparametric Functional Data Analysis: Theory and Practice (<span class="citation" data-cites="FV2006_book">Ferraty and Vieu (<a href="#ref-FV2006_book" role="doc-biblioref">2006</a>)</span>)</li>
-<li>Theoretical Foundations of Functional Data Analysis, with an Introduction to Linear Operators (@<span class="citation" data-cites="hsing2015theoretical">Hsing and Eubank (<a href="#ref-hsing2015theoretical" role="doc-biblioref">2015</a>)</span>)</li>
-</ul></li>
 </ul>
-<p><code>R</code>-packages used in this chapter:</p>
-<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/packages_d82ebcd4ff82c953ed88357611e94641">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the fda package</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"fda"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the fda package</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"fda"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the growth curve data (contained in the fda package)</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(growth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Further textbooks:</p>
+<ul>
+<li>Functional Data Analysis (<span class="citation" data-cites="RS_2005_book">Ramsay and Silverman (<a href="#ref-RS_2005_book" role="doc-biblioref">2005</a>)</span>)</li>
+<li>Nonparametric Functional Data Analysis: Theory and Practice (<span class="citation" data-cites="FV2006_book">Ferraty and Vieu (<a href="#ref-FV2006_book" role="doc-biblioref">2006</a>)</span>)</li>
+<li>Theoretical Foundations of Functional Data Analysis, with an Introduction to Linear Operators (<span class="citation" data-cites="hsing2015theoretical">Hsing and Eubank (<a href="#ref-hsing2015theoretical" role="doc-biblioref">2015</a>)</span>)</li>
+</ul>
+<p><code>R</code> package used in this chapter:</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/packages2_c76c35f49e728588a36f42a6115411eb">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the fda package</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"fda"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"fda"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Load data contained in the package</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(growth)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(CanadianWeather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>In the previous chapter, we used basis expansions to recover latent regression curves from discrete observations. When several such curves are observed—for example, for different people, firms, countries, days, or repeated experiments—we can perform statistics on the curves themselves. The field that studies such data is called <strong>functional data analysis</strong> (FDA).</p>
+<p>The word <em>functional</em> does not merely mean that a very long vector is stored in a computer. It expresses a substantive assumption: the coordinates are evaluations of one underlying object, and the ordering of the coordinates carries information. Values observed at nearby ages, maturities, wavelengths, or times are related because they belong to the same curve.</p>
+<p>This chapter develops that distinction carefully. In particular, we will compare unstructured high-dimensional variation} with high-dimensional observations generated by smooth functions.</p>
+<p>The distinction explains why a dense observation grid is often helpful in FDA, while an increasing number of unrelated variables is difficult in ordinary high-dimensional statistics.</p>
 <section id="functional-data-examples" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="functional-data-examples">Functional Data Examples</h4>
-<p>Growth data (e.g. <a href="#fig-boygrowth">Figure&nbsp;<span>4.1</span></a>) inspired the first works in functional data analysis. This type of data has very smooth trajectories and often the derivatives contain important information.</p>
+<h4 class="unnumbered anchored" data-anchor-id="functional-data-examples">Functional data examples</h4>
+<p>Growth data, such as those shown in <a href="#fig-boygrowth">Figure&nbsp;<span>4.1</span></a>, inspired some of the first work in FDA. The trajectories are smooth, and their derivatives have a direct interpretation as growth velocities.</p>
 <div id="fig-boygrowth" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./images/boygrowth.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Growth data</figcaption><p></p>
 </figure>
 </div>
-<p>More modern works in functional data analysis also consider the case of rough sample paths; i.e.&nbsp;sample paths which are continuous, but not necessarily differentiable. <a href="#fig-POI">Figure&nbsp;<span>4.2</span></a> shows data from a psychological case study.</p>
+<p>Modern FDA also considers rough sample paths: curves may be continuous without being differentiable. <a href="#fig-POI">Figure&nbsp;<span>4.2</span></a> shows data from a psychological case study.</p>
 <div id="fig-POI" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./images/Fig_POI.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;4.2: Psychological data</figcaption><p></p>
 </figure>
 </div>
-<p>Functional time series data are typically constructed by chopping a time series into regular sections (e.g.&nbsp;daily curves). Functional data methods were successfully applied to model and forecast daily electricity price curves and using the daily electricity demand curves as predictors (<a href="#fig-Electr">Figure&nbsp;<span>4.3</span></a>).</p>
+<p>Functional time-series data are often constructed by dividing a long time series into regular sections, such as days. Functional methods have been used to model and forecast daily electricity prices and to use daily demand curves as predictors.</p>
 <div id="fig-Electr" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./images/Fig_Electr.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;4.3: Electricity market data</figcaption><p></p>
 </figure>
 </div>
-<p>Another example for functional time series are, for instance, daily PM10 (environmental data) curves (<a href="#fig-PM10_2">Figure&nbsp;<span>4.4</span></a>).</p>
+<p>A further example is a sequence of daily pollution curves.</p>
 <div id="fig-PM10_2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./images/Fig_PM10_2.png" class="img-fluid figure-img"></p>
@@ -310,272 +354,531 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="from-raw-data-to-functional-data" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="from-raw-data-to-functional-data"><span class="header-section-number">4.1</span> From Raw Data to Functional Data</h2>
-<p>The simplest raw data set encountered in functional data analysis is a sample of the form: <span class="math display">\[
-\begin{align}
-X_i(t_j),\quad t_j\in[a,b],\quad i=1,\dots,n \quad j=1,\dots,J.
-\end{align}
-\]</span> The <strong>theoretical objects</strong> we wish to study are smooth curves: <span class="math display">\[
-\begin{align}
-X_i(t),\quad t\in[a,b],\quad i=1,\dots,n \quad j=1,\dots,J.\\[4ex]
-\end{align}
+</section>
+<section id="from-raw-observations-to-random-functions" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="from-raw-observations-to-random-functions"><span class="header-section-number">4.1</span> From raw observations to random functions</h2>
+<p>A common raw dataset has the form</p>
+<p><span class="math display">\[
+X_i(t_j),
+\qquad
+i=1,\ldots,N,
+\qquad
+j=1,\ldots,J,
 \]</span></p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-growthCurves2_0fac127b729c0acf49e6b213ce5476fb">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">5.1</span>, <span class="fl">4.1</span>, <span class="fl">2.1</span>, <span class="fl">2.1</span>))</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(<span class="at">x=</span>growth<span class="sc">$</span>age, <span class="at">y=</span>growth<span class="sc">$</span>hgtf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">type=</span><span class="st">"p"</span>, <span class="at">lty=</span><span class="dv">1</span>, <span class="at">pch=</span><span class="dv">21</span>, </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">"Age"</span>, <span class="at">ylab=</span><span class="st">"Height (cm)"</span>, <span class="at">cex.lab=</span><span class="fl">1.2</span>,<span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="at">bg=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="fu">expression</span>(X[i](t[j])))</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(<span class="at">x=</span>growth<span class="sc">$</span>age, <span class="at">y=</span>growth<span class="sc">$</span>hgtf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">type=</span><span class="st">"l"</span>, <span class="at">lty=</span><span class="dv">1</span>, <span class="at">pch=</span><span class="dv">1</span>, </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">"Age"</span>, <span class="at">ylab=</span><span class="st">"Height (cm)"</span>, <span class="at">cex.lab=</span><span class="fl">1.2</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="fu">expression</span>(X[i](t)))</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">5.1</span>, <span class="fl">4.1</span>, <span class="fl">4.1</span>, <span class="fl">2.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <span class="math inline">\(N\)</span> is the number of independently observed units and <span class="math inline">\(J\)</span> is the number of measurements per unit.</p>
+<p>We deliberately use two different letters:</p>
+<p><span class="math display">\[
+N:
+\quad \text{number of independent curves},
+\]</span></p>
+<p><span class="math display">\[
+J:
+\quad \text{number of grid points on each curve}.
+\]</span></p>
+<p>This distinction will remain important throughout the chapter. Increasing <span class="math inline">\(N\)</span> gives more information about the population of curves. Increasing <span class="math inline">\(J\)</span> gives a more detailed view of each already-observed curve.</p>
+<p>The theoretical objects of interest are entire functions,</p>
+<p><span class="math display">\[
+X_i(t),
+\qquad t\in[a,b],
+\qquad i=1,\ldots,N.
+\]</span></p>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-growthCurves2_d14ca7044a11e95a50b59b2ec05bc631">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">5.1</span>, <span class="fl">4.1</span>, <span class="fl">2.1</span>, <span class="fl">2.1</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> growth<span class="sc">$</span>age,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> growth<span class="sc">$</span>hgtf[, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"p"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">21</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Age"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Height (cm)"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex.lab =</span> <span class="fl">1.2</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">expression</span>(X[i](t[j]))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> growth<span class="sc">$</span>age,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> growth<span class="sc">$</span>hgtf[, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Age"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Height (cm)"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex.lab =</span> <span class="fl">1.2</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">expression</span>(X[i](t))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-growthCurves2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-growthCurves2-1.png" class="img-fluid figure-img" width="768"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.5: Actually observed data points <span class="math inline">\(X_i(t_j)\)</span> versus the theoretical objects <span class="math inline">\(X(t).\)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.5: Observed values <span class="math inline">\(X_i(t_j)\)</span> versus the functional objects <span class="math inline">\(X_i(t)\)</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>Pre-Processing the Data using Basis Expansions:</strong></p>
-<p>Typically, the first step in working with functional data is to express the functional data by means of a <strong>basis expansion</strong> <span class="math display">\[
-X_i(t)\approx\sum_{m=1}^M c_{im} B_m(t),\quad t\in[a,b],
-\]</span> where <span class="math inline">\(B_1(t),\dots,B_M(t)\)</span> are some standard collection of basis functions like:</p>
+<p>A random function is therefore a random variable whose realization is an entire curve rather than a single number. We will not need abstract functional analysis to work with this idea. We only need to specify how distances between curves are measured.</p>
+</section>
+<section id="why-a-dense-grid-is-not-automatically-a-high-dimensional-problem" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="why-a-dense-grid-is-not-automatically-a-high-dimensional-problem"><span class="header-section-number">4.2</span> Why a dense grid is not automatically a high-dimensional problem</h2>
+<section id="the-function-norm-averages-over-the-domain" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="the-function-norm-averages-over-the-domain"><span class="header-section-number">4.2.1</span> The function norm averages over the domain</h3>
+<p>On <span class="math inline">\([0,1]\)</span>, a natural measure of the size of a curve <span class="math inline">\(g\)</span> is</p>
+<p><span class="math display">\[
+\|g\|_{L^2}^2
+=
+\int_0^1 g(t)^2\,dt.
+\]</span></p>
+<p>Two curves are close when their integrated squared difference is small:</p>
+<p><span class="math display">\[
+\|g-h\|_{L^2}^2
+=
+\int_0^1 \{g(t)-h(t)\}^2\,dt.
+\]</span></p>
+<p>Suppose that the curve is recorded on the regular grid</p>
+<p><span class="math display">\[
+t_j=\frac{j}{J},
+\qquad j=1,\ldots,J.
+\]</span></p>
+<p>The integral is approximated by a Riemann sum,</p>
+<p><span class="math display">\[
+\|g\|_{L^2}^2
+\approx
+\frac{1}{J}\sum_{j=1}^J g(t_j)^2.
+\]</span></p>
+<p>It is therefore natural to define the <strong>discrete function norm</strong></p>
+<p><span class="math display">\[
+\|\boldsymbol g\|_J^2
+=
+\frac{1}{J}\sum_{j=1}^J g(t_j)^2.
+\]</span></p>
+<p>By contrast, the ordinary Euclidean norm of the stored vector is</p>
+<p><span class="math display">\[
+\|\boldsymbol g\|_{\mathbb R^J}^2
+=
+\sum_{j=1}^J g(t_j)^2
+=
+J\|\boldsymbol g\|_J^2.
+\]</span></p>
+<p>For a fixed nonzero curve, the ordinary Euclidean norm grows approximately like <span class="math inline">\(\sqrt{J}\)</span>, simply because it adds more terms. The function norm remains stable because each term receives weight <span class="math inline">\(1/J\)</span>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Same numbers, different geometry
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A vector of <span class="math inline">\(J\)</span> evaluations can be viewed in two different ways.</p>
 <ul>
-<li>splines</li>
-<li>wavelets</li>
-<li>sine and cosine functions</li>
-<li>etc.</li>
+<li>In ordinary <span class="math inline">\(\mathbb R^J\)</span>, the coordinates are treated as <span class="math inline">\(J\)</span> separate variables and squared errors are added.</li>
+<li>In FDA, the coordinates approximate one curve and squared errors are integrated over a fixed domain.</li>
 </ul>
-<p><strong>Example: B-spline</strong> basis functions <span class="math inline">\(B_1(t),\dots,B_M(t)\)</span>:</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-1_5b9b3945ba1cf16c545fc43b64a81b66">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>bspl_bf <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">create.bspline.basis</span>(<span class="at">rangeval =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">norder   =</span> <span class="dv">3</span>, </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">breaks   =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">len=</span><span class="dv">7</span>))</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bspl_bf, </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"B-spline Basis Functions"</span>, </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"[a,b]=[0,1]"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
-</figure>
+<p>The factor <span class="math inline">\(1/J\)</span> is not cosmetic. It represents the width of the grid cells and makes the discrete norm approximate a function norm.</p>
+</div>
+</div>
+<div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="cf">function</span>(t) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">+</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> t) <span class="sc">+</span> <span class="fl">0.25</span> <span class="sc">*</span> <span class="fu">cos</span>(<span class="dv">6</span> <span class="sc">*</span> pi <span class="sc">*</span> t)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>J_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">25</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>norm_comparison <span class="ot">&lt;-</span> <span class="fu">do.call</span>(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  rbind,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(J_values, <span class="cf">function</span>(J) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    t_grid <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">:</span>J) <span class="sc">/</span> J</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    values <span class="ot">&lt;-</span> <span class="fu">g</span>(t_grid)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">J =</span> J,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">Euclidean_norm =</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>(values<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">Discrete_L2_norm =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>(values<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(norm_comparison, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-grid-norm" class="cell tbl-parent quarto-layout-panel anchored" data-tbl-cap="The Euclidean norm grows with the number of grid points, while the discretized function norm converges." data-hash="Ch5_FunctionalDataAnalysis_cache/html/tbl-grid-norm_c1ee7017a281f2f4804b0468f1808665">
+<div class="panel-caption table-caption">
+<p><strong>?(caption)</strong></p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<pre><code>     J Euclidean_norm Discrete_L2_norm
+1   10          3.572             1.13
+2   25          5.649             1.13
+3   50          7.988             1.13
+4  100         11.297             1.13
+5  250         17.862             1.13
+6  500         25.261             1.13
+7 1000         35.725             1.13</code></pre>
 </div>
 </div>
 </div>
-<p><strong>Example: Fourier</strong> basis functions <span class="math inline">\(B_1(t),\dots,B_M(t)\)</span>:</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-2_8e1235919b3c96db6a858627b5d9ce90">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>fourier_bf <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">create.fourier.basis</span>(<span class="at">rangeval =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">nbasis   =</span> <span class="dv">5</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fourier_bf, </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Fourier Basis Functions"</span>, </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"[a,b]=[0,1]"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
-</figure>
 </div>
-</div>
-</div>
-<p><strong>Example:</strong> Pre-processing the data of the Berkeley growth study</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-3_ed815402f3066e651ca75c5a65f486f0">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>SmObj <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">smooth.basisPar</span>(growth<span class="sc">$</span>age, </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">y =</span> growth<span class="sc">$</span>hgtf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],<span class="at">lam=</span><span class="fl">0.1</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">plot</span>(SmObj<span class="sc">$</span>fd, </span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Age (years)"</span>, </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Height (cm)"</span>, <span class="at">cex.lab=</span><span class="fl">1.2</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"5 Girls in Berkeley Growth Study"</span>, <span class="at">lty=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>Example:</strong> <strong>1st derivative</strong> of the functional data from the Berkeley growth study</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-4_79722439ebfcc5e3dea777d97c850a40">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">plot</span>(fda<span class="sc">::</span><span class="fu">deriv.fd</span>(SmObj<span class="sc">$</span>fd, <span class="dv">1</span>), </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Age (years)"</span>, </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Growth Rate (cm / year)"</span>, <span class="at">cex.lab=</span><span class="fl">1.2</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"5 Girls in Berkeley Growth Study (1st Derivative)"</span>, <span class="at">lty=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>Example:</strong> <strong>2nd derivative</strong> of the functional data from the Berkeley growth study</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-5_6ba872312b4a12d56c769404e6fd36e4">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">plot</span>(fda<span class="sc">::</span><span class="fu">deriv.fd</span>(SmObj<span class="sc">$</span>fd, <span class="dv">2</span>), </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Age (years)"</span>, </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Growth Rate (cm / year)"</span>, <span class="at">cex.lab=</span><span class="fl">1.2</span>,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"5 Girls in Berkeley Growth Study (1st Derivative)"</span>, <span class="at">lty=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>For an irregular grid, <span class="math inline">\(1/J\)</span> is replaced by quadrature weights:</p>
+<p><span class="math display">\[
+\|g\|_{L^2}^2
+\approx
+\sum_{j=1}^J w_j g(t_j)^2,
+\qquad
+\sum_{j=1}^J w_j=1.
+\]</span></p>
 </section>
-<section id="sample-mean-and-covariance" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="sample-mean-and-covariance"><span class="header-section-number">4.2</span> Sample Mean and Covariance</h2>
-<p><strong>Pointwise mean:</strong> <span class="math display">\[
-\bar{X}_n(t)=\frac{1}{n}\sum_{i=1}^n X_i(t)
+<section id="convergence-of-sampled-curves" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="convergence-of-sampled-curves"><span class="header-section-number">4.2.2</span> Convergence of sampled curves</h3>
+<p>Suppose that <span class="math inline">\(\widehat \mu_N(t)\)</span> estimates a mean curve <span class="math inline">\(\mu(t)\)</span>. On a grid, we may calculate</p>
+<p><span class="math display">\[
+\|\widehat\mu_N-\mu\|_J^2
+=
+\frac{1}{J}
+\sum_{j=1}^J
+\{\widehat\mu_N(t_j)-\mu(t_j)\}^2.
 \]</span></p>
-<p><strong>Pointwise standard deviation:</strong> <span class="math display">\[
-S_n(t)=\sqrt{\frac{1}{n-1}\sum_{i=1}^n\Big(X_i(t)-\bar{X}_n(t)\Big)^2}
+<p>If the grid becomes dense and the error curve is sufficiently regular, then</p>
+<p><span class="math display">\[
+\|\widehat\mu_N-\mu\|_J^2
+\longrightarrow
+\|\widehat\mu_N-\mu\|_{L^2}^2.
 \]</span></p>
-<p><strong>Pointwise covariance function:</strong> <span class="math display">\[
-\hat{c}_n(t,s)=\frac{1}{n-1}\sum_{i=1}^n\Big(X_i(t)-\bar{X}_n(t)\Big)\Big(X_i(s)-\bar{X}_n(s)\Big)
+<p>Thus, increasing <span class="math inline">\(J\)</span> does not change the statistical target. It improves the numerical approximation of the same integrated error.</p>
+<p>If we instead use the unscaled Euclidean norm, then</p>
+<p><span class="math display">\[
+\|\widehat\mu_N-\mu\|_{\mathbb R^J}^2
+=
+J\|\widehat\mu_N-\mu\|_J^2.
 \]</span></p>
-<p>The sample covariance function is extensively used in Functional Data Analysis. The interpretation of the values of <span class="math inline">\(\hat{c}_n(t,s)\)</span> is the same as for the usual variance-covariance matrix.</p>
-<p><strong>Example Data:</strong> Brownian motion trajectories</p>
-<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-6_4ca7884ce1f835dbdfa1577de7f652bf">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">109</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>n       <span class="ot">&lt;-</span> <span class="dv">50</span>   <span class="co"># sample size</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>J       <span class="ot">&lt;-</span> <span class="dv">500</span>  <span class="co"># number of evaluation points</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>BM.mat  <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="at">ncol=</span>n, <span class="at">nrow=</span>J)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>     BM.mat[,i] <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(<span class="fu">rnorm</span>(J, <span class="at">sd =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">100</span>))</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Computing and plotting the pointwise mean and standard deviations in <code>R</code>:</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-7_61d227a1ca6b25e963e5c6d48011d96b">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>BM.Mean <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(BM.mat)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>BM.SD   <span class="ot">&lt;-</span> <span class="fu">apply</span>(BM.mat,<span class="dv">1</span>,sd)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>xx      <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">len=</span>J) </span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(<span class="at">x    =</span> xx, </span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">y    =</span> BM.mat, </span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, </span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span><span class="st">"l"</span>, </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">col  =</span> <span class="fu">gray</span>(.<span class="dv">7</span>), <span class="at">lty=</span><span class="dv">1</span>, </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Brownian Motions"</span>)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> xx, </span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> BM.Mean)</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> xx, </span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> BM.SD, <span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>, <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Sample Mean"</span>,<span class="st">"Sample SD"</span>))</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(<span class="at">x    =</span> xx, </span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">y    =</span> BM.mat, </span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>, </span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"l"</span>, </span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">col  =</span> <span class="fu">gray</span>(.<span class="dv">7</span>), <span class="at">lty=</span><span class="dv">1</span>, </span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Brownian Motion"</span>)</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), </span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">lty=</span><span class="dv">1</span>)</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), </span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fu">sqrt</span>(J<span class="sc">*</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">100</span>)<span class="sc">^</span><span class="dv">2</span>)), <span class="at">lty=</span><span class="dv">2</span>)</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>, <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), </span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"True Mean"</span>,<span class="st">"True SD"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Computing and plotting the pointwise covariance function in <code>R</code>:</p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-8_ee6cab2c5a51c3178cd66f4e692b82e9">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>BM.cov <span class="ot">&lt;-</span> <span class="fu">var</span>(<span class="fu">t</span>(BM.mat))</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>slct   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">seq.int</span>(<span class="dv">1</span>,<span class="dv">500</span>,<span class="at">by=</span><span class="dv">20</span>),<span class="dv">500</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">1.1</span>, <span class="fl">1.2</span>, <span class="fl">1.1</span>))</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(<span class="at">x =</span> xx[slct], </span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> xx[slct], </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">z =</span> BM.cov[slct,slct], </span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">ylab =</span> <span class="st">"t"</span>, <span class="at">zlab =</span> <span class="st">""</span>, </span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Sample Covariance Function"</span>,</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">theta =</span> <span class="sc">-</span><span class="dv">40</span>, <span class="at">phi =</span> <span class="dv">20</span>, <span class="at">expand =</span> .<span class="dv">75</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>, <span class="at">shade =</span> <span class="fl">1.05</span>)</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length=</span> <span class="dv">30</span>)</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){<span class="fu">min</span>(x,y)}</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">Vectorize</span>(f)</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">outer</span>(x, y, f)</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">z =</span> z, <span class="at">xlab=</span><span class="st">"s"</span>, <span class="at">ylab=</span><span class="st">"t"</span>, <span class="at">zlab=</span><span class="st">""</span>,</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">main  =</span> <span class="st">"True Covariance Function"</span>,</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">theta =</span> <span class="sc">-</span><span class="dv">40</span>, <span class="at">phi =</span> <span class="dv">20</span>, <span class="at">expand =</span> .<span class="dv">75</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>, <span class="at">shade =</span> <span class="fl">1.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-9_2550937128137da82d52c86901552419">
-
-</div>
+<p>Even when the average squared error per unit of the domain is stable, the unscaled sum grows with <span class="math inline">\(J\)</span>. This is one reason why a dense functional observation can look problematic when it is analyzed using the geometry of an ordinary high-dimensional vector.</p>
+<p>However, the norm scaling is only the first part of the story. We must also ask whether the increasingly long vectors are evaluations of a genuine random function.</p>
 </section>
-<section id="functional-principal-component-analysis" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="functional-principal-component-analysis"><span class="header-section-number">4.3</span> Functional Principal Component Analysis</h2>
-<p>Principal Component Analysis (PCA) is effectively an eigendecomposition of the empirical covariance function <span class="math inline">\(\hat{c}_n(t,s)\)</span> <span class="math display">\[
-\begin{align*}
-\hat{c}_n(t,s)
-&amp;=\sum_{j=1}^n\hat{\lambda}_j\hat{v}_j(t)\hat{v}_j(s),\\[2ex]
-&amp;\approx\sum_{j=1}^{p&lt;n}\hat{\lambda}_j\hat{v}_j(t)\hat{v}_j(s),
-\end{align*}
-\]</span> where <span class="math display">\[
-\hat{\lambda}_1&gt;\hat{\lambda}_2&gt;\dots \geq 0
-\]</span> denote the estimated eigenvalues and where <span class="math display">\[
-\hat{v}_1(t),\dots,\hat{v}_p(t)
-\]</span> denote the estimated principal component (or eigen) functions.</p>
-<p>The estimated eigenfunctions are orthonormal, i.e.&nbsp; <span class="math display">\[
-\int_a^b\hat{v}_j(t)\hat{v}_k(t)dt=
+</section>
+<section id="two-gaussian-models-cylindrical-noise-and-a-smooth-random-curve" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="two-gaussian-models-cylindrical-noise-and-a-smooth-random-curve"><span class="header-section-number">4.3</span> Two Gaussian models: cylindrical noise and a smooth random curve</h2>
+<p>To see the difference clearly, consider an orthonormal collection of functions</p>
+<p><span class="math display">\[
+e_1,e_2,\ldots
+\]</span></p>
+<p>on <span class="math inline">\([0,1]\)</span>. “Orthonormal” means</p>
+<p><span class="math display">\[
+\int_0^1 e_j(t)e_k(t)\,dt
+=
 \begin{cases}
-1, &amp; j=k \\
-0, &amp;j\neq k.
+1,&amp;j=k,\\
+0,&amp;j\neq k.
 \end{cases}
 \]</span></p>
-<p>In FDA, functional PCA is very prominent since the Estimated Functional Principal Components (EFPC’s) <span class="math inline">\(\hat{v}_j\)</span> are very well suited as <strong>basis functions</strong> for <span class="math inline">\(X_i\)</span>: <span class="math display">\[
-\begin{align*}
+<p>The sine functions</p>
+<p><span class="math display">\[
+e_k(t)=\sqrt{2}\sin(k\pi t)
+\]</span></p>
+<p>are one example. They represent increasingly oscillatory directions.</p>
+<p>Consider Gaussian expansions of the form</p>
+<p><span class="math display">\[
 X_i(t)
-&amp;=\bar{X}_n(t) + \sum_{j=1}^n\hat{\xi}_{ij}\hat{v}_j(t)\\[2ex]
-&amp;\approx\bar{X}_n(t) + \sum_{j=1}^{p&lt;n}\hat{\xi}_{ij}\hat{v}_j(t),
-\end{align*}
-\]</span> where <span class="math inline">\(\hat{\xi}_{ij}\)</span> denote the <strong>estimated scores</strong> <span class="math display">\[
-\hat{\xi}_{ij}=\int_a^b (X_i(t)-\bar{X}_n(t))\hat{v}_j(t)dt.
+=
+\mu(t)
++
+\sum_{k=1}^{\infty}
+\sqrt{\lambda_k}\,Z_{ik}e_k(t),
+\qquad
+Z_{ik}\overset{\mathrm{i.i.d.}}{\sim}N(0,1).
 \]</span></p>
-<p>Note that <span class="math display">\[
-\frac{1}{n}\sum_{i=1}^n\hat{\xi}_{ij} = 0,\quad\text{for all }j=1,2,\dots
-\]</span> and that <span class="math display">\[
-\frac{1}{n}\sum_{i=1}^n\hat{\xi}_{ij}^2 = \hat{\lambda}_j,\quad\text{for all }j=1,2,\dots
+<p>The coefficients <span class="math inline">\(\lambda_k\)</span> determine how much random variation occurs in direction <span class="math inline">\(e_k\)</span>.</p>
+<section id="case-1-the-cylindrical-model-nmui" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="case-1-the-cylindrical-model-nmui"><span class="header-section-number">4.3.1</span> Case 1: the cylindrical model <span class="math inline">\(N(\mu,I)\)</span></h3>
+<p>The formal cylindrical model sets</p>
+<p><span class="math display">\[
+\lambda_k=1
+\qquad\text{for every }k.
 \]</span></p>
-<p><strong>Example: Computing the Functional PCA in <code>R</code>:</strong></p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-10_9580b48ffebd0355450a0472596849c2">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>BSPL.basis <span class="ot">&lt;-</span> <span class="fu">create.bspline.basis</span>(<span class="at">rangeval=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">nbasis=</span><span class="dv">200</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>BM.fd      <span class="ot">&lt;-</span> <span class="fu">smooth.basis</span>(<span class="at">argvals=</span>xx, <span class="at">y=</span>BM.mat, <span class="at">fdParobj=</span>BSPL.basis)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>BM.pca     <span class="ot">&lt;-</span> <span class="fu">pca.fd</span>(BM.fd<span class="sc">$</span>fd, <span class="at">nharm=</span><span class="dv">3</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.1</span>, <span class="fl">1.1</span>, <span class="fl">4.1</span>, <span class="fl">1.1</span>))</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(xx[slct], xx[slct], BM.cov[slct,slct], <span class="at">xlab=</span><span class="st">"s"</span>, <span class="at">ylab=</span><span class="st">"t"</span>, <span class="at">zlab=</span><span class="st">""</span>,</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="st">"Sample Covariance Function"</span>, <span class="at">theta =</span> <span class="sc">-</span><span class="dv">40</span>, <span class="at">phi =</span> <span class="dv">20</span>, <span class="at">expand =</span> .<span class="dv">75</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">shade =</span> <span class="fl">1.05</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">plot</span>(BM.pca<span class="sc">$</span>values[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">type=</span><span class="st">"o"</span>, <span class="at">ylab=</span><span class="st">""</span>, <span class="at">main=</span><span class="st">"Estimated Eigenvalues (p=3)"</span>))</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">plot</span>(BM.pca<span class="sc">$</span>harmonics, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">ylab=</span><span class="st">""</span>, <span class="at">main=</span><span class="st">"Estimated FPC's (p=3)"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Its <span class="math inline">\(J\)</span>-direction truncation is</p>
+<p><span class="math display">\[
+X_i^{(J)}(t)
+=
+\mu(t)
++
+\sum_{k=1}^J Z_{ik}e_k(t).
+\]</span></p>
+<p>Because the basis functions are orthonormal,</p>
+<p><span class="math display">\[
+\left\|X_i^{(J)}-\mu\right\|_{L^2}^2
+=
+\sum_{k=1}^J Z_{ik}^2.
+\]</span></p>
+<p>Consequently,</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\left\|X_i^{(J)}-\mu\right\|_{L^2}^2
+\right]
+=
+J.
+\]</span></p>
+<p>Each newly added direction contributes one additional unit of variance. The total variation therefore grows without bound. The sequence <span class="math inline">\(X_i^{(J)}\)</span> does not converge to an <span class="math inline">\(L^2\)</span>-valued random curve.</p>
+<p>This is the meaning of the word <strong>cylindrical</strong> here. Every finite collection of coefficients has a valid multivariate normal distribution, but the infinite collection does not define an ordinary square-integrable random function.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Point evaluations are misleading in the cylindrical case
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Writing <span class="math inline">\(X(t_j)\)</span> for cylindrical <span class="math inline">\(N(\mu,I)\)</span> suggests that an underlying curve exists and can be evaluated at <span class="math inline">\(t_j\)</span>. In general, it does not. Cylindrical white noise is better understood through finite projections or as a generalized noise object.</p>
+<p>A grid vector with independent <span class="math inline">\(N(0,1)\)</span> entries can be generated, but refining the grid does not reveal the same underlying curve more accurately. It creates new independent fluctuations at finer scales.</p>
+</div>
+</div>
+</section>
+<section id="case-2-a-smooth-gaussian-model-nmuk" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="case-2-a-smooth-gaussian-model-nmuk"><span class="header-section-number">4.3.2</span> Case 2: a smooth Gaussian model <span class="math inline">\(N(\mu,K)\)</span></h3>
+<p>Now let</p>
+<p><span class="math display">\[
+\lambda_k=\frac{\sigma^2}{k^4}.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+X_i(t)
+=
+\mu(t)
++
+\sum_{k=1}^{\infty}
+\frac{\sigma}{k^2}Z_{ik}e_k(t).
+\]</span></p>
+<p>The total expected variation is</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\|X_i-\mu\|_{L^2}^2
+\right]
+=
+\sum_{k=1}^{\infty}\lambda_k
+=
+\sigma^2\sum_{k=1}^{\infty}\frac{1}{k^4}
+&lt;
+\infty.
+\]</span></p>
+<p>The high-frequency directions receive rapidly decreasing variance. The random series converges to a square-integrable function. In fact, because the coefficients decrease rapidly and the sine functions are bounded, this example has continuous sample paths.</p>
+<p>Its covariance function is</p>
+<p><span class="math display">\[
+K(s,t)
+=
+\sum_{k=1}^{\infty}
+\lambda_k e_k(s)e_k(t)
+=
+\sigma^2
+\sum_{k=1}^{\infty}
+\frac{e_k(s)e_k(t)}{k^4}.
+\]</span></p>
+<p>This is a smooth covariance surface. Nearby values of a sample curve are related, and increasingly oscillatory directions carry increasingly little variation.</p>
+<p>The crucial comparison is</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+&amp; N(\mu,I) &amp; N(\mu,K)\\
+\hline
+\text{variance in direction }k &amp; 1 &amp; \lambda_k\downarrow0\\
+\text{total variation} &amp; \sum_k1=\infty &amp; \sum_k\lambda_k&lt;\infty\\
+\text{ordinary }L^2\text{ random curve} &amp; \text{no} &amp; \text{yes}\\
+\text{regularity across }t &amp; \text{none} &amp; \text{built into }K
+\end{array}
+\]</span></p>
+</section>
+<section id="a-simulation-adding-more-directions" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="a-simulation-adding-more-directions"><span class="header-section-number">4.3.3</span> A simulation: adding more directions</h3>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-cylindrical-smooth_e1c270145f7a8225a74bd64d36a50a97">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20260715</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">500</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>K_max <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(K_max)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>mu_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(t) {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">+</span> <span class="fl">0.4</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> t)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>basis_matrix <span class="ot">&lt;-</span> <span class="fu">sapply</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span>K_max,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(k) <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">*</span> <span class="fu">sin</span>(k <span class="sc">*</span> pi <span class="sc">*</span> grid)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>cyl_10 <span class="ot">&lt;-</span> <span class="fu">mu_fun</span>(grid) <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  basis_matrix[, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="sc">%*%</span> z[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>cyl_80 <span class="ot">&lt;-</span> <span class="fu">mu_fun</span>(grid) <span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  basis_matrix[, <span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>] <span class="sc">%*%</span> z[<span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>]</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span><span class="sc">:</span>K_max)<span class="sc">^</span><span class="dv">4</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>smooth_10 <span class="ot">&lt;-</span> <span class="fu">mu_fun</span>(grid) <span class="sc">+</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  basis_matrix[, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="sc">%*%</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">sqrt</span>(lambda[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]) <span class="sc">*</span> z[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>smooth_80 <span class="ot">&lt;-</span> <span class="fu">mu_fun</span>(grid) <span class="sc">+</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  basis_matrix[, <span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>] <span class="sc">%*%</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">sqrt</span>(lambda[<span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>]) <span class="sc">*</span> z[<span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>])</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">4.2</span>, <span class="fl">4.2</span>, <span class="fl">2.4</span>, <span class="fl">1.2</span>))</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  grid, cyl_10,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"t"</span>, <span class="at">ylab =</span> <span class="st">""</span>,</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Cylindrical truncation: J = 10"</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(grid, <span class="fu">mu_fun</span>(grid), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  grid, cyl_80,</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"t"</span>, <span class="at">ylab =</span> <span class="st">""</span>,</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Cylindrical truncation: J = 80"</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(grid, <span class="fu">mu_fun</span>(grid), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  grid, smooth_10,</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"t"</span>, <span class="at">ylab =</span> <span class="st">""</span>,</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Smooth covariance: J = 10"</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(grid, <span class="fu">mu_fun</span>(grid), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  grid, smooth_80,</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"t"</span>, <span class="at">ylab =</span> <span class="st">""</span>,</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Smooth covariance: J = 80"</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(grid, <span class="fu">mu_fun</span>(grid), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-cylindrical-smooth" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-cylindrical-smooth-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.6: Finite projections of cylindrical <span class="math inline">\(N(\mu,I)\)</span> do not stabilize as more directions are added. With decaying eigenvalues, the smooth Gaussian expansion stabilizes.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the cylindrical model, increasing the truncation level adds fluctuations of undiminished size. In the smooth model, the new directions have very small coefficients, so the approximations stabilize.</p>
+</section>
+</section>
+<section id="estimating-the-mean-in-the-two-gaussian-models" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="estimating-the-mean-in-the-two-gaussian-models"><span class="header-section-number">4.4</span> Estimating the mean in the two Gaussian models</h2>
+<p>For <span class="math inline">\(N\)</span> independent observations, the sample mean is</p>
+<p><span class="math display">\[
+\overline X_N(t)
+=
+\frac{1}{N}\sum_{i=1}^N X_i(t).
+\]</span></p>
+<section id="cylindrical-model" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="cylindrical-model"><span class="header-section-number">4.4.1</span> Cylindrical model</h3>
+<p>For the <span class="math inline">\(J\)</span>-direction cylindrical truncation,</p>
+<p><span class="math display">\[
+\overline X_N^{(J)}(t)-\mu(t)
+=
+\sum_{k=1}^J
+\left(
+\frac{1}{N}\sum_{i=1}^N Z_{ik}
+\right)e_k(t).
+\]</span></p>
+<p>Each averaged coefficient has variance <span class="math inline">\(1/N\)</span>. Hence</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\|\overline X_N^{(J)}-\mu\|_{L^2}^2
+\right]
+=
+\frac{J}{N}.
+\]</span></p>
+<p>Mean estimation is consistent only along sequences for which</p>
+<p><span class="math display">\[
+\frac{J}{N}\longrightarrow0.
+\]</span></p>
+<p>This is the familiar high-dimensional phenomenon: every additional direction introduces a new parameter with the same noise level.</p>
+</section>
+<section id="smooth-functional-model" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="smooth-functional-model"><span class="header-section-number">4.4.2</span> Smooth functional model</h3>
+<p>For the smooth model,</p>
+<p><span class="math display">\[
+\overline X_N(t)-\mu(t)
+=
+\sum_{k=1}^{\infty}
+\sqrt{\lambda_k}
+\left(
+\frac{1}{N}\sum_{i=1}^N Z_{ik}
+\right)e_k(t),
+\]</span></p>
+<p>and therefore</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\|\overline X_N-\mu\|_{L^2}^2
+\right]
+=
+\frac{1}{N}\sum_{k=1}^{\infty}\lambda_k.
+\]</span></p>
+<p>Because the total variation is finite,</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\|\overline X_N-\mu\|_{L^2}^2
+\right]
+=
+\frac{\operatorname{tr}(K)}{N}
+\longrightarrow0.
+\]</span></p>
+<p>The notation <span class="math inline">\(\operatorname{tr}(K)\)</span> simply means the total variance</p>
+<p><span class="math display">\[
+\operatorname{tr}(K)
+=
+\sum_{k=1}^{\infty}\lambda_k
+=
+\int_0^1 K(t,t)\,dt.
+\]</span></p>
+<p>No condition involving the observation-grid size <span class="math inline">\(J\)</span> appears. Once the data-generating distribution is a genuine random function with finite total variance, the sample mean converges in function norm at the usual <span class="math inline">\(N^{-1/2}\)</span> rate.</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-mean-risk_962c873312b836d502d06c64563d8c5d">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>J_seq <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>risk_cylindrical <span class="ot">&lt;-</span> J_seq <span class="sc">/</span> N</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>risk_smooth <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(<span class="dv">1</span> <span class="sc">/</span> J_seq<span class="sc">^</span><span class="dv">4</span>) <span class="sc">/</span> N</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  J_seq,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  risk_cylindrical,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Number of included directions J"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Expected squared L2 error"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">range</span>(<span class="fu">c</span>(risk_cylindrical, risk_smooth)),</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Risk of the sample mean"</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(J_seq, risk_smooth, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"topleft"</span>,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cylindrical N(mu, I): J/N"</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Smooth N(mu, K): sum(lambda_k)/N"</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">bty =</span> <span class="st">"n"</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-mean-risk" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-mean-risk-1.png" class="img-fluid figure-img" width="768"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.7: Expected squared function-norm error of the sample mean. Cylindrical variation grows with the number of active directions; smooth functional variation has a finite variance budget.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -586,59 +889,861 @@ X_i(t)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Population Quantities
+A useful subtlety
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>If we observe independent noise at <span class="math inline">\(J\)</span> grid points and evaluate the mean using</p>
 <p><span class="math display">\[
-\begin{align*}
-Cov(X(t),X(s)) = c(t,s)
-&amp;=\sum_{j=1}^n \lambda_j v_j(t) v_j(s),\\[2ex]
-&amp;\approx\sum_{j=1}^{p&lt;n} \lambda_j v_j(t) v_j(s),
-\end{align*}
-\]</span> where <span class="math display">\[
-\lambda_1 &gt; \lambda_2&gt;\dots \geq 0
-\]</span> denote the <strong>true eigenvalues</strong> and where <span class="math display">\[
-v_1(t),\dots,v_p(t)
-\]</span> denote the <strong>true principal component (or eigen) functions.</strong></p>
-<p>The eigenfunctions are orthonormal, i.e.&nbsp; <span class="math display">\[
-\int_a^b v_j(t)v_k(t)dt=
-\begin{cases}
-1, &amp; j=k \\
-0, &amp;j\neq k.
-\end{cases}
+\frac{1}{J}\sum_{j=1}^J
+\{\overline Y(t_j)-\mu(t_j)\}^2,
 \]</span></p>
-<p>Eigenfunctions as basis functions <span class="math display">\[
-\begin{align*}
+<p>the expected error can remain of order <span class="math inline">\(1/N\)</span>. This does <strong>not</strong> turn white noise into a random function. It only shows that an average loss over grid cells is different from an unscaled Euclidean loss.</p>
+<p>The cylindrical problem reappears when we ask whether the observations themselves converge to an <span class="math inline">\(L^2\)</span> object, whether individual curves can be reconstructed, or whether the infinitely many random directions have finite total variance. They do not.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="why-functional-high-dimensionality-is-often-manageable" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="why-functional-high-dimensionality-is-often-manageable"><span class="header-section-number">4.5</span> Why functional high dimensionality is often manageable</h2>
+<p>FDA is not a claim that dimension never matters. It is a way of exploiting structure that is absent from an unrestricted high-dimensional vector.</p>
+<section id="neighboring-coordinates-are-linked" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="neighboring-coordinates-are-linked"><span class="header-section-number">4.5.1</span> 1. Neighboring coordinates are linked</h3>
+<p>For a functional observation, <span class="math inline">\(X(t_j)\)</span> and <span class="math inline">\(X(t_{j+1})\)</span> refer to nearby locations on the same curve. Smoothness or continuity makes them informative about one another.</p>
+<p>For an unrestricted vector,</p>
+<p><span class="math display">\[
+(X_1,\ldots,X_J),
+\]</span></p>
+<p>coordinate <span class="math inline">\(j+1\)</span> need not have any special relation to coordinate <span class="math inline">\(j\)</span>. Increasing <span class="math inline">\(J\)</span> then means adding genuinely new variables.</p>
+</section>
+<section id="there-is-a-finite-variance-budget" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="there-is-a-finite-variance-budget"><span class="header-section-number">4.5.2</span> 2. There is a finite variance budget</h3>
+<p>A square-integrable random curve satisfies</p>
+<p><span class="math display">\[
+\mathbb E\|X-\mu\|_{L^2}^2
+=
+\int_a^b \operatorname{Var}\{X(t)\}\,dt
+&lt;
+\infty.
+\]</span></p>
+<p>In the principal-component representation, this is equivalent to</p>
+<p><span class="math display">\[
+\sum_{k=1}^{\infty}\lambda_k&lt;\infty.
+\]</span></p>
+<p>The infinitely many directions must therefore share a finite amount of total variation. Their variances cannot all remain large. This automatically creates eigenvalue decay.</p>
+<p>By contrast, cylindrical <span class="math inline">\(N(\mu,I)\)</span> assigns variance one to every direction. It has no finite variance budget and no ordinary functional realization.</p>
+</section>
+<section id="smoothness-shrinks-rough-directions" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="smoothness-shrinks-rough-directions"><span class="header-section-number">4.5.3</span> 3. Smoothness shrinks rough directions</h3>
+<p>A common estimator solves</p>
+<p><span class="math display">\[
+\widehat g_\lambda
+=
+\arg\min_g
+\left\{
+\sum_{j=1}^J
+\{Y(t_j)-g(t_j)\}^2
++
+\lambda
+\int_a^b
+\{g''(t)\}^2\,dt
+\right\}.
+\]</span></p>
+<p>The first term rewards fit. The second penalizes excessive curvature.</p>
+<ul>
+<li>A small <span class="math inline">\(\lambda\)</span> allows a flexible, possibly noisy curve.</li>
+<li>A large <span class="math inline">\(\lambda\)</span> retains only smooth shapes.</li>
+</ul>
+<p>This is regularization. The estimator is not allowed to spend equal flexibility on all <span class="math inline">\(J\)</span> directions. Highly oscillatory directions are shrunk most strongly.</p>
+<p>For fixed <span class="math inline">\(\lambda\)</span>, the fitted grid values can be written as</p>
+<p><span class="math display">\[
+\widehat{\boldsymbol g}
+=
+S_\lambda\boldsymbol Y,
+\]</span></p>
+<p>where <span class="math inline">\(S_\lambda\)</span> is a smoothing matrix. Its trace,</p>
+<p><span class="math display">\[
+\operatorname{df}_{\mathrm{eff}}(\lambda)
+=
+\operatorname{tr}(S_\lambda),
+\]</span></p>
+<p>is called the <strong>effective degrees of freedom</strong>. A curve recorded at <span class="math inline">\(J=500\)</span> locations may use only 10 or 15 effective degrees of freedom after smoothing.</p>
+</section>
+<section id="basis-expansions-express-the-same-idea" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="basis-expansions-express-the-same-idea"><span class="header-section-number">4.5.4</span> 4. Basis expansions express the same idea</h3>
+<p>We may write</p>
+<p><span class="math display">\[
 X_i(t)
-&amp;=\mathbb{E}(X(t)) + \sum_{j=1}^n \xi_{ij}v_j(t)\\[2ex]
-&amp;\approx\mathbb{E}(X(t)) + \sum_{j=1}^{p&lt;n}\xi_{ij}v_j(t),
-\end{align*}
-\]</span> where <span class="math inline">\(\xi_{ij}\)</span> denote the <strong>true scores</strong> <span class="math display">\[
-\xi_{ij}=\int_a^b (X_i(t)-\mathbb{E}(X(t)) )v_j(t)dt.
+\approx
+\sum_{m=1}^{M} c_{im}B_m(t),
 \]</span></p>
-<p>Note that <span class="math display">\[
-\mathbb{E}(\xi_{ij}) = 0,\quad\text{for all }j=1,2,\dots
-\]</span> and that <span class="math display">\[
-Var(\xi_{ij}) = \lambda_j,\quad\text{for all }j=1,2,\dots.
-\]</span></p>
-</div>
-</div>
-<p><strong>Best basis property:</strong> The EFPC’s are the best basis; i.e.&nbsp;they have the smallest approximation error (in the mean square sense).</p>
+<p>where <span class="math inline">\(B_1,\ldots,B_M\)</span> are smooth basis functions.</p>
+<p>Typically,</p>
 <p><span class="math display">\[
-\begin{align}
-X_i(t)&amp;\approx\bar{X}_n(t) + \sum_{j=1}^p\hat{\xi}_{ij}\hat{v}_j(t)
-\end{align}
+M\ll J.
 \]</span></p>
-<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-11_d23c54ea1e7dc495bd393e09f18f6fc7">
+<p>This does not assert that the true curve literally has only <span class="math inline">\(M\)</span> dimensions. It says that, at the resolution supported by the data, a moderate number of smooth building blocks captures the relevant variation.</p>
+<p>A basis restriction and a roughness penalty are two versions of the same principle:</p>
+<ul>
+<li>the basis restricts the admissible shapes;</li>
+<li>the penalty continuously shrinks implausibly rough shapes.</li>
+</ul>
+</section>
+<section id="the-covariance-is-a-surface-not-j2-unrelated-numbers" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="the-covariance-is-a-surface-not-j2-unrelated-numbers"><span class="header-section-number">4.5.5</span> 5. The covariance is a surface, not <span class="math inline">\(J^2\)</span> unrelated numbers</h3>
+<p>An unrestricted <span class="math inline">\(J\times J\)</span> covariance matrix contains</p>
+<p><span class="math display">\[
+\frac{J(J+1)}{2}
+\]</span></p>
+<p>different entries. Estimating them separately is difficult when <span class="math inline">\(J\)</span> is large relative to <span class="math inline">\(N\)</span>.</p>
+<p>In FDA, the covariance is modeled as a function</p>
+<p><span class="math display">\[
+c(s,t)
+=
+\operatorname{Cov}\{X(s),X(t)\}.
+\]</span></p>
+<p>If <span class="math inline">\(c\)</span> is smooth, neighboring points on the covariance surface are related. Estimation can pool information over nearby <span class="math inline">\((s,t)\)</span>-pairs. Functional principal components then summarize this surface using a sequence of smooth modes whose importance decreases with their eigenvalues.</p>
+</section>
+<section id="grid-density-and-sample-size-play-different-roles" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="grid-density-and-sample-size-play-different-roles"><span class="header-section-number">4.5.6</span> 6. Grid density and sample size play different roles</h3>
+<p>A dense grid cannot create new independent curves.</p>
+<p><span class="math display">\[
+J:
+\quad
+\text{how accurately can each curve be observed or reconstructed?}
+\]</span></p>
+<p><span class="math display">\[
+N:
+\quad
+\text{how accurately can population quantities be learned?}
+\]</span></p>
+<p>Observing ten people at 10,000 ages is not equivalent to observing 10,000 people. Smoothness can make large <span class="math inline">\(J\)</span> manageable and beneficial, but uncertainty about the population still depends primarily on <span class="math inline">\(N\)</span>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Main conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>FDA is best understood as <strong>structured high-dimensional statistics</strong>.</p>
+<p>The raw vectors may be long, but the ordering of their coordinates, smoothness of the trajectories, smoothness of the covariance, and decay of principal-component variances provide regularization. If those structural assumptions are false, functional methods do not make the curse of dimensionality disappear.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="pre-processing-using-basis-expansions" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="pre-processing-using-basis-expansions"><span class="header-section-number">4.6</span> Pre-processing using basis expansions</h2>
+<p>The first practical step is often to represent discretely observed curves through a basis:</p>
+<p><span class="math display">\[
+X_i(t)
+\approx
+\sum_{m=1}^{M}c_{im}B_m(t).
+\]</span></p>
+<p>Common choices include:</p>
+<ul>
+<li>B-splines for non-periodic curves;</li>
+<li>Fourier functions for periodic curves;</li>
+<li>wavelets for localized features;</li>
+<li>data-adaptive principal-component functions.</li>
+</ul>
+<section id="b-spline-basis-functions" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="b-spline-basis-functions"><span class="header-section-number">4.6.1</span> B-spline basis functions</h3>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-1_7b26f6fc5beb213082a8a100759a42ec">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bspl_bf <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">create.bspline.basis</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">rangeval =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">norder =</span> <span class="dv">3</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="at">length.out=</span><span class="dv">7</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  bspl_bf,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"B-spline Basis Functions"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"[a,b] = [0,1]"</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="fourier-basis-functions" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="fourier-basis-functions"><span class="header-section-number">4.6.2</span> Fourier basis functions</h3>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-2_70240f748e33c6375a9d7b3fb90381c6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fourier_bf <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">create.fourier.basis</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">rangeval =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nbasis =</span> <span class="dv">5</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  fourier_bf,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Fourier Basis Functions"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"[a,b] = [0,1]"</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="berkeley-growth-curves" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="berkeley-growth-curves"><span class="header-section-number">4.6.3</span> Berkeley growth curves</h3>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-3_607b7e18df39cb414a013b3ce49b0fc9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>growth_five <span class="ot">&lt;-</span> fda<span class="sc">::</span><span class="fu">smooth.basisPar</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">argvals =</span> growth<span class="sc">$</span>age,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> growth<span class="sc">$</span>hgtf[, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lfdobj =</span> <span class="dv">2</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">lambda =</span> <span class="fl">0.1</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  growth_five<span class="sc">$</span>fd,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Age (years)"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Height (cm)"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex.lab =</span> <span class="fl">1.2</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Five Girls in the Berkeley Growth Study"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "done"</code></pre>
+</div>
+</div>
+<p>The roughness penalty uses the second derivative. It therefore discourages curves that bend excessively between nearby ages.</p>
+</section>
+<section id="first-derivative-growth-velocity" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="first-derivative-growth-velocity"><span class="header-section-number">4.6.4</span> First derivative: growth velocity</h3>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-4_c086f68d788f50abb3aeafaaf36d58b7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  fda<span class="sc">::</span><span class="fu">deriv.fd</span>(growth_five<span class="sc">$</span>fd, <span class="dv">1</span>),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Age (years)"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Growth velocity (cm/year)"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex.lab =</span> <span class="fl">1.2</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Estimated Growth Velocities"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "done"</code></pre>
+</div>
+</div>
+<p>The derivative reveals features that are less visible in the height curves, most importantly the adolescent growth spurt.</p>
+</section>
+<section id="second-derivative-growth-acceleration" class="level3" data-number="4.6.5">
+<h3 data-number="4.6.5" class="anchored" data-anchor-id="second-derivative-growth-acceleration"><span class="header-section-number">4.6.5</span> Second derivative: growth acceleration</h3>
+<div class="cell" data-layout-align="center" data-hash="Ch5_FunctionalDataAnalysis_cache/html/unnamed-chunk-5_37228c653743ec238d19703068abe643">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  fda<span class="sc">::</span><span class="fu">deriv.fd</span>(growth_five<span class="sc">$</span>fd, <span class="dv">2</span>),</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Age (years)"</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Growth acceleration (cm/year²)"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex.lab =</span> <span class="fl">1.2</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Estimated Growth Accelerations"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty =</span> <span class="dv">1</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "done"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="functional-mean-and-covariance" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="functional-mean-and-covariance"><span class="header-section-number">4.7</span> Functional mean and covariance</h2>
+<p>For a random curve <span class="math inline">\(X\)</span>, the population mean is</p>
+<p><span class="math display">\[
+\mu(t)=\mathbb E\{X(t)\}.
+\]</span></p>
+<p>Its sample analogue is the pointwise mean</p>
+<p><span class="math display">\[
+\overline X_N(t)
+=
+\frac{1}{N}\sum_{i=1}^N X_i(t).
+\]</span></p>
+<p>The pointwise standard deviation is</p>
+<p><span class="math display">\[
+S_N(t)
+=
+\sqrt{
+\frac{1}{N-1}
+\sum_{i=1}^N
+\{X_i(t)-\overline X_N(t)\}^2
+}.
+\]</span></p>
+<p>The covariance function is estimated by</p>
+<p><span class="math display">\[
+\widehat c_N(s,t)
+=
+\frac{1}{N-1}
+\sum_{i=1}^N
+\{X_i(s)-\overline X_N(s)\}
+\{X_i(t)-\overline X_N(t)\}.
+\]</span></p>
+<p>Its interpretation is the same as that of an ordinary covariance matrix:</p>
+<ul>
+<li>positive <span class="math inline">\(\widehat c_N(s,t)\)</span>: curves above their mean at <span class="math inline">\(s\)</span> tend also to be above their mean at <span class="math inline">\(t\)</span>;</li>
+<li>negative <span class="math inline">\(\widehat c_N(s,t)\)</span>: curves above their mean at <span class="math inline">\(s\)</span> tend to be below their mean at <span class="math inline">\(t\)</span>;</li>
+<li>large diagonal value <span class="math inline">\(\widehat c_N(t,t)\)</span>: substantial variation across curves at location <span class="math inline">\(t\)</span>.</li>
+</ul>
+<section id="smooth-gaussian-example" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="smooth-gaussian-example"><span class="header-section-number">4.7.1</span> Smooth Gaussian example</h3>
+<p>The following simulation uses the smooth covariance model introduced above.</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-smooth-gaussian-summary_73a9d2f4ff58828c03ce291362992611">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">109</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>J <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>K_terms <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>t_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out=</span>J)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>mu_grid <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fl">0.6</span> <span class="sc">*</span> t_grid <span class="sc">+</span> <span class="fl">0.35</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">*</span>t_grid)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>basis_matrix <span class="ot">&lt;-</span> <span class="fu">sapply</span>(</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span>K_terms,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(k) <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">*</span> <span class="fu">sin</span>(k<span class="sc">*</span>pi<span class="sc">*</span>t_grid)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fl">0.7</span> <span class="sc">/</span> (<span class="dv">1</span><span class="sc">:</span>K_terms)<span class="sc">^</span><span class="dv">4</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rnorm</span>(N<span class="sc">*</span>K_terms),</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">nrow=</span>N,</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol=</span>K_terms</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>smooth_curves <span class="ot">&lt;-</span> <span class="fu">sweep</span>(</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  scores <span class="sc">%*%</span> <span class="fu">diag</span>(<span class="fu">sqrt</span>(lambda)) <span class="sc">%*%</span> <span class="fu">t</span>(basis_matrix),</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">MARGIN=</span><span class="dv">2</span>,</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">STATS=</span>mu_grid,</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">FUN=</span><span class="st">"+"</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>smooth_mean <span class="ot">&lt;-</span> <span class="fu">colMeans</span>(smooth_curves)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>smooth_sd <span class="ot">&lt;-</span> <span class="fu">apply</span>(smooth_curves, <span class="dv">2</span>, sd)</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>smooth_cov <span class="ot">&lt;-</span> <span class="fu">cov</span>(smooth_curves)</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">4.2</span>, <span class="fl">4.2</span>, <span class="fl">2.5</span>, <span class="fl">1.2</span>))</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="fu">matplot</span>(</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  t_grid,</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>(smooth_curves),</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">type=</span><span class="st">"l"</span>,</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty=</span><span class="dv">1</span>,</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.75</span>),</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"t"</span>,</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"X(t)"</span>,</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Smooth Gaussian Curves"</span></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(t_grid, smooth_mean, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(t_grid, smooth_mean <span class="sc">+</span> smooth_sd, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(t_grid, smooth_mean <span class="sc">-</span> smooth_sd, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">"topleft"</span>,</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),</span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd=</span><span class="dv">2</span>,</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Sample mean"</span>, <span class="st">"Mean ± pointwise SD"</span>),</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">bty=</span><span class="st">"n"</span></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>selected <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, J, <span class="at">length.out=</span><span class="dv">40</span>)</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span>t_grid[selected],</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span>t_grid[selected],</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>  <span class="at">z=</span>smooth_cov[selected, selected],</span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"s"</span>,</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"t"</span>,</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>  <span class="at">zlab=</span><span class="st">""</span>,</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Sample Covariance Function"</span>,</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>  <span class="at">theta=</span><span class="sc">-</span><span class="dv">40</span>,</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>  <span class="at">phi=</span><span class="dv">20</span>,</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>  <span class="at">expand=</span><span class="fl">0.75</span>,</span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>  <span class="at">shade=</span><span class="fl">0.7</span></span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-smooth-gaussian-summary" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-smooth-gaussian-summary-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.8: Smooth Gaussian curves, their estimated mean and pointwise standard deviation, and the estimated covariance surface.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The covariance surface is smooth because it is generated by a small amount of variation in low-frequency directions and progressively less variation in high-frequency directions.</p>
+</section>
+</section>
+<section id="functional-principal-component-analysis" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="functional-principal-component-analysis"><span class="header-section-number">4.8</span> Functional principal component analysis</h2>
+<section id="from-covariance-to-modes-of-variation" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="from-covariance-to-modes-of-variation"><span class="header-section-number">4.8.1</span> From covariance to modes of variation</h3>
+<p>Functional principal component analysis (FPCA) finds directions <span class="math inline">\(v_k(t)\)</span> satisfying</p>
+<p><span class="math display">\[
+\int_a^b c(s,t)v_k(s)\,ds
+=
+\lambda_k v_k(t).
+\]</span></p>
+<p>This equation is the functional analogue of</p>
+<p><span class="math display">\[
+\Sigma\boldsymbol v_k
+=
+\lambda_k\boldsymbol v_k
+\]</span></p>
+<p>in ordinary PCA.</p>
+<p>The covariance function can be represented as</p>
+<p><span class="math display">\[
+c(s,t)
+=
+\sum_{k=1}^{\infty}
+\lambda_k v_k(s)v_k(t),
+\]</span></p>
+<p>and approximated by</p>
+<p><span class="math display">\[
+c(s,t)
+\approx
+\sum_{k=1}^{p}
+\lambda_k v_k(s)v_k(t).
+\]</span></p>
+<p>The eigenvalues are ordered as</p>
+<p><span class="math display">\[
+\lambda_1\geq\lambda_2\geq\cdots\geq0.
+\]</span></p>
+<p>The eigenfunctions are orthonormal:</p>
+<p><span class="math display">\[
+\int_a^b v_j(t)v_k(t)\,dt
+=
+\begin{cases}
+1,&amp;j=k,\\
+0,&amp;j\neq k.
+\end{cases}
+\]</span></p>
+</section>
+<section id="scores-and-reconstruction" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="scores-and-reconstruction"><span class="header-section-number">4.8.2</span> Scores and reconstruction</h3>
+<p>Each centered curve has the expansion</p>
+<p><span class="math display">\[
+X_i(t)-\mu(t)
+=
+\sum_{k=1}^{\infty}
+\xi_{ik}v_k(t),
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\xi_{ik}
+=
+\int_a^b
+\{X_i(t)-\mu(t)\}v_k(t)\,dt.
+\]</span></p>
+<p>The score <span class="math inline">\(\xi_{ik}\)</span> tells us how strongly curve <span class="math inline">\(i\)</span> exhibits mode <span class="math inline">\(k\)</span>.</p>
+<p>A <span class="math inline">\(p\)</span>-component approximation is</p>
+<p><span class="math display">\[
+X_i(t)
+\approx
+\mu(t)
++
+\sum_{k=1}^{p}
+\xi_{ik}v_k(t).
+\]</span></p>
+<p>For sample quantities,</p>
+<p><span class="math display">\[
+\widehat\xi_{ik}
+=
+\int_a^b
+\{X_i(t)-\overline X_N(t)\}
+\widehat v_k(t)\,dt.
+\]</span></p>
+<p>The estimated scores satisfy approximately</p>
+<p><span class="math display">\[
+\frac{1}{N}\sum_{i=1}^N\widehat\xi_{ik}=0,
+\qquad
+\frac{1}{N}\sum_{i=1}^N\widehat\xi_{ik}^2
+=
+\widehat\lambda_k.
+\]</span></p>
+</section>
+<section id="why-fpca-is-a-regularizer" class="level3" data-number="4.8.3">
+<h3 data-number="4.8.3" class="anchored" data-anchor-id="why-fpca-is-a-regularizer"><span class="header-section-number">4.8.3</span> Why FPCA is a regularizer</h3>
+<p>FPCA is more than a plotting technique. It replaces the many original grid values with a small number of scores,</p>
+<p><span class="math display">\[
+(\widehat\xi_{i1},\ldots,\widehat\xi_{ip}).
+\]</span></p>
+<p>The approximation keeps the directions in which curves actually vary and discards directions with little estimated variation.</p>
+<p>For smooth covariance functions, the eigenvalues tend to decrease. Therefore, a moderate <span class="math inline">\(p\)</span> can explain a large proportion of the total variation:</p>
+<p><span class="math display">\[
+\frac{\sum_{k=1}^{p}\widehat\lambda_k}
+{\sum_{k\geq1}\widehat\lambda_k}.
+\]</span></p>
+<p>This is an <strong>effective dimension</strong>, not necessarily an exact finite dimension. A process may have infinitely many nonzero components while only a few are statistically visible at the available sample size.</p>
+</section>
+<section id="best-basis-property" class="level3" data-number="4.8.4">
+<h3 data-number="4.8.4" class="anchored" data-anchor-id="best-basis-property"><span class="header-section-number">4.8.4</span> Best-basis property</h3>
+<p>Among all orthonormal sets of <span class="math inline">\(p\)</span> functions, the first <span class="math inline">\(p\)</span> principal components minimize the expected squared reconstruction error:</p>
+<p><span class="math display">\[
+\mathbb E
+\left[
+\left\|
+X-\mu-\sum_{k=1}^p\xi_kv_k
+\right\|_{L^2}^2
+\right]
+=
+\sum_{k&gt;p}\lambda_k.
+\]</span></p>
+<p>Thus, FPCA uses the best <span class="math inline">\(p\)</span>-dimensional linear approximation for the particular population of curves.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+The sign of a principal component is arbitrary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(v_k\)</span> is an eigenfunction, then <span class="math inline">\(-v_k\)</span> is the same eigenfunction for statistical purposes. Scores change sign at the same time. Interpretations should therefore not be based on whether the plotted eigenfunction happens to be positive or negative.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="fpca-application-1-human-growth" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="fpca-application-1-human-growth"><span class="header-section-number">4.9</span> FPCA application 1: human growth</h2>
+<p>The Berkeley growth dataset contains heights of 39 boys and 54 girls measured at 31 unequally spaced ages from 1 to 18. We use the girls’ curves for the illustration.</p>
+<p>The following helper displays two complementary views of each functional principal component:</p>
+<ol type="1">
+<li>the estimated principal component function, or eigenfunction, (_k(t));</li>
+<li>the corresponding mode of variation, [ (t)c_k(t),] where (c) is a chosen standard-deviation multiplier.</li>
+</ol>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-growth-fpca_12d05705b8b279d75c925f70abe92b87">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>growth_basis <span class="ot">&lt;-</span> <span class="fu">create.bspline.basis</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">rangeval=</span><span class="fu">range</span>(growth<span class="sc">$</span>age),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nbasis=</span><span class="dv">25</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">norder=</span><span class="dv">4</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>growth_smooth <span class="ot">&lt;-</span> <span class="fu">smooth.basisPar</span>(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">argvals=</span>growth<span class="sc">$</span>age,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span>growth<span class="sc">$</span>hgtf,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">fdobj=</span>growth_basis,</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lfdobj=</span><span class="dv">2</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">lambda=</span><span class="fl">0.1</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>growth_pca <span class="ot">&lt;-</span> <span class="fu">pca.fd</span>(</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  growth_smooth<span class="sc">$</span>fd,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">nharm=</span><span class="dv">3</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">centerfns=</span><span class="cn">TRUE</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>age_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(growth<span class="sc">$</span>age),</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">max</span>(growth<span class="sc">$</span>age),</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">length.out=</span><span class="dv">200</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_fpca_functions_and_modes</span>(</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">pca_object=</span>growth_pca,</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">eval_grid=</span>age_grid,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncomp=</span><span class="dv">3</span>,</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiplier=</span><span class="dv">2</span>,</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Age (years)"</span>,</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">function_ylab=</span><span class="st">"FPC function"</span>,</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode_ylab=</span><span class="st">"Height (cm)"</span>,</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">component_names=</span><span class="fu">c</span>(</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FPC 1"</span>,</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FPC 2"</span>,</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FPC 3"</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-growth-fpca" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-growth-fpca-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.9: Functional principal components of the Berkeley girls’ height curves. The left column shows the estimated FPC functions. The right column shows the mean height curve and the perturbations mean ± two standard deviations along each component.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="interpretation" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">4.9.1</span> Interpretation</h3>
+<p>The panels provide two related ways of interpreting each component. The FPC function in the left panel shows how strongly different ages contribute to the component. The mean-plus/minus curves in the right panel translate that function back into the original units of height, making its substantive effect easier to interpret.</p>
+<p>The first component is usually dominated by a common vertical displacement of the height curve. Children with a large score in one direction tend to be taller than average over much of the age range, while children with a score in the opposite direction tend to be shorter. It is therefore an <strong>overall size component</strong>.</p>
+<p>The second component typically changes its effect over age. It distinguishes children who are relatively tall earlier but gain less height later from children who are relatively shorter earlier but catch up later. This is related to the <strong>timing and tempo of maturation</strong>.</p>
+<p>The third component often describes a more localized deviation around adolescence and captures features of the pubertal growth spurt that are not explained by overall size or a simple early-versus-late contrast.</p>
+<p>The signs of the FPC functions are arbitrary. Multiplying an FPC function and all its scores by (-1) produces an equivalent FPCA solution. Interpretation should therefore focus on the contrast between the two perturbation curves rather than on whether a particular direction is labeled positive or negative.</p>
+</section>
+<section id="scores-turn-curves-into-interpretable-variables" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="scores-turn-curves-into-interpretable-variables"><span class="header-section-number">4.9.2</span> Scores turn curves into interpretable variables</h3>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-growth-scores_cc965566f12c92f49b7e926b711122b9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  growth_pca<span class="sc">$</span>scores[, <span class="dv">1</span>],</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  growth_pca<span class="sc">$</span>scores[, <span class="dv">2</span>],</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="dv">19</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"FPC 1 score: overall size"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"FPC 2 score: maturation pattern"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Growth-Curve Scores"</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">h=</span><span class="dv">0</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">v=</span><span class="dv">0</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty=</span><span class="dv">3</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-growth-scores" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-growth-scores-1.png" class="img-fluid figure-img" width="624"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.10: Scores of the Berkeley girls on the first two functional principal components.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The score plot gives each child a low-dimensional summary. These scores can subsequently be used in regression, clustering, or classification. For example, one could study whether maturation scores are associated with later health outcomes.</p>
+</section>
+<section id="fpca-of-growth-velocities" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="fpca-of-growth-velocities"><span class="header-section-number">4.9.3</span> FPCA of growth velocities</h3>
+<p>For growth research, the derivative is often more informative than height itself. The derivative of a fitted height curve estimates the child’s instantaneous growth velocity.</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-growth-velocity-fpca_fca441f69172a849dd3dfe6d0e787f97">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>growth_velocity_fd <span class="ot">&lt;-</span> <span class="fu">deriv.fd</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  growth_smooth<span class="sc">$</span>fd,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>growth_velocity_pca <span class="ot">&lt;-</span> <span class="fu">pca.fd</span>(</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  growth_velocity_fd,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">nharm=</span><span class="dv">2</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">centerfns=</span><span class="cn">TRUE</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_fpca_functions_and_modes</span>(</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">pca_object=</span>growth_velocity_pca,</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">eval_grid=</span>age_grid,</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncomp=</span><span class="dv">2</span>,</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiplier=</span><span class="dv">2</span>,</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Age (years)"</span>,</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">function_ylab=</span><span class="st">"Velocity FPC function"</span>,</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode_ylab=</span><span class="st">"Growth velocity (cm/year)"</span>,</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">component_names=</span><span class="fu">c</span>(</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Velocity FPC 1"</span>,</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Velocity FPC 2"</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-growth-velocity-fpca" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-growth-velocity-fpca-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.11: FPCA of estimated growth velocities. The left column shows the velocity FPC functions. The right column shows the mean velocity curve and its perturbations by two standard deviations along each component.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For velocity curves, one component commonly captures the <strong>intensity</strong> of the adolescent growth spurt. Its perturbation curves differ primarily in the height of the velocity peak.</p>
+<p>The second component in this analysis is concentrated near the beginning of the observed age range. Its loading function is largest at the youngest ages and then decays rapidly toward zero. It should therefore be interpreted primarily as an <strong>early-childhood growth-speed</strong> component. Children with scores in one direction have a higher estimated growth velocity at young ages, whereas children with scores in the opposite direction have a lower early growth velocity. Because the loading function is close to zero at later ages, this component has comparatively little effect on adolescent growth.</p>
+<p>The precise ordering and signs of these components depend on the fitted data. The displayed FPC functions identify the ages at which the velocity curves vary, while the perturbation curves show whether that variation changes the magnitude, timing, or shape of the growth spurt.</p>
+<p>This illustrates an important advantage of functional data analysis: scientifically meaningful features can be extracted from derivatives of smooth curves rather than only from the original measurements.</p>
+</section>
+</section>
+<section id="fpca-application-2-canadian-temperature-curves" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="fpca-application-2-canadian-temperature-curves"><span class="header-section-number">4.10</span> FPCA application 2: Canadian temperature curves</h2>
+<p>The <code>CanadianWeather</code> data contain average daily temperature and precipitation curves for 35 Canadian weather stations, based on observations from 1960 to 1994. Here, each station is one functional observation and the argument (t) is day of the year.</p>
+<p>A Fourier basis is natural because annual temperature is periodic.</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-weather-curves_5cb4d726ebae2dc94feb1ab3ba0face3">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="ot">&lt;-</span> CanadianWeather<span class="sc">$</span>dailyAv[</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  ,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  ,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Temperature.C"</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>day_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.5</span>,</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fl">364.5</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">by=</span><span class="dv">1</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>weather_basis <span class="ot">&lt;-</span> <span class="fu">create.fourier.basis</span>(</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">rangeval=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">365</span>),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">nbasis=</span><span class="dv">65</span>,</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">period=</span><span class="dv">365</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>harmonic_acceleration <span class="ot">&lt;-</span> <span class="fu">vec2Lfd</span>(</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">365</span>)<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">365</span>)</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>weather_smooth <span class="ot">&lt;-</span> <span class="fu">smooth.basisPar</span>(</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">argvals=</span>day_grid,</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span>temperature,</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">fdobj=</span>weather_basis,</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lfdobj=</span>harmonic_acceleration,</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">lambda=</span><span class="fl">1e5</span></span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>  weather_smooth<span class="sc">$</span>fd,</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Day of year"</span>,</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"Average temperature (°C)"</span>,</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Canadian Annual Temperature Curves"</span>,</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty=</span><span class="dv">1</span></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "done"</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-weather-curves" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-weather-curves-1.png" class="img-fluid figure-img" width="768"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.12: Smoothed average daily temperature curves for 35 Canadian weather stations.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We also regularize the principal-component functions so that the estimated modes remain smooth.</p>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-weather-fpca_304068ed685f65f42b8025293b00aeb8">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>weather_harmonic_par <span class="ot">&lt;-</span> <span class="fu">fdPar</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fd</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">matrix</span>(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>      weather_basis<span class="sc">$</span>nbasis,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    weather_basis</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  harmonic_acceleration,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lambda=</span><span class="fl">1e5</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>weather_pca <span class="ot">&lt;-</span> <span class="fu">pca.fd</span>(</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  weather_smooth<span class="sc">$</span>fd,</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">nharm=</span><span class="dv">3</span>,</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">harmfdPar=</span>weather_harmonic_par,</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">centerfns=</span><span class="cn">TRUE</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_fpca_functions_and_modes</span>(</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">pca_object=</span>weather_pca,</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">eval_grid=</span>day_grid,</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncomp=</span><span class="dv">3</span>,</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiplier=</span><span class="dv">2</span>,</span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Day of year"</span>,</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">function_ylab=</span><span class="st">"Temperature FPC function"</span>,</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode_ylab=</span><span class="st">"Average temperature (°C)"</span>,</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">component_names=</span><span class="fu">c</span>(</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Temperature FPC 1"</span>,</span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Temperature FPC 2"</span>,</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Temperature FPC 3"</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-weather-fpca" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-weather-fpca-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.13: Leading functional principal components of the Canadian temperature curves. The left column shows the estimated FPC functions. The right column shows the mean annual temperature curve and its perturbations by two standard deviations along each component.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="interpretation-1" class="level3" data-number="4.10.1">
+<h3 data-number="4.10.1" class="anchored" data-anchor-id="interpretation-1"><span class="header-section-number">4.10.1</span> Interpretation</h3>
+<p>The FPC functions in the left column show the parts of the year that contribute most strongly to each component. Values close to zero indicate times of the year that contribute relatively little to the corresponding score. Sign changes indicate contrasts between different parts of the year.</p>
+<p>The perturbation curves in the right column express the same components in degrees Celsius and are therefore generally easier to interpret scientifically.</p>
+<p>The first component generally acts as an <strong>overall temperature-level component</strong>. Stations at one end of the score distribution are warmer over most of the year, while stations at the other end are colder. This component is strongly related to broad geographic differences such as latitude.</p>
+<p>The second component commonly describes the <strong>amplitude of the seasonal cycle</strong>. A score in one direction corresponds to a more continental climate, with colder winters relative to summers and a larger annual temperature range. A score in the other direction corresponds to a more maritime climate, where seasonal temperature differences are moderated by the ocean.</p>
+<p>The third component often adjusts the <strong>shape or timing of the seasons</strong>. For example, it may describe differences in the speed of spring warming and autumn cooling or an asymmetry between the first and second halves of the year.</p>
+<p>As in the growth example, the signs of the temperature FPC functions are arbitrary. Reversing the sign of a function merely exchanges the displayed plus and minus perturbation curves.</p>
+</section>
+<section id="scores-reveal-geographic-structure" class="level3" data-number="4.10.2">
+<h3 data-number="4.10.2" class="anchored" data-anchor-id="scores-reveal-geographic-structure"><span class="header-section-number">4.10.2</span> Scores reveal geographic structure</h3>
+<div class="cell" data-hash="Ch5_FunctionalDataAnalysis_cache/html/fig-weather-scores_bcebb507ad4a0eb4a2125c12f52bdbe4">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>weather_region <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  CanadianWeather<span class="sc">$</span>region</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>region_number <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  weather_region</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  weather_pca<span class="sc">$</span>scores[, <span class="dv">1</span>],</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  weather_pca<span class="sc">$</span>scores[, <span class="dv">2</span>],</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="dv">19</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>region_number,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"FPC 1 score: annual temperature level"</span>,</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab=</span><span class="st">"FPC 2 score: seasonal amplitude"</span>,</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Canadian Temperature Scores"</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">h=</span><span class="dv">0</span>,</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">v=</span><span class="dv">0</span>,</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">lty=</span><span class="dv">3</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"topright"</span>,</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">levels</span>(weather_region),</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">seq_along</span>(<span class="fu">levels</span>(weather_region)),</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="dv">19</span>,</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">bty=</span><span class="st">"n"</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>extreme_stations <span class="ot">&lt;-</span> <span class="fu">unique</span>(</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">which.min</span>(weather_pca<span class="sc">$</span>scores[, <span class="dv">1</span>]),</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">which.max</span>(weather_pca<span class="sc">$</span>scores[, <span class="dv">1</span>]),</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">which.min</span>(weather_pca<span class="sc">$</span>scores[, <span class="dv">2</span>]),</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">which.max</span>(weather_pca<span class="sc">$</span>scores[, <span class="dv">2</span>])</span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>  weather_pca<span class="sc">$</span>scores[extreme_stations, <span class="dv">1</span>],</span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>  weather_pca<span class="sc">$</span>scores[extreme_stations, <span class="dv">2</span>],</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span>CanadianWeather<span class="sc">$</span>place[extreme_stations],</span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos=</span><span class="dv">3</span>,</span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex=</span><span class="fl">0.75</span></span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-weather-scores" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch5_FunctionalDataAnalysis_files/figure-html/fig-weather-scores-1.png" class="img-fluid figure-img" width="720"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.14: Canadian weather stations in the space of the first two temperature components. Colors indicate the climate region.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot shows why FPCA is useful rather than merely technical. Hundreds of daily temperature values per station are reduced to a few economically and scientifically meaningful features: average climate level, seasonal amplitude, seasonal timing and asymmetry.</p>
+<p>The scores can be related to geography, energy demand, agricultural outcomes, or infrastructure requirements.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
@@ -655,6 +1760,7 @@ Kokoszka, Piotr, and Matthew Reimherr. 2017. <em>Introduction to Functional Data
 Ramsay, J. O., and B. W. Silverman. 2005. <em>Functional Data Analysis</em>. 2. ed. Springer.
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
