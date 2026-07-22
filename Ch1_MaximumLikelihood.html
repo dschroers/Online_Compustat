@@ -199,6 +199,11 @@ div.csl-indent {
   <a href="./Ch5_NPRegression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nonparametric Regression</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch5_FunctionalDataAnalysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Functional Data Analysis</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -214,7 +219,12 @@ div.csl-indent {
   <li><a href="#example-coin-flipping-bernoulli-trial" id="toc-example-coin-flipping-bernoulli-trial" class="nav-link" data-scroll-target="#example-coin-flipping-bernoulli-trial"><span class="toc-section-number">1.1.2</span>  Example: Coin Flipping (Bernoulli Trial)</a></li>
   <li><a href="#estimation-idea" id="toc-estimation-idea" class="nav-link" data-scroll-target="#estimation-idea"><span class="toc-section-number">1.1.3</span>  Estimation Idea</a></li>
   </ul></li>
-  <li><a href="#numeric-optimization" id="toc-numeric-optimization" class="nav-link" data-scroll-target="#numeric-optimization"><span class="toc-section-number">1.2</span>  Numeric Optimization</a></li>
+  <li><a href="#numeric-optimization" id="toc-numeric-optimization" class="nav-link" data-scroll-target="#numeric-optimization"><span class="toc-section-number">1.2</span>  Numeric Optimization</a>
+  <ul class="collapse">
+  <li><a href="#newton-raphson-optimization" id="toc-newton-raphson-optimization" class="nav-link" data-scroll-target="#newton-raphson-optimization"><span class="toc-section-number">1.2.1</span>  Newton-Raphson Optimization</a></li>
+  <li><a href="#sec-ConvNR" id="toc-sec-ConvNR" class="nav-link" data-scroll-target="#sec-ConvNR"><span class="toc-section-number">1.2.2</span>  Convergence of the Newton-Raphson Algorithm</a></li>
+  <li><a href="#newton-raphson-algorithm-coin-flipping-example" id="toc-newton-raphson-algorithm-coin-flipping-example" class="nav-link" data-scroll-target="#newton-raphson-algorithm-coin-flipping-example"><span class="toc-section-number">1.2.3</span>  Newton-Raphson Algorithm: Coin-Flipping Example</a></li>
+  </ul></li>
   <li><a href="#sec-LinRegNorm" id="toc-sec-LinRegNorm" class="nav-link" data-scroll-target="#sec-LinRegNorm"><span class="toc-section-number">1.3</span>  A classical Example: Linear Regression under Normality</a>
   <ul class="collapse">
   <li><a href="#sec-varMLE" id="toc-sec-varMLE" class="nav-link" data-scroll-target="#sec-varMLE"><span class="toc-section-number">1.3.1</span>  Variance of ML-Estimators <span class="math inline">\(\hat\beta_{ML}\)</span> and <span class="math inline">\(s^2_{ML}\)</span></a></li>
@@ -541,6 +551,21 @@ Note
 </section>
 <section id="numeric-optimization" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="numeric-optimization"><span class="header-section-number">1.2</span> Numeric Optimization</h2>
+<p>Usually, we are not so fortunate as to have an analytical solution for the MLE, and must rely on the computer to find the maximizing arguments of the log-likelihood function. Various methods exist for finding the maximum (or minimum) of a function.</p>
+<!-- [numerically with the help of the computer](https://jaimemosg.github.io/EstimationTools/index.html) -->
+<p><strong>General idea: Try to find the root of</strong> <span class="math inline">\(\ell'\)</span></p>
+<ol type="1">
+<li>Start at some value, <span class="math inline">\(\theta_{(0)},\)</span> in the parameter space <span class="math inline">\(\Theta.\)</span></li>
+<li>Search across the parameter space <span class="math inline">\(\Theta\)</span> using a step-wise procedure <span class="math display">\[
+\theta_{(0)},\theta_{(1)},\dots,\theta_{(m)}
+\]</span> until an updated parameter value <span class="math inline">\(\theta_{(m)}\)</span> is found that yields a derivative of the log likelihood that is effectively zero (i.e.&nbsp;smaller than some convergence/stopping criterion), <span class="math display">\[
+\ell'(\theta_{(m)})\approx 0.
+\]</span></li>
+</ol>
+<section id="newton-raphson-optimization" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="newton-raphson-optimization"><span class="header-section-number">1.2.1</span> Newton-Raphson Optimization</h3>
+<p>One of the most-used methods for optimization is the Newton-Raphson method (or a variant of it). The Newton-Raphson method relies on Taylor-series approximations of the log-likelihood function.</p>
+<p>In the following, we consider the univariate case <span class="math inline">\(\theta\in\mathbb{R}.\)</span> However, the multivariate case <span class="math inline">\(\theta\in\mathbb{R}^K\)</span> is treated likewise, but requires substituting first derivatives by gradients, second derivatives by the Hessian, etc.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -550,10 +575,305 @@ Note
 Note
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Need of Numerical optimization is standard">
-<p>Usually, we are not so fortunate as to have an analytical solution for the MLE, and must rely on the computer to find the maximizing arguments of the log-likelihood function. Various methods exist for finding the maximum (or minimum) of a function (e.g.&nbsp;the Newton-Raphson algorithm). In this aspect, MLE belongs to the field of computational statistics.</p>
+<div class="callout-body-container callout-body">
+<p>Minimization and maximization are essentially the same problems, since minimizing a function <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span> is equivalent to maximizing <span class="math inline">\(-f(x)\)</span> with respect to <span class="math inline">\(x.\)</span></p>
 </div>
 </div>
+<p>Let <span class="math inline">\(f\)</span> be a two times differentiable function to be optimized (here maximized). The <strong>first- and second-order Taylor-series approximations</strong> of <span class="math inline">\(f\)</span> around the point <span class="math inline">\(\theta\)</span> are:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{First-order:}\quad &amp;f(\theta+h)\approx \overbrace{f(\theta)+f'(\theta)h}^{\text{Taylor Polynomial of order 1}} \\
+\text{Second-order:}\quad&amp; f(\theta+h)\approx \underbrace{f(\theta)+f'(\theta)h + \frac{1}{2} f''(\theta)h^2}_{\text{Taylor Polynomial of order 2}},
+\end{aligned}
+\]</span> Locally, i.e.&nbsp;for <span class="math inline">\(|h|\approx 0,\)</span> (e.g.&nbsp;<span class="math inline">\(h=\pm 0.04\)</span>) the Taylor polynomials are very good approximations of <span class="math inline">\(f(\theta + h);\)</span> see <a href="#fig-taylorApprox">Figure&nbsp;<span>1.2</span></a>.</p>
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-taylorApprox_2beae6bede62a1615d9b40acfec10f7f">
+<div class="cell-output-display">
+<div id="fig-taylorApprox" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-taylorApprox-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: First- and second-order Taylor approximations of a function <span class="math inline">\(f\)</span> around <span class="math inline">\(\theta=1.\)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ::: {.callout-important}
+The first-order and the second-order Taylor polynomial can both be used to approximate $f.$
+
+The second-order Taylor polynomial can be used to apprixmate $f'.$
+::: -->
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="thm-TaylorThm" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 (Taylor’s Theorem) </strong></span><br> Today, there are many different versions of Taylor’s theorem. We consider the following two:</p>
+<p><strong>1. <a href="https://en.wikipedia.org/wiki/Giuseppe_Peano">Peano</a> form of the remainder term:</strong><br> Let <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> be <span class="math inline">\(k\)</span> times differentiable at <span class="math inline">\(x\in\mathbb{R}\)</span> and let <span class="math inline">\(h\in\mathbb{R}.\)</span> Then there exists a function <span class="math inline">\(P_{k,x}:\mathbb{R}\to\mathbb{R}\)</span> such that</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(x+h) &amp;=
+f(x)
++ \sum_{\ell=1}^k \frac{f^{(\ell)}(x)}{\ell!} h^\ell
++ P_{k,x}(h) \cdot h^k
+\end{aligned}
+\]</span> with <span class="math display">\[
+P_{k,x}(h)\to 0\quad\text{as}\quad |h|\to 0,
+\]</span> where <span class="math inline">\(f^{(\ell)}(x)\)</span> denotes the <span class="math inline">\(\ell\)</span>th derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x.\)</span></p>
+<p><strong>2. <a href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">Lagrange</a> or Mean-value form of the remainder term:</strong><br> Let <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> be <span class="math inline">\(k+1\)</span> times differentiable on the open interval between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+h,\)</span> with <span class="math inline">\(h\in\mathbb{R},\)</span> and let <span class="math inline">\(f^{(k)}\)</span> be continuous on the closed interval between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+h,\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(x+h) &amp;=
+f(x)
++ \sum_{\ell=1}^k \frac{f^{(\ell)}(x)}{\ell!} h^\ell
++ M_{k,x}(h)
+\end{aligned}
+\]</span> with <span class="math display">\[
+M_{k,x}(h)=\frac{f^{(k+1)}(\xi)}{(k+1)!} h^{k+1}
+\]</span> for some real number <span class="math inline">\(\xi\)</span> between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+h.\)</span> This form of Taylor’s theorem is based on the mean-value <a href="#thm-MVT">Theorem&nbsp;<span>1.2</span></a>. Note that <span class="math display">\[
+M_{k,x}(h)\to 0\quad\text{as}\quad |h|\to 0.
+\]</span></p>
+</div>
+</div>
+</div>
+<section id="optimization-idea" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="optimization-idea"><strong>Optimization Idea</strong></h4>
+<p>Let <span class="math inline">\(\ell_{n,obs}\)</span> be an observed realization of the log-likelihood function with continuous first, <span class="math inline">\(\ell_n',\)</span> and second, <span class="math inline">\(\ell_n'',\)</span> derivative.</p>
+<p>To optimize the log-likelihood function <span class="math inline">\(\ell_{n,obs},\)</span> we try to find the root of <span class="math inline">\(\ell_{n,obs}',\)</span> i.e.&nbsp;the value of <span class="math inline">\(\theta\in\Theta\)</span> such that <span class="math display">\[
+\ell_{n,obs}'(\theta)=0.
+\]</span> That is, we try to find the value of <span class="math inline">\(\theta\)</span> that fulfills the <strong>first order condition</strong> of the optimization problem. We do so using a step-wise optimization approach, where each step has a smallish size <span class="math inline">\(h.\)</span></p>
+<p><strong>Initialization:</strong> Let <span class="math inline">\(\theta_{(0)}\in\Theta\)</span> be our first guess of the root of <span class="math inline">\(\ell'_{n,obs}.\)</span></p>
+<p><span class="math inline">\(h\)</span>-Steps: Typically, our guess is not perfect and thus <span class="math inline">\(\ell_{n,obs}'(\theta_{(0)})\neq 0.\)</span> Therefore, we want to move from <span class="math inline">\(\theta_{(0)}\)</span> to a new root-candidate <span class="math inline">\(\theta_{(1)}\)</span> by doing an <span class="math inline">\(h\)</span>-step update <span class="math display">\[
+\theta_{(1)} = \theta_{(0)} + h.
+\]</span></p>
+<!-- 1. We select some starting value $\theta_0.$ 
+2. Optimize the second-order Taylor polynomial of $f$ around $\theta_0$ with respect to $h.$ 
+3. In each of the following steps, we optimize new second-order Taylor polynomials of $f$ at those values $\theta,$ for which the previous second-order Taylor polynomial was maximal.  -->
+<!-- **Implementation-Idea:** The second-order Taylor-series approximation gives -->
+<p>The first-order Taylor-series approximation of <span class="math inline">\(\ell_{n,obs}'\)</span> around our first guess <span class="math inline">\(\theta_{(0)}\)</span> gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ell_{n,obs}'(\theta_{(0)} + h) &amp; = \ell_{n,obs}'(\theta_{(0)}) + \ell_{n,obs}''(\theta_{(0)})h + o(|h|)\\[2ex]
+{\color{gray}\big(f(\theta_{(0)} + h) }\,&amp;\,{\color{gray} = f(\theta_{(0)}) + f'(\theta_{(0)})h \,+\, o(|h|)\big)}
+\end{aligned}
+\]</span> Thus, in a small <span class="math inline">\(h\)</span>-neigborhood (<span class="math inline">\(|h|\to 0\)</span>) around <span class="math inline">\(\theta_{(0)},\)</span> <span class="math inline">\(\ell_{n,obs}'(\theta_{(0)} + h)\)</span> approximately equals the linear function (in <span class="math inline">\(h\)</span>) <span class="math display">\[
+\ell_{n,obs}'(\theta_{(0)}) + \ell_{n,obs}''(\theta_{(0)})h
+\]</span> plus negligible terms, <span class="math inline">\((o(|h|)),\)</span> that are of a smaller order of magnitude.</p>
+<p>Therefore, to find the <span class="math inline">\(h\)</span>-step that brings us closer to the root of <span class="math inline">\(\ell_{n,obs}',\)</span> we can (approximatively) use the <span class="math inline">\(h\)</span>-step that brings us to the root of its first-order approximation, i.e.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ell_{n,obs}'(\theta_{(0)}) + \ell_{n,obs}''(\theta_{(0)}) h_{(0)} = 0\\[2ex]
+\Rightarrow h_{(0)} = -\frac{\ell_{n,obs}'(\theta_{(0)})}{\ell_{n,obs}''(\theta_{(0)})}.
+\end{aligned}
+\]</span> Based on this <span class="math inline">\(h\)</span>-step, the new root-candidate is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta_{(1)}
+&amp; = \theta_{(0)} + h_{(0)}\\[2ex]
+&amp; = \theta_{(0)} - \frac{\ell_{n,obs}'(\theta_{(0)})}{\ell_{n,obs}''(\theta_{(0)})}.
+\end{aligned}
+\]</span> Likewise, the <span class="math inline">\(m\)</span>th root-candidate is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta_{(m)}
+&amp; = \theta_{(m-1)} + h_{(m-1)}\\[2ex]
+&amp; = \theta_{(m-1)} - \frac{\ell_{n,obs}'(\theta_{(m-1)})}{\ell_{n,obs}''(\theta_{(m-1)})};
+\end{aligned}
+\]</span> see also <a href="#fig-NR">Figure&nbsp;<span>1.3</span></a>.</p>
+<div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-NR_8b8fc0c86c3e3fc3c650039ee66ce8b3">
+<div class="cell-output-display">
+<div id="fig-NR" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-NR-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: The <span class="math inline">\(m\)</span>th update step in the Newton-Raphson root-finding algorithm. (To avoid confusion, note that the displayed function is not the derivative of a log-likelihood function)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-ConvNR" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="sec-ConvNR"><span class="header-section-number">1.2.2</span> Convergence of the Newton-Raphson Algorithm</h3>
+<p>Let <span class="math inline">\(\theta_{root}\)</span> denote the root of <span class="math inline">\(\ell_{n,obs}';\)</span> i.e.&nbsp;<span class="math display">\[
+\ell_{n,obs}'(\theta_{root})=0.
+\]</span> We aim to find <span class="math inline">\(\theta_{root}\)</span> using the Newton-Raphson algorithm and call our best approximation of <span class="math inline">\(\theta_{root}\)</span> the maximum likelihood estimate; i.e.&nbsp;<span class="math inline">\(\hat{\theta}_{ML}\approx\theta_{root}.\)</span></p>
+<p>Let <span class="math display">\[
+e_{(0)}=\theta_{root}-\theta_{(0)}
+\]</span> denote the start value error and let <span class="math display">\[
+I=[\theta_{root}-|e_{(0)}|, \theta_{root}+|e_{(0)}|]
+\]</span> denote the start value error neighborhood around <span class="math inline">\(\theta_{root}.\)</span></p>
+<p>One can shown that if <span class="math inline">\(\ell_{n,obs}'\)</span> is “well behaved” over <span class="math inline">\(I;\)</span> i.e.</p>
+<ul>
+<li>if <span class="math inline">\(\ell_{n,obs}''(\theta)\neq 0\)</span> for all <span class="math inline">\(\theta\in I\)</span> and</li>
+<li>if <span class="math inline">\(\ell_{n,obs}'''(\theta)\)</span> is finite and continuous for all <span class="math inline">\(\theta\in I,\)</span></li>
+</ul>
+<p>and if our first guess <span class="math inline">\(\theta_{(0)}\)</span> is “close enough;” i.e. if <span class="math inline">\(M|e_{(0)}|&lt;1,\)</span> where <span class="math display">\[
+    M=\frac{1}{2}\left(\sup_{\theta\in I}|\ell_{n,obs}'''(\theta)|\right)\left(\sup_{\theta\in I}\frac{1}{|\ell_{n,obs}''(\theta)|}\right)\geq 0,
+    \]</span></p>
+<p>then <span class="math inline">\(\theta_{(m)}\)</span> will converge to <span class="math inline">\(\theta_{root}\)</span> as <span class="math inline">\(m\to\infty.\)</span></p>
+<p>This can be seen by taking a closer look at the Taylor approximation with <span class="math inline">\(h=e_{(m)}\)</span> and for some <span class="math inline">\(\xi \in I\)</span><br>
+<span class="math display">\[
+0=\ell_{n,obs}'(\theta_{root})=\ell_{n,obs}'(\theta_{(m)}) + \ell_{n,obs}''(\theta_{(m)})e_{(m)} + \frac{\ell_{n,obs}'''(\xi)}2 e_{(m)}^2.
+\]</span> Dividing by <span class="math inline">\(\ell_{n,obs}''(\theta_{(m)})\)</span> and rearranging, this yields <span class="math display">\[
+\begin{aligned}
+e_{(m+1)}=\theta_{root}-\theta_{(m+1)}= \frac{\ell_{n,obs}'(\theta_{(m)})}{\ell_{n,obs}''(\theta_{(m)})} + e_{(m)} =  - \frac{\ell_{n,obs}'''(\xi)}{2 \ell_{n,obs}''(\theta_{(m)})} e_{(m)}^2
+\end{aligned}\]</span> and therefore <span class="math display">\[\begin{align}
+|e_{(m+1)}| \leq M  e_{(m)}^2.
+\end{align}\]</span> By induction, we obtain <span class="math display">\[\begin{align}
+|e_{(m+1)}| \leq M^{2m-1}  e_{(0)}^{2m}=\frac{(Me_{(0)})^{2m}}M.
+\end{align}\]</span> which converges to <span class="math inline">\(0\)</span> as <span class="math inline">\(m\to \infty\)</span>, since <span class="math inline">\(Me_{(0)}&lt;1\)</span>.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Unfortunately, we may not know if <span class="math inline">\(\ell_{n,obs}'\)</span> is “well behaved,” and we may also don’t know whether our first guess is “close enough”. So, we may not be able to guarantee convergence of the Newton-Raphson algorithm. 😭 <!-- Exercise: Let this be proven: https://en.wikipedia.org/wiki/Newton%27s_method --></p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>For problems that are globally concave, the starting value <span class="math inline">\(\theta_0\)</span> doesn’t matter. For more complex problems, however, the Newton-Raphson algorithm can get stuck into a local maximum. In such cases, it is usually a good idea to <strong>try multiple starting values</strong>.</p></li>
+<li><p>In practice, the implementation of the Newton-Raphson algorithm can be tricky. We may have <span class="math inline">\(\ell_{n,obs}''(\theta_{(m)})=0,\)</span> in which case the function looks locally like a straight line, with no solution to the Taylor series approximation</p></li>
+</ul>
+<span class="math display">\[\begin{aligned}
+\ell_{n,obs}'(\theta_{(m)} + h) &amp; \approx \ell_{n,obs}'(\theta_{(m)}) + \ell_{n,obs}''(\theta_{(m)})h = \ell_{n,obs}'(\theta_{(m)}).
+\end{aligned}\]</span>
+<p>In this case a simple strategy is to move a small step in the direction which decreases the function value, based only on <span class="math inline">\(\ell_{n,obs}'(\theta_m).\)</span></p>
+<ul>
+<li>In other cases where <span class="math inline">\(\theta_{(m)}\)</span> is too far from the true root <span class="math inline">\(\theta_{root}\)</span>, the Taylor approximation may be so inaccurate that <span class="math inline">\(\ell_{n,obs}(\theta_{(m+1)})\)</span> is actually <em>more distant</em> from zero than <span class="math inline">\(\ell_{n,obs}(\theta_{(m)}).\)</span> When this happens one may replace <span class="math inline">\(\theta_{(m+1)}\)</span> with <span class="math inline">\((\theta_{(m+1)}+\theta_{(m)})/2\)</span> (or some other value between <span class="math inline">\(\theta_{(m)}\)</span> and <span class="math inline">\(\theta_{(m+1)}\)</span>) in the hope that a smaller step will produce a better result.</li>
+</ul>
+</div>
+</div>
+<p><strong>Stopping Criterion:</strong> Since we are expecting that <span class="math inline">\(\ell_{n,obs}'(\theta_{(m)})\to 0,\)</span> as <span class="math inline">\(m\to\infty,\)</span> a good stopping condition for the Newton-Raphson algorithm is <span class="math display">\[
+|\ell_{n,obs}'(\theta_{(m)})|\leq \varepsilon
+\]</span> for some (small) tolerance <span class="math inline">\(\varepsilon&gt;0.\)</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pseudo-Code: Newton-Raphson Algorithm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{array}{ll}
+\texttt{\textbf{select }} \theta_{(0)}\in\Theta\;\;\text{ and}&amp;\varepsilon&gt;0 \\[2ex]
+\texttt{\textbf{let }} m=0         &amp;  \\
+\texttt{\textbf{while }}  | \ell_{n,obs}'(\theta_{(m)}) | &gt;\varepsilon &amp; \texttt{\textbf{do}}\\
+&amp;\left[
+                                    \begin{array}{l}\texttt{\textbf{let }} m = m+1 \\
+                                    \texttt{\textbf{let }} \theta_{(m)} = \theta_{(m-1)} - \frac{\ell_{n,obs}'(\theta_{(m-1)})}{\ell_{n,obs}''(\theta_{(m-1)})} \\
+                                    \end{array} \right.\\
+\texttt{\textbf{let }}\hat\theta_{ML}=\theta_{(m)} &amp; \\
+\texttt{\textbf{return }} \hat\theta_{ML} &amp;  \\
+\end{array}\]</span></p>
+</div>
+</div>
+</section>
+<section id="newton-raphson-algorithm-coin-flipping-example" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="newton-raphson-algorithm-coin-flipping-example"><span class="header-section-number">1.2.3</span> Newton-Raphson Algorithm: Coin-Flipping Example</h3>
+<p>Let’s return to our earlier coin flipping example.</p>
+<p>If we observe, for instance, only one head <span class="math inline">\(N_{H,obs}=1\)</span> for a sample size of <span class="math inline">\(n=5,\)</span> we already know that <span class="math display">\[
+\hat\theta_{ML,obs}=\frac{N_{H,obs}}{n}=\frac{1}{5}=0.2,
+\]</span> but let us, nevertheless, apply the Newton-Raphson algorithm.</p>
+<p>The first and second derivatives of <span class="math display">\[
+\ell_{n,obs}(\theta)=\sum_{i=1}^n\big(X_{i,obs} \ln(\theta) + (1-X_{i,obs})\ln(1-\theta)\big)
+\]</span> are</p>
+<span class="math display">\[\begin{align*}
+\ell_{n,obs}'(\theta)&amp;=\dfrac{N_{H,obs}}{\theta} - \dfrac{n-N_{H,obs}}{1-\theta}
+\end{align*}\]</span>
+<p>and</p>
+<span class="math display">\[\begin{align*}
+\ell_{n,obs}''(\theta) &amp;= -\dfrac{N_{H,obs}}{\theta^2} + \dfrac{n}{(1-\theta)^2}(-1)-\dfrac{N_{H,obs}}{(1-\theta)^2}(-1)\\[2ex]
+&amp;= -\dfrac{N_{H,obs}}{\theta^2} - \dfrac{n-N_{H,obs}}{(1-\theta)^2}.
+\end{align*}\]</span>
+<p>We consider a sample size of <span class="math inline">\(n=5\)</span> with the following observed outcome:</p>
+<ul>
+<li>One Head: <span class="math inline">\(\quad N_{H,obs}=1\)</span></li>
+<li>Four Tails: <span class="math inline">\(\quad n-N_{H,obs}=4\)</span></li>
+</ul>
+<p>Setting <span class="math inline">\(\varepsilon=10^{-10}\)</span> as our <strong>stopping criterion</strong> and <span class="math inline">\(\theta_{(0)}=0.4\)</span> as our <strong>starting value</strong> allows us to run the Newton-Raphson algorithm which gives us the results shown in <a href="#tbl-NR">Table&nbsp;<span>1.1</span></a>. The numeric optimization solution,<br>
+<span class="math display">\[
+\hat\theta_{ML,obs} = \hat\theta_{(5)} = 0.2,
+\]</span> equals the analytic solution.</p>
+<div id="tbl-NR" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1.1: Result of applying the Newton Raphson optimization algorithm to our coin flipping example for given data with <span class="math inline">\(N_{H,obs}=1,\)</span> sample size <span class="math inline">\(n=5,\)</span> starting value <span class="math inline">\(\theta_{(0)}=0.4,\)</span> and convergence criterion <span class="math inline">\(\varepsilon=10^{-10}.\)</span></caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(m\)</span></th>
+<th><span class="math inline">\(\hat\theta_{(m)}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(h_{{(m)}}=\frac{-\ell_{n,obs}'(\hat\theta_{(m)})}{\ell_{n,obs}''(\hat\theta_{(m)})}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(|\ell_{n,obs}'(\hat\theta_{(m)})|\gtrless \varepsilon\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(0.40\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-2.4\cdot 10^{-1}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{red}|4.2| &gt; \varepsilon}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0.16\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\phantom{-}3.3\cdot 10^{-2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{red}|1.5| &gt; \varepsilon}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0.19\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\phantom{-}6.6\cdot 10^{-3}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{red}|2.2\cdot 10^{-1}| &gt; \varepsilon}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(0.19\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\phantom{-}1.7\cdot 10^{-4}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{red}|5.4\cdot 10^{-3}| &gt; \varepsilon}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(0.19\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\phantom{-}1.1\cdot 10^{-7}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{red}|3.5\cdot 10^{-6}| &gt; \varepsilon}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(0.20\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\phantom{-}4.8\cdot 10^{-14}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\({\color{green}|1.5\cdot 10^{-12}| &lt; \varepsilon}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 <section id="sec-LinRegNorm" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sec-LinRegNorm"><span class="header-section-number">1.3</span> A classical Example: Linear Regression under Normality</h2>
@@ -1206,7 +1526,7 @@ f(x;\theta)=h(x)\exp(\eta(\theta) T(x) - B(\theta))
 </div>
 <p>The derivation of the asymptotic distribution of the ML estimator, <span class="math inline">\(\hat\theta_n,\)</span> relies on an expansion of the derivative of the log-likelihood function, <span class="math display">\[
 \ell_n'(\cdot),
-\]</span> around <span class="math inline">\(\theta_0\)</span> (see <a href="#eq-MVT">Equation&nbsp;<span>1.7</span></a> below) using the <strong>Mean Value Theorem</strong> (<a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>).</p>
+\]</span> around <span class="math inline">\(\theta_0\)</span> (see <a href="#eq-MVT">Equation&nbsp;<span>1.7</span></a> below) using the <strong>Mean Value Theorem</strong> (<a href="#thm-MVT">Theorem&nbsp;<span>1.2</span></a>).</p>
 <div class="callout-note callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1218,7 +1538,7 @@ f(x;\theta)=h(x)\exp(\eta(\theta) T(x) - B(\theta))
 </div>
 <div class="callout-body-container callout-body">
 <div id="thm-MVT" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1.1 (Mean Value Theorem) </strong></span><em>Let <span class="math inline">\(f\)</span> be continuous over the closed interval <span class="math inline">\([a,b]\)</span> and differentiable over the open interval <span class="math inline">\((a,b).\)</span> Then, there exists at least one point <span class="math inline">\(c\in(a,b)\)</span> such that</em> <span class="math display">\[
+<p><span class="theorem-title"><strong>Theorem 1.2 (Mean Value Theorem) </strong></span><em>Let <span class="math inline">\(f\)</span> be continuous over the closed interval <span class="math inline">\([a,b]\)</span> and differentiable over the open interval <span class="math inline">\((a,b).\)</span> Then, there exists at least one point <span class="math inline">\(c\in(a,b)\)</span> such that</em> <span class="math display">\[
 f'(c) = \frac{f(b)-f(a)}{b-a}
 \]</span> <em>or equivalently</em> <span class="math display">\[
 f(b)=f(a) + f'(c)(b-a).
@@ -1226,7 +1546,7 @@ f(b)=f(a) + f'(c)(b-a).
 </div>
 </div>
 </div>
-<p>By the Mean Value Theorem (<a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>), we know that <span id="eq-MVT"><span class="math display">\[
+<p>By the Mean Value Theorem (<a href="#thm-MVT">Theorem&nbsp;<span>1.2</span></a>), we know that <span id="eq-MVT"><span class="math display">\[
 \ell_n'(\hat{\theta}_n)=\ell_n'(\theta_0)+\ell_n''(\psi_n)(\hat{\theta}_n-\theta_0)
 \tag{1.7}\]</span></span> for some <span class="math inline">\(\psi_n\)</span> between <span class="math inline">\(\hat{\theta}_n\)</span> and <span class="math inline">\(\theta_0;\)</span> i.e.</p>
 <ul>
@@ -1713,7 +2033,7 @@ f(x;\lambda_0) = \frac{\lambda_0^x \exp(-\lambda_0)}{x!}.
 &amp; = \ell'(\theta_{(m)}) + \ell''(\theta_{(m)})(\theta_{root}-\theta_{(m)}) + R,
 \end{align*}\]</span> where <span class="math display">\[
 R=\frac{1}{2}\ell'''(\xi_{(m)})(\theta_{root}-\theta_{(m)})^2
-\]</span> for a mean-value <span class="math inline">\(\xi_{(m)}\)</span> between <span class="math inline">\(\theta_{(m)}\)</span> and <span class="math inline">\(\theta_{root}\)</span>. This is called the Lagrange form of the Taylor-Series remainder term and follows from the Mean-Value <a href="#thm-MVT">Theorem&nbsp;<span>1.1</span></a>.</p>
+\]</span> for a mean-value <span class="math inline">\(\xi_{(m)}\)</span> between <span class="math inline">\(\theta_{(m)}\)</span> and <span class="math inline">\(\theta_{root}\)</span>. This is called the Lagrange form of the Taylor-Series remainder term and follows from the Mean-Value <a href="#thm-MVT">Theorem&nbsp;<span>1.2</span></a>.</p>
 </section>
 <section id="exercise-6." class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="exercise-6.">Exercise 6.</h4>
@@ -1910,7 +2230,7 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 </section>
 <section id="b-maximum-likelihood-estimator-of-theta_0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="b-maximum-likelihood-estimator-of-theta_0">(b) Maximum Likelihood Estimator of <span class="math inline">\(\theta_0\)</span></h4>
-<p><span class="math inline">\(\mathcal{L}_n(\theta)\)</span> is strictly decreasing over the interval <span class="math inline">\([X_{(n)},\infty);\)</span> see <a href="#fig-MLMaxestim">Figure&nbsp;<span>1.2</span></a>.</p>
+<p><span class="math inline">\(\mathcal{L}_n(\theta)\)</span> is strictly decreasing over the interval <span class="math inline">\([X_{(n)},\infty);\)</span> see <a href="#fig-MLMaxestim">Figure&nbsp;<span>1.4</span></a>.</p>
 <div class="cell" data-hash="Ch1_MaximumLikelihood_cache/html/fig-MLMaxestim_869bdd1be55e92853d476068e50bbeec">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n          <span class="ot">&lt;-</span> <span class="dv">20</span>   <span class="co"># sample size</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>X_max      <span class="ot">&lt;-</span> <span class="fl">0.25</span></span>
@@ -1939,7 +2259,7 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 <div id="fig-MLMaxestim" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-MLMaxestim-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: Graph of the likelihood function <span class="math inline">\(\mathcal{L}_n(\theta)\)</span> given in <a href="#eq-MLMaxestim">Equation&nbsp;<span>1.16</span></a>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.4: Graph of the likelihood function <span class="math inline">\(\mathcal{L}_n(\theta)\)</span> given in <a href="#eq-MLMaxestim">Equation&nbsp;<span>1.16</span></a>.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1991,7 +2311,7 @@ f(X_i;\theta)=\frac{1}{\theta}\quad\textbf{for all}\quad i=1,\dots,n.
 \begin{align}
 P(X=4) = \frac{\lambda_0^4 \exp(-\lambda_0)}{4!}.
 \end{align}
-\]</span> Thus <span class="math inline">\(P(X=4)\)</span> is a function of <span class="math inline">\(\lambda\)</span> (see <a href="#fig-ExPoisson">Figure&nbsp;<span>1.3</span></a>) <span class="math display">\[
+\]</span> Thus <span class="math inline">\(P(X=4)\)</span> is a function of <span class="math inline">\(\lambda\)</span> (see <a href="#fig-ExPoisson">Figure&nbsp;<span>1.5</span></a>) <span class="math display">\[
 \begin{align}
 P(X=4)\equiv P_\lambda(X=4) = \frac{\lambda^4 \exp(-\lambda)}{4!} = \tau(\lambda)
 \end{align}
@@ -2008,7 +2328,7 @@ P(X=4)\equiv P_\lambda(X=4) = \frac{\lambda^4 \exp(-\lambda)}{4!} = \tau(\lambda
 <div id="fig-ExPoisson" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-ExPoisson-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: For <span class="math inline">\(0\leq \lambda \leq 4\)</span> the function <span class="math inline">\(\tau(\lambda)\)</span> is a one-to-one function.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.5: For <span class="math inline">\(0\leq \lambda \leq 4\)</span> the function <span class="math inline">\(\tau(\lambda)\)</span> is a one-to-one function.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -2381,7 +2701,7 @@ f_{X_{(n)}}(x)
 <div id="fig-estimator-convergence" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-estimator-convergence-.gif" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.4: Animated convergence of the density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Animated convergence of the density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -2447,7 +2767,7 @@ f_{X_{(n)}}(x)
 <div id="fig-estimator-density" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Ch1_MaximumLikelihood_files/figure-html/fig-estimator-density-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.5: Density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Density estimates of the empirical mean, empirical median and mid-range estimator.</figcaption><p></p>
 </figure>
 </div>
 </div>
